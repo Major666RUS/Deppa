@@ -1,7 +1,72 @@
+.carousel-indicators {
+  flex-direction: column;
+  margin: 0;
+  right: 1rem;
+  left: auto;
+  top: 0;
+  & li {
+    box-sizing: border-box;
+    margin: .375rem 0;
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background: none;
+    transition: .25s;
+    border: 1px solid $white;
+    &.active {
+      background-color: $white;
+    }
+  }
+}
 .carousel-item {
-  height: 600px;
+  height: 680px;
+  padding-top: 0;
+  padding-bottom: 0;
   & img {
     object-fit: cover;
     height: 100%;
+  }
+}
+.carousel-caption {
+  padding-top: 0;
+  padding-bottom: 0;
+  top: 200px;
+  left: calc((100vw - 100%) / 2);
+  right: calc((100vw - 100%) / 2);
+  bottom: auto;
+  text-align: left;
+
+  .btn {
+    margin-top: 4rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .carousel-indicators {
+    flex-direction: row;
+    right: 1rem;
+    left: 1rem;
+    top: auto;
+    bottom: 1.5rem;
+    & li {
+      margin: 0 .5rem;
+    }
+  }
+  .carousel-item {
+    height: 420px;
+    h1 {
+      font-size: 1.75rem;
+      line-height: 2.125rem;
+    }
+    h4 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+  .carousel-caption {
+    top: 80px;
+    .btn {
+      margin-top: 1.75rem;
+    }
   }
 }

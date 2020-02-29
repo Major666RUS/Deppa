@@ -1,0 +1,16 @@
+.btn {
+  &-lg {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    height: 60px;
+    border-radius: .25rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .btn {
+    &-lg {
+      height: 44px;
+    }
+  }
+}
