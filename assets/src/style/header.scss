@@ -65,5 +65,14 @@
         flex-direction: column;
       }
     }
+    &Socials {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      &Item {
+        list-style: none;
+      }
+    }
   }
 }
