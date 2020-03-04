@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "author": "Vadim Falin",
   "license": "ISC",
+  "scripts": {
+    "gulp": "gulp"
+  },
   "dependencies": {
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
