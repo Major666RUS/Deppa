@@ -19,13 +19,30 @@
       &:not(:last-of-type) {
         margin-right: 2rem;
       }
-      &__hasChildren:after {
-        content: "";
-        background: url('../img/arrow-bottom.svg') center no-repeat;
-        display: block;
-        margin-left: .5rem;
-        width: 6px;
-        height: 3px;
+      &:hover,
+      &.active {
+        color: #7BB5B1;
+      }
+      &__hasChildren {
+        &:after {
+          content: "";
+          background: url('../img/arrow-bottom.svg') center no-repeat;
+          display: block;
+          margin-left: .5rem;
+          width: 6px;
+          height: 3px;
+          transition: all .25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        &.active:after {
+          transform: rotate(180deg);
+        }
+      }
+      &Link {
+        color: inherit;
+        &:hover {
+          color: inherit;
+          text-decoration: none;
+        }
       }
     }
   }
