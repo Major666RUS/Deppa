@@ -1,0 +1,112 @@
+.searchBar {
+  height: 62px;
+  padding: 0 3rem;
+  background-color: $gray-900;
+  color: #fff;
+  &_nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &Item {
+      display: flex;
+      align-items: center;
+      font-size: .75rem;
+      line-height: .875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+      &__hasChildren:after {
+        content: "";
+        background: url('../img/arrow-bottom.svg') center no-repeat;
+        display: block;
+        margin-left: .5rem;
+        width: 6px;
+        height: 3px;
+      }
+    }
+  }
+  &_search {
+    cursor: pointer;
+    margin-right: 2rem;
+    &Input {
+      display: none;
+      background-color: transparent;
+      border: none;
+      font-weight: 300;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      letter-spacing: 0.05em;
+      width: 100%;
+      color: #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__mobile {
+      display: none;
+    }
+  }
+  &_close {
+    display: none;
+    &Divider {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 1.25rem;
+      width: 1px;
+      height: 20px;
+      background-color: #fff;
+      opacity: 0.2;
+    }
+    & > img {
+      cursor: pointer;
+    }
+  }
+  &_cart {
+    position: relative;
+    margin-right: 2.125rem;
+    cursor: pointer;
+    &Count {
+      position: absolute;
+      top: -8px;
+      left: calc(100% + 2px);
+      width: 1rem;
+      height: 1rem;
+      text-align: center;
+      line-height: 1rem;
+      color: #fff;
+      background-color: #7BB5B1;
+      border-radius: 1rem;
+      font-weight: 600;
+      font-size: .625rem;
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .searchBar {
+    height: 52px;
+    padding: 0 1.25rem;
+    flex-direction: row-reverse;
+    &_nav,
+    &_cart {
+      display: none;
+    }
+    &_search {
+      margin-right: .75rem;
+      &Input {
+        display: block !important;
+        font-size: 1rem;
+      }
+      &__desktop {
+        display: none;
+      }
+      &__mobile {
+        display: block;
+      }
+    }
+  }
+}

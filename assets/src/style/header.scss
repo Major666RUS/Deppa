@@ -18,6 +18,7 @@
     border-left: 1px solid rgba(255, 255, 255, .6);
     padding-left: 1rem;
     opacity: .4;
+    font-weight: 300;
   }
   &_menu {
     display: flex;
@@ -169,6 +170,7 @@
 
 @media (max-width: 979px) {
   .header {
+    height: 64px;
     &_menu {
       display: none;
     }

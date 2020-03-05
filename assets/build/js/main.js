@@ -18436,7 +18436,19 @@ return Popper;
 //# sourceMappingURL=toast.js.map
 
 // Импортируем другие js-файлы
-// скрипт для скрытия/появления полосы поиска
+$(function(){
+  $('.js-search, .js-searchClose').click(function(event) {
+    $('.js-searchBarNav').toggle();
+    $('.js-searchInput').toggle();
+    $('.searchBar_search__desktop').toggle();
+    if ($(event.target).is('.js-search')) {
+      $('.searchBar_close').css('display', 'flex');
+    }
+    else {
+      $('.searchBar_close').hide();
+    }
+  });
+})
 $(function(){
   $('.js-menuToggle, .mainMenu_overlay').click(function(){
     $('.js-menuToggle').toggleClass('header_burger__open');

@@ -19,5 +19,5 @@
 //= ../../../node_modules/bootstrap/js/dist/toast.js
 
 // Импортируем другие js-файлы
-//= search.js
+//= searchBar.js
 //= mainMenu.js

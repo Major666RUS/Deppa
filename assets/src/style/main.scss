@@ -41,9 +41,11 @@
 @import "../../../node_modules/bootstrap/scss/_print";
 
 // Подключение своих SCSS файлов
+@import "fonts";
 @import "base";
 @import "buttons";
 @import "header";
+@import "searchBar";
 @import "mainMenu";
 @import "carousel";
 @import "promotions";
