@@ -122,11 +122,11 @@
 
         <ul class="searchBar_devicesList active" data-id="apple">
           <li class="searchBar_devicesListItemName">Устройство:</li>
-          <li class="searchBar_devicesListItem">
-            <a href="/" class="searchBar_devicesListItemLink">Iphone</a>
+          <li class="searchBar_devicesListItem" data-id="iPhone">
+            <span class="searchBar_devicesListItemLink">Iphone</span>
           </li>
-          <li class="searchBar_devicesListItem">
-            <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+          <li class="searchBar_devicesListItem" data-id="iPad">
+            <span class="searchBar_devicesListItemLink">Ipad</span>
           </li>
           <li class="searchBar_devicesListItem">
             <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
@@ -142,7 +142,32 @@
           </li>   
           <li class="searchBar_devicesListItem">
             <a href="/" class="searchBar_devicesListItemLink">Mac</a>
-          </li>   
+          </li>
+          <li class="searchBar_devicesListItem searchBar_devicesListItem__model">
+            <ul class="searchBar_devicesList searchBar_devicesList__model" data-id="iPhone">
+              <li class="searchBar_devicesListItemName">Модель:</li>
+              <li class="searchBar_devicesListItem searchBar_devicesListItem__inner">
+                <a href="/" class="searchBar_devicesListItemLink searchBar_devicesListItemLink__inner">iPhone XS</a>
+              </li>
+              <li class="searchBar_devicesListItem searchBar_devicesListItem__inner">
+                <a href="/" class="searchBar_devicesListItemLink searchBar_devicesListItemLink__inner">iPhone XS Max</a>
+              </li>   
+              <li class="searchBar_devicesListItem searchBar_devicesListItem__inner">
+                <a href="/" class="searchBar_devicesListItemLink searchBar_devicesListItemLink__inner">iPhone XR</a>
+              </li>
+            </ul>
+          </li>
+          <li class="searchBar_devicesListItem searchBar_devicesListItem__model">
+            <ul class="searchBar_devicesList searchBar_devicesList__model" data-id="iPad">
+              <li class="searchBar_devicesListItemName">Модель:</li>
+              <li class="searchBar_devicesListItem searchBar_devicesListItem__inner">
+                <a href="/" class="searchBar_devicesListItemLink searchBar_devicesListItemLink__inner">iPad Pro</a>
+              </li>
+              <li class="searchBar_devicesListItem searchBar_devicesListItem__inner">
+                <a href="/" class="searchBar_devicesListItemLink searchBar_devicesListItemLink__inner">iPad Mini</a>
+              </li>   
+            </ul>
+          </li>
         </ul>
 
         <ul class="searchBar_devicesList" data-id="samsung">

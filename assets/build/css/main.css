@@ -7399,8 +7399,7 @@ body {
       align-items: center;
       font-size: .75rem;
       line-height: .875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase; }
+      letter-spacing: 0.1em; }
       .searchBar_navItem:not(:last-of-type) {
         margin-right: 2rem; }
       .searchBar_navItem:hover, .searchBar_navItem.active {
@@ -7420,6 +7419,7 @@ body {
         transform: rotate(180deg); }
       .searchBar_navItemLink {
         color: inherit;
+        text-transform: uppercase;
         cursor: pointer; }
         .searchBar_navItemLink:hover {
           color: inherit;
@@ -7499,7 +7499,6 @@ body {
         cursor: pointer;
         color: #19222A;
         font-size: 1.125rem;
-        text-transform: none;
         line-height: 1.375rem;
         opacity: .5;
         transition: all .25s ease-in-out; }
@@ -7515,28 +7514,46 @@ body {
         opacity: 1; }
     .searchBar_devicesList {
       display: none;
-      padding: 2.5rem 0 3rem; }
+      flex-wrap: wrap;
+      padding: 2.5rem 0 3rem;
+      font-weight: 300;
+      font-size: .875rem; }
+      .searchBar_devicesList__model {
+        padding: 2rem 0 0; }
       .searchBar_devicesListItem:not(:last-of-type) {
         margin-right: .75rem; }
+      .searchBar_devicesListItem__model {
+        width: 100%; }
+      .searchBar_devicesListItem__inner:not(:last-of-type) {
+        margin-right: 1.125rem; }
       .searchBar_devicesListItemLink {
+        cursor: pointer;
         display: block;
         padding: .75rem 1rem;
         border: 1px solid #E8E9EA;
         border-radius: 4px;
-        font-weight: 300;
-        font-size: .875rem;
         line-height: 1;
+        color: #19222A;
         transition: all .25s ease-in-out; }
         .searchBar_devicesListItemLink:hover {
           text-decoration: none;
           color: #19222A;
           border-color: #19222A; }
+        .searchBar_devicesListItemLink__inner {
+          padding: 0;
+          border: none;
+          line-height: 1.125rem; }
+          .searchBar_devicesListItemLink__inner:hover {
+            opacity: .5; }
+        .searchBar_devicesListItem.active > .searchBar_devicesListItemLink {
+          background-color: #19222A;
+          border-color: #19222A;
+          color: #fff; }
       .searchBar_devicesListItemName {
         display: flex;
         align-items: center;
+        width: 88px;
         margin-right: 1.875rem;
-        font-weight: 300;
-        font-size: .875rem;
         color: #19222A;
         opacity: 0.5; }
       .searchBar_devicesList.active {

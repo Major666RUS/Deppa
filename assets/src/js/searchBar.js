@@ -30,8 +30,11 @@ $(function(){
     }
   });
   $('.searchBar_devicesBrand').click(function() {
-    $('.searchBar_devicesBrand').removeClass('active');
-    $('.searchBar_devicesList').removeClass('active');
+    $('.searchBar_devicesBrand, .searchBar_devicesListItem, .searchBar_devicesList').removeClass('active');
+    $('[data-id=' + $(this).attr('data-id') + ']').addClass('active');
+  });
+  $('.searchBar_devicesListItem').click(function() {
+    $('.searchBar_devicesListItem, .searchBar_devicesListItem > .searchBar_devicesList').removeClass('active');
     $('[data-id=' + $(this).attr('data-id') + ']').addClass('active');
   })
 })
