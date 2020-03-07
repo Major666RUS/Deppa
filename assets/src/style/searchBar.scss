@@ -3,19 +3,20 @@
   padding: 0 3rem;
   background-color: $gray-900;
   color: #fff;
+  position: relative;
   &_nav {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
     &Item {
+      $this: &;
       display: flex;
       align-items: center;
       font-size: .75rem;
       line-height: .875rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      cursor: pointer;
       &:not(:last-of-type) {
         margin-right: 2rem;
       }
@@ -23,7 +24,9 @@
       &.active {
         color: #7BB5B1;
       }
-      &__hasChildren {
+      &__hasChildren > &Link {
+        display: flex;
+        align-items: center;
         &:after {
           content: "";
           background: url('../img/arrow-bottom.svg') center no-repeat;
@@ -33,16 +36,180 @@
           height: 3px;
           transition: all .25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        &.active:after {
+      }
+      &.active {
+        & > #{$this}Link:after {
           transform: rotate(180deg);
         }
       }
       &Link {
         color: inherit;
+        cursor: pointer;
         &:hover {
           color: inherit;
           text-decoration: none;
         }
+      }
+    }
+  }
+  &_catalog,
+  &_priorityBrands {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    &Item {
+      list-style: none;
+    }
+  }
+  &_priorityBrands {
+    padding: 1.5rem 0 1.25rem;
+    border-bottom: 1px solid #E8E9EA;
+    &Item {
+      &:not(:last-of-type) {
+        margin-right: 2.5rem;
+      }
+      &Link {
+        display: block;
+        transition: all .25s ease-in-out;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+  &_catalog {
+    padding: 2.5rem 0 3.5rem;
+    &Wrapper {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      padding: 0 3rem;
+      z-index: 10;
+      background-color: #fff;
+    }
+    &Item {
+      $this: &;
+      width: 147px;
+      text-align: center;
+      text-transform: none;
+      &:not(:last-of-type) {
+        margin-right: 1.5rem;
+      }
+      &Name {
+        margin-top: 1rem;
+        display: block;
+        font-weight: 300;
+        font-size: .875rem;
+        line-height: 1.3;
+      }
+      &Link {
+        display: block;
+        & > img,
+        & > #{$this}Name {
+          transition: all .25s ease-in-out;
+        }
+        &:hover {
+          text-decoration: none;
+          & > img {
+            opacity: .8;
+          }
+          & > #{$this}Name {
+            opacity: .5;
+          }
+        }
+      }
+
+    }
+  }
+  &_devices,
+  &_devicesList {
+    list-style: none;
+    margin: 0;
+    display: flex;
+  }
+  &_devices {
+    padding: 1.5rem 0 0;
+    border-bottom: 1px solid #E8E9EA;
+    &Brand {
+      $this: &;
+      position: relative;
+      padding-bottom: 1.5rem;
+      &:not(:last-of-type) {
+        margin-right: 2.5rem;
+      }
+      &.active {
+        &:after {
+          content: "";
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          background-color: $gray-900;
+        }
+      }
+      &Tab {
+        display: block;
+        cursor: pointer;
+        color: $gray-900;
+        font-size: 1.125rem;
+        text-transform: none;
+        line-height: 1.375rem;
+        opacity: .5;
+        transition: all .25s ease-in-out;
+        & > img {
+          opacity: .8;
+        }
+        &:hover,
+        &:hover > img,
+        #{$this}.active img,
+        #{$this}.active #{$this}Tab {
+          opacity: 1;
+        }
+      }
+      &.active {
+        & img,
+        & > .searchBar_devicesBrandTab {
+          opacity: 1;
+        }
+      } 
+    }
+    &List {
+      display: none;
+      padding: 2.5rem 0 3rem;
+      &Item {
+        &:not(:last-of-type) {
+          margin-right: .75rem;
+        }
+        &Link {
+          display: block;
+          padding: .75rem 1rem;
+          border: 1px solid #E8E9EA;
+          border-radius: 4px;
+          font-weight: 300;
+          font-size: .875rem;
+          line-height: 1;
+          transition: all .25s ease-in-out;
+          &:hover {
+            text-decoration: none;
+            color: $gray-900;
+            border-color: $gray-900;
+          }
+        }
+        &Name {
+          display: flex;
+          align-items: center;
+          margin-right: 1.875rem;
+          font-weight: 300;
+          font-size: .875rem;
+          color: $gray-900;
+          opacity: 0.5;
+        }
+      }
+      &.active {
+        display: flex;
       }
     }
   }

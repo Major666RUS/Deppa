@@ -7229,7 +7229,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   padding-top: 70px;
-  font-family: "PF Beau Sans Pro"; }
+  font-family: "PF Beau Sans Pro";
+  color: #19222A; }
 
 .noScroll {
   overflow: hidden; }
@@ -7386,7 +7387,8 @@ body {
   height: 62px;
   padding: 0 3rem;
   background-color: #19222A;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
   .searchBar_nav {
     display: flex;
     list-style: none;
@@ -7398,27 +7400,147 @@ body {
       font-size: .75rem;
       line-height: .875rem;
       letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer; }
+      text-transform: uppercase; }
       .searchBar_navItem:not(:last-of-type) {
         margin-right: 2rem; }
       .searchBar_navItem:hover, .searchBar_navItem.active {
         color: #7BB5B1; }
-      .searchBar_navItem__hasChildren:after {
-        content: "";
-        background: url("../img/arrow-bottom.svg") center no-repeat;
-        display: block;
-        margin-left: .5rem;
-        width: 6px;
-        height: 3px;
-        transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-      .searchBar_navItem__hasChildren.active:after {
+      .searchBar_navItem__hasChildren > .searchBar_navItemLink {
+        display: flex;
+        align-items: center; }
+        .searchBar_navItem__hasChildren > .searchBar_navItemLink:after {
+          content: "";
+          background: url("../img/arrow-bottom.svg") center no-repeat;
+          display: block;
+          margin-left: .5rem;
+          width: 6px;
+          height: 3px;
+          transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .searchBar_navItem.active > .searchBar_navItemLink:after {
         transform: rotate(180deg); }
       .searchBar_navItemLink {
-        color: inherit; }
+        color: inherit;
+        cursor: pointer; }
         .searchBar_navItemLink:hover {
           color: inherit;
           text-decoration: none; }
+  .searchBar_catalog, .searchBar_priorityBrands {
+    list-style: none;
+    margin: 0;
+    display: flex; }
+    .searchBar_catalogItem, .searchBar_priorityBrandsItem {
+      list-style: none; }
+  .searchBar_priorityBrands {
+    padding: 1.5rem 0 1.25rem;
+    border-bottom: 1px solid #E8E9EA; }
+    .searchBar_priorityBrandsItem:not(:last-of-type) {
+      margin-right: 2.5rem; }
+    .searchBar_priorityBrandsItemLink {
+      display: block;
+      transition: all .25s ease-in-out; }
+      .searchBar_priorityBrandsItemLink:hover {
+        opacity: .8; }
+  .searchBar_catalog {
+    padding: 2.5rem 0 3.5rem; }
+    .searchBar_catalogWrapper {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      padding: 0 3rem;
+      z-index: 10;
+      background-color: #fff; }
+    .searchBar_catalogItem {
+      width: 147px;
+      text-align: center;
+      text-transform: none; }
+      .searchBar_catalogItem:not(:last-of-type) {
+        margin-right: 1.5rem; }
+      .searchBar_catalogItemName {
+        margin-top: 1rem;
+        display: block;
+        font-weight: 300;
+        font-size: .875rem;
+        line-height: 1.3; }
+      .searchBar_catalogItemLink {
+        display: block; }
+        .searchBar_catalogItemLink > img,
+        .searchBar_catalogItemLink > .searchBar_catalogItemName {
+          transition: all .25s ease-in-out; }
+        .searchBar_catalogItemLink:hover {
+          text-decoration: none; }
+          .searchBar_catalogItemLink:hover > img {
+            opacity: .8; }
+          .searchBar_catalogItemLink:hover > .searchBar_catalogItemName {
+            opacity: .5; }
+  .searchBar_devices, .searchBar_devicesList {
+    list-style: none;
+    margin: 0;
+    display: flex; }
+  .searchBar_devices {
+    padding: 1.5rem 0 0;
+    border-bottom: 1px solid #E8E9EA; }
+    .searchBar_devicesBrand {
+      position: relative;
+      padding-bottom: 1.5rem; }
+      .searchBar_devicesBrand:not(:last-of-type) {
+        margin-right: 2.5rem; }
+      .searchBar_devicesBrand.active:after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        background-color: #19222A; }
+      .searchBar_devicesBrandTab {
+        display: block;
+        cursor: pointer;
+        color: #19222A;
+        font-size: 1.125rem;
+        text-transform: none;
+        line-height: 1.375rem;
+        opacity: .5;
+        transition: all .25s ease-in-out; }
+        .searchBar_devicesBrandTab > img {
+          opacity: .8; }
+        .searchBar_devicesBrandTab:hover,
+        .searchBar_devicesBrandTab:hover > img,
+        .searchBar_devicesBrandTab .searchBar_devicesBrand.active img,
+        .searchBar_devicesBrandTab .searchBar_devicesBrand.active .searchBar_devicesBrandTab {
+          opacity: 1; }
+      .searchBar_devicesBrand.active img,
+      .searchBar_devicesBrand.active > .searchBar_devicesBrandTab {
+        opacity: 1; }
+    .searchBar_devicesList {
+      display: none;
+      padding: 2.5rem 0 3rem; }
+      .searchBar_devicesListItem:not(:last-of-type) {
+        margin-right: .75rem; }
+      .searchBar_devicesListItemLink {
+        display: block;
+        padding: .75rem 1rem;
+        border: 1px solid #E8E9EA;
+        border-radius: 4px;
+        font-weight: 300;
+        font-size: .875rem;
+        line-height: 1;
+        transition: all .25s ease-in-out; }
+        .searchBar_devicesListItemLink:hover {
+          text-decoration: none;
+          color: #19222A;
+          border-color: #19222A; }
+      .searchBar_devicesListItemName {
+        display: flex;
+        align-items: center;
+        margin-right: 1.875rem;
+        font-weight: 300;
+        font-size: .875rem;
+        color: #19222A;
+        opacity: 0.5; }
+      .searchBar_devicesList.active {
+        display: flex; }
   .searchBar_search {
     cursor: pointer;
     margin-right: 2rem; }

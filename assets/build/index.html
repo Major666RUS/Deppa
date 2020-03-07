@@ -72,10 +72,275 @@
   </header>
   <section class="searchBar d-flex justify-content-between align-items-center">
     <ul class="searchBar_nav js-searchBarNav">
-      <li class="searchBar_navItem searchBar_navItem__hasChildren">Каталог</li>
-      <li class="searchBar_navItem searchBar_navItem__hasChildren">По устройству</li>
+      <li class="searchBar_navItem searchBar_navItem__hasChildren">
+        <span class="searchBar_navItemLink js-catalog">Каталог</span>
+        <div class="searchBar_catalogWrapper">
+          <ul class="searchBar_priorityBrands">
+            <li class="searchBar_priorityBrandsItem">
+              <a href="/" class="searchBar_priorityBrandsItemLink">
+                <img src="img/br.png" alt="Black Rock">
+              </a>
+            </li>
+            <li class="searchBar_priorityBrandsItem">
+              <a href="/" class="searchBar_priorityBrandsItemLink">
+                <img src="img/wd.png" alt="White Diamond">
+              </a>
+            </li>
+            <li class="searchBar_priorityBrandsItem">
+              <a href="/" class="searchBar_priorityBrandsItemLink">
+                <img src="img/sen.png" alt="Sennheiser">
+              </a>
+            </li>
+          </ul>
+          <ul class="searchBar_catalog">
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_1.png" alt="catalog_1">
+                <span class="searchBar_catalogItemName">Защитные стекла и пленки</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_2.png" alt="catalog_2">
+                <span class="searchBar_catalogItemName">Адаптеры и картридеры</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_3.png" alt="catalog_3">
+                <span class="searchBar_catalogItemName">Автомобильные держатели</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_4.png" alt="catalog_4">
+                <span class="searchBar_catalogItemName">Внешние аккумуляторы</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_5.png" alt="catalog_5">
+                <span class="searchBar_catalogItemName">Дата-кабели и AUX-кабели</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_6.png" alt="catalog_6">
+                <span class="searchBar_catalogItemName">Зарядные устройства и адаптеры питания</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_7.png" alt="catalog_7">
+                <span class="searchBar_catalogItemName">Кейсы, бамперы, чехлы</span>
+              </a>
+            </li>
+            <li class="searchBar_catalogItem">
+              <a href="" class="searchBar_catalogItemLink">
+                <img src="img/catalog_8.png" alt="catalog_8">
+                <span class="searchBar_catalogItemName">Стереогарнитуры и колонки</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+  
+      <li class="searchBar_navItem searchBar_navItem__hasChildren">
+        <span class="searchBar_navItemLink js-catalog">По устройству</span>
+        <div class="searchBar_catalogWrapper">
+          <ul class="searchBar_devices">
+            <li class="searchBar_devicesBrand active" data-id="apple">
+              <span class="searchBar_devicesBrandTab">
+                <img src="img/apple.png" alt="Apple">
+              </span>
+            </li>
+    
+            <li class="searchBar_devicesBrand" data-id="samsung">
+              <span class="searchBar_devicesBrandTab">
+                <img src="img/samsung.png" alt="Samsung">
+              </span>
+            </li>
+    
+            <li class="searchBar_devicesBrand" data-id="honor">
+              <span class="searchBar_devicesBrandTab">
+                <img src="img/honor.png" alt="Honor">
+              </span>
+            </li>
+    
+            <li class="searchBar_devicesBrand" data-id="sony">
+              <span class="searchBar_devicesBrandTab">
+                <img src="img/sony.png" alt="Sony">
+              </span>
+            </li>
+    
+            <li class="searchBar_devicesBrand" data-id="huawei">
+              <span class="searchBar_devicesBrandTab">
+                <img src="img/huawei.png" alt="Huawei">
+              </span>
+            </li>
+    
+            <li class="searchBar_devicesBrand" data-id="xiaomi">
+              <span class="searchBar_devicesBrandTab">
+                <img src="img/xiaomi.png" alt="Xiaomi">
+              </span>
+            </li>
+    
+            <li class="searchBar_devicesBrand" data-id="others">
+              <span class="searchBar_devicesBrandTab">
+                Другие
+              </span>
+            </li>
+          </ul>
+  
+          <ul class="searchBar_devicesList active" data-id="apple">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Iphone</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">iPod</a>
+            </li>   
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Mac</a>
+            </li>   
+          </ul>
+  
+          <ul class="searchBar_devicesList" data-id="samsung">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Galaxy A9</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Galaxy A10</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Galaxy Tab</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">iPod</a>
+            </li>   
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Mac</a>
+            </li>   
+          </ul>
+  
+          <ul class="searchBar_devicesList" data-id="honor">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Something</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li> 
+          </ul>
+  
+          <ul class="searchBar_devicesList" data-id="sony">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Something</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li> 
+          </ul>
+  
+          <ul class="searchBar_devicesList" data-id="huawei">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Something</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li> 
+          </ul>
+  
+          <ul class="searchBar_devicesList" data-id="xiaomi">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Something</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li> 
+          </ul>
+  
+          <ul class="searchBar_devicesList" data-id="others">
+            <li class="searchBar_devicesListItemName">Устройство:</li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Something</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Ipad</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">AirPods</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">MacBook</a>
+            </li>
+            <li class="searchBar_devicesListItem">
+              <a href="/" class="searchBar_devicesListItemLink">Apple watch</a>
+            </li> 
+          </ul>
+        </div>  
+      </li>
       <li class="searchBar_navItem">
-        <a href="/" class="searchBar_navItemLink">Акции</a></li>
+        <a href="/" class="searchBar_navItemLink">Акции</a>
+      </li>
     </ul>
     <input type="text" class="searchBar_searchInput js-searchInput" placeholder="Поиск по названию или артикулу">
     <div class="d-flex align-items-center">
