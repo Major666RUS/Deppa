@@ -1,0 +1,13 @@
+@import "variables";
+
+.breadcrumbs {
+    margin-top: 2.5rem;
+    margin-bottom: 3.25rem;
+    &_link {
+        color: rgba(57,64,73,0.5)!important;
+    }
+    &_separator {
+        margin: 0 0.75rem;
+        color: rgba(57,64,73,0.5)!important;
+    }
+}

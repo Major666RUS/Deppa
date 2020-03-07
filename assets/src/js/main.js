@@ -19,5 +19,6 @@
 //= ../../../node_modules/bootstrap/js/dist/toast.js
 
 // Импортируем другие js-файлы
+//= ion.rangeSlider.min.js
 //= searchBar.js
 //= mainMenu.js

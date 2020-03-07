@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Каталог</title>
+
+    <!-- Similar font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap&subset=cyrillic"
+        rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Swiper slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="product">
+
+    <div class="product_grid">
+        <div class="product_left product_wrapper mw-100">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top justify-content-between">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Navigation</a>
+                    <a href="#" id="cart" class="text-white">Show cart</a href="#">
+                </div>
+            </nav>
+            <div class="container">
+
+                //= template/breadcrumbsProduct.html
+
+                <form>
+                    <div class="row">
+                        <div class="product_photo col-lg-6 col-md-6 col-sm-12">
+                            <span class="product_photoWrapper">
+                                <img src="img/page_files_product/productBigPhoto.png"
+                                    alt="Чехол Art Nature для iPhone 6/6S">
+                            </span>
+                        </div>
+                        <div class="product_info col-lg-6 col-md-6 col-sm-12">
+                            <div class="product_sku">Арт 101108<span class="product_skuSeparator"></span>В наличии 466
+                                шт.
+                            </div>
+                            <h1 class="product_title">Чехол Art Nature для iPhone 6/6S</h1>
+                            <div class="product_description">
+                                Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас!
+                                Профессиональная консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное
+                                качество.
+                            </div>
+                            <div class="product_priceBlock">
+                                <span class="product_inputCount js-inputCount">
+                                    <span class="minus"></span>
+                                    <input type="number" name="productsAmount" value="1" readonly>
+                                    <span class="plus"></span>
+                                </span>
+                                <span class="product_price">890 ₽</span>
+                                <span class="product_bonus">+ 89 баллов</span>
+                            </div>
+                            <div class="product_buttons">
+                                <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                <a href="#" type="button" class="btn btn-dark">
+                                    <img src="img/apple.svg" class="product_buttonsIcon" alt="">
+                                    <img src="img/pay.svg" alt="Pay">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_variations col-lg-6 col-md-6 col-sm-12 p-0">
+                            <label>
+                                <input type="radio" id="productVariation1" name="productVariation">
+                                <span class="product_variation"><img src="img/page_files_product/variation1.png"></span>
+                            </label>
+                            <label>
+                                <input type="radio" id="productVariation2" name="productVariation">
+                                <span class="product_variation"><img src="img/page_files_product/variation2.png"></span>
+                            </label>
+                            <label>
+                                <input type="radio" id="productVariation3" name="productVariation">
+                                <span class="product_variation"><img src="img/page_files_product/variation3.png"></span>
+                            </label>
+                            <label>
+                                <input type="radio" id="productVariation4" name="productVariation">
+                                <span class="product_variation"><img src="img/page_files_product/variation4.png"></span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="product_tabsBlock row">
+                    <nav class="col-lg-12 col-md-12 col-sm-12 p-md-0">
+                        <div id="product_tabsNav" class="product_tabsNav nav nav-tabs" role="tablist">
+                            <a href="#product_description" id="product_description-tab" class="product_tabsNavItem"
+                                data-toggle="tab" role="tab" aria-controls="product_description"
+                                aria-selected="false">Описание</a>
+                            <a href="#product_options" id="product_options-tab" class="product_tabsNavItem active"
+                                data-toggle="tab" role="tab" aria-controls="product_options"
+                                aria-selected="true">Характеристики</a>
+                            <a href="#product_reviews" id="product_reviews-tab" class="product_tabsNavItem"
+                                data-toggle="tab" role="tab" aria-controls="product_reviews" aria-selected="false"><span
+                                    class="product_tabsNavItemReviewsNumber">92</span> отзыва</a>
+                            <a href="#product_shipping" id="product_shipping-tab" class="product_tabsNavItem"
+                                data-toggle="tab" role="tab" aria-controls="product_shipping"
+                                aria-selected="false">Доставка от <span class="product_tabsNavItemShippingPrice">120
+                                    ₽</span></a>
+                            <a href="#product_checkout" id="product_checkout-tab" class="product_tabsNavItem"
+                                data-toggle="tab" role="tab" aria-controls="product_checkout"
+                                aria-selected="false">Оплата</a>
+                        </div>
+                    </nav>
+                    <div id="product_tabsContent"
+                        class="product_tabsContent tab-content col-lg-12 col-md-12 col-sm-12 p-md-0">
+                        <div class="product_tabsContentDescription tab-pane fade" id="product_description"
+                            role="tabpanel" aria-labelledby="product_description-tab">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                            eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="product_tabsContentOptions tab-pane fade show active" id="product_options"
+                            role="tabpanel" aria-labelledby="product_options-tab">
+                            <div class="row">
+                                <div class="product_tabsContentOptionsList col-lg-8 col-md-8 col-sm-12">
+                                    <ul class="list-unstyled">
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Плюс дней</span>
+                                            <span class="product_tabsContentOptionContent">5</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Тип чехла</span>
+                                            <span class="product_tabsContentOptionContent">Нет</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Материал кейса</span>
+                                            <span class="product_tabsContentOptionContent">Нет</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Цвет чехла</span>
+                                            <span class="product_tabsContentOptionContent">Нет</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Флагман</span>
+                                            <span class="product_tabsContentOptionContent">101107</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Полное название</span>
+                                            <span class="product_tabsContentOptionContent">Чехол Art Case для Apple
+                                                iPhone 6/6S, Nature_Горы, Deppa</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Штрих-код EAN-13</span>
+                                            <span class="product_tabsContentOptionContent">4670019243352</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Страна-производитель</span>
+                                            <span class="product_tabsContentOptionContent">Россия</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Код ТНВЭД</span>
+                                            <span class="product_tabsContentOptionContent">4202321000</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Срок службы</span>
+                                            <span class="product_tabsContentOptionContent">12</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Тип упаковки</span>
+                                            <span class="product_tabsContentOptionContent">коробка пластик</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Высота упаковки</span>
+                                            <span class="product_tabsContentOptionContent">15.4</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Ширина упаковки</span>
+                                            <span class="product_tabsContentOptionContent">8.5</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Глубина упаковки</span>
+                                            <span class="product_tabsContentOptionContent">1.5</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Вес изделия с упаковкой</span>
+                                            <span class="product_tabsContentOptionContent">0.053</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Количество потребительских
+                                                упаковок</span>
+                                            <span class="product_tabsContentOptionContent">100</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Объем мастер-бокса</span>
+                                            <span class="product_tabsContentOptionContent">0.0407</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Материал</span>
+                                            <span class="product_tabsContentOptionContent">PC</span>
+                                        </li>
+                                        <li class="product_tabsContentOption">
+                                            <span class="product_tabsContentOptionTitle">Название цвета</span>
+                                            <span class="product_tabsContentOptionContent">Nature_Горы</span>
+                                        </li>
+                                    </ul>
+                                    <div class="product_tabsContentSpecification">
+                                        <div class="product_tabsContentSpecificationTitle js-dropdown__trigger" data-toggle="specification">
+                                            Смотреть спецификации
+                                        </div>
+                                        <div class="product_tabsContentSpecificationContent js-dropdown" data-toggle="specification">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product_tabsContentOptionsBarcode col-lg-4 col-md-4 col-sm-12">
+                                    <img src="img/page_files_product/barcode.png" alt="4670019243352">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_tabsContentReviews tab-pane fade" id="product_reviews" role="tabpanel"
+                            aria-labelledby="product_reviews-tab">
+                            Хуснутдинов Рустем
+                        </div>
+                        <div class="product_tabsContentShipping tab-pane fade" id="product_shipping" role="tabpanel"
+                            aria-labelledby="product_shipping-tab">
+                            Как доставить
+                        </div>
+                        <div class="product_tabsContentCheckout tab-pane fade" id="product_checkout" role="tabpanel"
+                            aria-labelledby="product_checkout-tab">
+                            При получении
+                        </div>
+                    </div>
+                </div>
+                <div class="product_additionalProducts row">
+                    <h2 class="product_additionalProductsTitle text-center col-lg-12 col-md-12 col-sm-12">Сопутствующие товары</h2>
+                    <div class="product_additionalProductsCarousel col-lg-12 col-md-12 col-sm-12 p-md-0">  
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct1.png" title="Внешний аккумулятор NRG Power 5000 mAh, 2.1A">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 33537</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Внешний аккумулятор NRG Power 5000 mAh, 2.1A</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 090 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct2.png" title="Магнитный автомобильный держатель Mage One">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 55151</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Магнитный автомобильный держатель Mage One</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct3.png" title="АЗУ USB Quick Charge 3.0">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 11286</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">АЗУ USB Quick Charge 3.0</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct4.png" title="Дата-кабель USB - 8-pin для Apple, витой">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 72120</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Дата-кабель USB - 8-pin для Apple, витой</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 190 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct1.png" title="Внешний аккумулятор NRG Power 5000 mAh, 2.1A">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 33537</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Внешний аккумулятор NRG Power 5000 mAh, 2.1A</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 090 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct2.png" title="Магнитный автомобильный держатель Mage One">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 55151</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Магнитный автомобильный держатель Mage One</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct3.png" title="АЗУ USB Quick Charge 3.0">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 11286</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">АЗУ USB Quick Charge 3.0</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct4.png" title="Дата-кабель USB - 8-pin для Apple, витой">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 72120</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Дата-кабель USB - 8-pin для Apple, витой</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 190 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+
+                            </div>                            
+                            <!-- Add Pagination -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>                      
+                    </div>
+                </div>
+
+                <div class="product_similarProducts row">
+                    <h2 class="product_similarProductsTitle text-center col-lg-12 col-md-12 col-sm-12">Похожие товары</h2>
+                    <div class="product_similarProductsCarousel col-lg-12 col-md-12 col-sm-12 p-md-0">  
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct1.png" title="Внешний аккумулятор NRG Power 5000 mAh, 2.1A">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 33537</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Внешний аккумулятор NRG Power 5000 mAh, 2.1A</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 090 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct2.png" title="Магнитный автомобильный держатель Mage One">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 55151</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Магнитный автомобильный держатель Mage One</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct3.png" title="АЗУ USB Quick Charge 3.0">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 11286</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">АЗУ USB Quick Charge 3.0</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct4.png" title="Дата-кабель USB - 8-pin для Apple, витой">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 72120</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Дата-кабель USB - 8-pin для Apple, витой</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 190 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct1.png" title="Внешний аккумулятор NRG Power 5000 mAh, 2.1A">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 33537</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Внешний аккумулятор NRG Power 5000 mAh, 2.1A</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 090 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct2.png" title="Магнитный автомобильный держатель Mage One">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 55151</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Магнитный автомобильный держатель Mage One</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct3.png" title="АЗУ USB Quick Charge 3.0">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 11286</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">АЗУ USB Quick Charge 3.0</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">890 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+                              <div class="swiper-slide">
+                                  
+                                <div class="catalog_productsTileItem text-center w-100 m-0">
+                                    <a href="#" class="catalog_productsTileItemImage">
+                                    <img src="img/page_files_product/additionalProduct4.png" title="Дата-кабель USB - 8-pin для Apple, витой">
+                                    </a>
+                                    <form>
+                                    <div class="catalog_productsTileItemSku">Арт 72120</div>
+                                    <a href="#" class="catalog_productsTileItemTitle">Дата-кабель USB - 8-pin для Apple, витой</a>
+                                    <div class="catalog_productsTileItemBottom">
+                                    <div class="catalog_productsTileItemPrice">1 190 ₽</div>
+                                    <div class="catalog_productsTileItemButtons">
+                                        <a href="#" type="button" class="btn btn-outline-dark">В корзину</a>
+                                        <a href="#" type="button" class="btn btn-dark">
+                                        <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                                        <img src="img/pay.svg" alt="Pay">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </form>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>                      
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product_right cart_wrapper">
+            <div class="cart_title">
+                <span>Корзина</span>
+                <span class="cart_close"></span>
+            </div>
+            <form class="cart_form">
+                <ul class="cart list-unstyled">
+                    <li class="cart_item">
+                        <div class="cart_itemImage">
+                            <img src="img/page_files_catalog/cartItem1.png">
+                        </div>
+                        <div class="cart_itemInfo">
+                            <div class="cart_itemSku">Арт 55155</div>
+                            <div class="cart_itemDescription">
+                                Автомобильный держатель Crab Qi, с функцией беспроводной зарядки
+                            </div>
+                            <div class="cart_itemPriceBlock">
+                                <span class="cart_itemInputCount js-inputCount">
+                                    <span class="minus"></span>
+                                    <input type="number" name="productsAmount" value="1" readonly>
+                                    <span class="plus"></span>
+                                </span>
+                                <span class="cart_itemPrice">1 990 ₽</span>
+                            </div>
+                        </div>
+                        <span class="cart_itemDelete" title="удалить из корзины"></span>
+                    </li>
+                    <li class="cart_item">
+                        <div class="cart_itemImage">
+                            <img src="img/page_files_catalog/cartItem2.png">
+                        </div>
+                        <div class="cart_itemInfo">
+                            <div class="cart_itemSku">Арт 101107</div>
+                            <div class="cart_itemDescription">
+                                Чехол Art Nature для iPhone 6/6S
+                            </div>
+                            <div class="cart_itemPriceBlock">
+                                <span class="cart_itemInputCount js-inputCount">
+                                    <span class="minus"></span>
+                                    <input type="number" name="productsAmount" value="1" readonly>
+                                    <span class="plus"></span>
+                                </span>
+                                <span class="cart_itemPrice">890 ₽</span>
+                            </div>
+                        </div>
+                        <span class="cart_itemDelete" title="удалить из корзины"></span>
+                    </li>
+                </ul>
+                <div class="cart_footer">
+                    <div class="cart_footerPromocode">
+                        <input type="text" class="form-control" id="promoCode" placeholder="Промокод">
+                        <a href="#" class="cart_footerPromocodeAccept"></a>
+                    </div>
+                    <div class="cart_footerTotal">
+                        <span>Итого</span>
+                        <span>
+                            <span class="cart_footerBonus">+ 288 баллов</span>
+                            <span class="cart_footerTotalPrice">2 880 ₽</span>
+                        </span>
+                    </div>
+                    <div class="cart_footerButtons">
+                        <a href="#" type="button"
+                            class="btn btn-dark w-100 cart_footerButton cart_footerButton__checkout">Оформить заказ</a>
+                        <a href="#" type="button"
+                            class="btn btn-outline-dark cart_footerButton cart_footerButton__purchase">Купить в один
+                            клик</a>
+                        <a href="#" type="button" class="btn btn-dark cart_footerButton cart_footerButton__applepay">
+                            <img src="img/apple.svg" class="product_productsTileItemButtonsIcon" alt="">
+                            <img src="img/pay.svg" alt="Pay">
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+        $(function () {
+
+            // cart toggle
+            $('#cart').on('click', function () {
+                $('.cart_wrapper').animate({
+                    width: 'toggle'
+                });
+            });
+
+            $('.cart_close').on('click', function () {
+                $('.cart_wrapper').animate({
+                    width: 'toggle'
+                });
+            });
+
+            // cart - delete Item
+            $('.cart_itemDelete').on('click', function () {
+                $(this).parents('.cart_item').remove();
+            });
+
+            // inputCount (js-inputCount)
+            $('.js-inputCount .minus').on('click', function () {
+                if (+$(this).siblings('input').val() > 1) {
+                    $(this).siblings('input').val(+$(this).siblings('input').val() - 1);
+                }
+            });
+            $('.js-inputCount .plus').on('click', function () {
+                if (+$(this).siblings('input').val() >= 1) {
+                    $(this).siblings('input').val(+$(this).siblings('input').val() + 1);
+                }
+            });
+
+            // js-dropdown (toggle)
+            $('.js-dropdown__trigger').on('click', function () {
+                $('.js-dropdown[data-toggle="' + $(this).attr('data-toggle') + '"').slideToggle();
+            });
+
+        });
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // init: false,
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        // },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+            768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            },
+            1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+            },
+        }
+        });
+    </script>
+
+</body>
+
+</html>

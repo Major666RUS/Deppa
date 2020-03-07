@@ -3,27 +3,945 @@
 <head>
   //= template/head.html
 </head>
-<body>
-  Каталог!
-  <div class="container">
-    <div class="row">
-      <div class="col-8">
-        <div class="row">
-          <div class="col-4 px-1">
-            <div style="background-color: #f00;">1</div>
-          </div>
-          <div class="col-4 px-1">
-            <div style="background-color: #f00;">2</div>
-          </div>
-          <div class="col-4 px-1">
-            <div style="background-color: #f00;">3</div>
+<body class="catalog">
+  //= template/header.html
+  //= template/searchBar.html
+
+  <div class="catalog_grid">
+    <div class="catalog_left catalog_wrapper mw-100">
+      <div class="jumbotron jumbotron-fluid catalog_jumbotron">
+        <div class="catalog_jumbotronText">
+          <div class="container text-center text-white">
+            <h1 class="catalog_title">Кейсы, бамперы, чехлы</h1>
+            <p class="catalog_subTitle">Стильная защита ваших телефонов</p>
           </div>
         </div>
       </div>
-      <div class="col-4">4</div>
+
+      <!-- Page Content -->
+      <div class="container">
+
+        //= template/breadcrumbs.html
+
+        <div class="row">
+          <div class="catalog_filtersColumn col-lg-3 col-md-3 p-0">
+            <div class="catalog_filters">
+              <form class="catalog_filterForm">
+                <div class="form-group catalog_filterFormField">
+                  <label class="catalog_filterFormLabel">Фильтр по цене</label>
+                  <div class="form-row align-items-center js-range-slider">
+                    <div class="col-md-1">                      
+                      <label class="m-0 catalog_filterFormLabel__small" for="priceFilterFrom">От</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" class="form-control js-range-slider-from" id="priceFilterFrom" value="100">
+                    </div>
+                    <div class="col-md-1">                      
+                      <label class="m-0 catalog_filterFormLabel__small" for="priceFilterTo">до</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" class="form-control js-range-slider-to" id="priceFilterTo" value="122900">
+                    </div>
+                    <div class="col-md-2">                      
+                      <label class="m-0 catalog_filterFormLabel__small">руб.</label>
+                    </div>
+                    <div class="col-md-12 catalog_filterFormRange">
+                      <input type="text" class="js-range-slider-range" value="" />
+                    </div>              
+                  </div>
+                </div>
+                <div class="form-group catalog_filterFormField">
+                  <label class="catalog_filterFormLabel">Страна производитель</label>
+                  <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+                    <input class="custom-control-input" type="checkbox" value="" id="vendorCountry1">
+                    <label class="custom-control-label" for="vendorCountry1">
+                      Россия
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+                    <input class="custom-control-input" type="checkbox" value="" id="vendorCountry2">
+                    <label class="custom-control-label" for="vendorCountry2">
+                      Китай
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+                    <input class="custom-control-input" type="checkbox" value="" id="vendorCountry3">
+                    <label class="custom-control-label" for="vendorCountry3">
+                      Германия
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+                    <input class="custom-control-input" type="checkbox" value="" id="vendorCountry4">
+                    <label class="custom-control-label" for="vendorCountry4">
+                      Великобритания
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group catalog_filterFormField">
+                  <label class="catalog_filterFormLabel">Количество</label>
+                  <div class="form-row align-items-center js-range-slider">
+                    <div class="col-md-1">                      
+                      <label class="m-0 catalog_filterFormLabel__small" for="priceFilterFrom">От</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" class="form-control js-range-slider-from" id="priceFilterFrom" value="5">
+                    </div>
+                    <div class="col-md-1">                      
+                      <label class="m-0 catalog_filterFormLabel__small" for="priceFilterTo">до</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" class="form-control js-range-slider-to" id="priceFilterTo" value="100">
+                    </div>
+                    <div class="col-md-2">                      
+                      <label class="m-0 catalog_filterFormLabel__small">шт.</label>
+                    </div>
+                    <div class="col-md-12 catalog_filterFormRange">
+                      <input type="text" class="js-range-slider-range" value="" />
+                    </div>              
+                  </div>
+                </div>
+              </form>
+              <a href="#" class="catalog_filtersClear"><img src="img/clearfilters.svg" alt="X">Сбросить фильтры</a>
+            </div>        
+          </div>
+          <div class="col-lg-9 col-md-9 p-0">
+            <div class="catalog_productsWrapper">
+              <div class="catalog_productsFilters">
+                <div class="catalog_productsFiltersLeft">
+                  <form class="form-inline catalog_productsFiltersSort">
+                    <label>Сортировать</label>
+                    <select class="custom-select">
+                      <option value="1" selected>По популярности</option>
+                      <option value="2">По цене</option>
+                      <option value="3">По алфавиту</option>
+                    </select>
+                  </form>
+                  <span class="catalog_productsFiltersSortResult">
+                    <span class="number">512</span>
+                    <span class="unit">товаров</span>
+                  </span>
+                </div> 
+                <div class="catalog_productsFiltersRight">
+                  Вид
+                  <a href="#" id="js-catalog__tile" class="catalog_productsFiltersTrigger catalog_productsFiltersTrigger__tile active">
+                  </a>
+                  <a href="#" id="js-catalog__list" class="catalog_productsFiltersTrigger catalog_productsFiltersTrigger__list">
+                  </a>
+                </div>              
+              </div>            
+              <div class="catalog_products">
+
+                <ul class="catalog_productsTile catalog_productsTile__2 list-unstyled">
+                  <li class="catalog_productsTileItem text-center catalog_productsTileItem__special" data-special="Новинка">
+                    <a href="#" class="catalog_productsTileItemImage">
+                      <img src="img/page_files_catalog/product1.png" title="Чехол Art Nature для iPhone 6/6S" alt="Чехол Art Nature для iPhone 6/6S">
+                    </a>
+                    <form>
+                    <div class="catalog_productsTileItemVariations">
+                      <label>
+                        <input type="radio" id="product1tileVariation1" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation1.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product1tileVariation2" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation2.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product1tileVariation3" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation3.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product1tileVariation4" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation4.png" alt="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="catalog_productsTileItemSku">Арт 101108</div>
+                    <a href="#" class="catalog_productsTileItemTitle">Чехол Art Nature для iPhone 6/6S</a>
+                    <div class="catalog_productsTileItemBottom">
+                      <div class="catalog_productsTileItemPrice">890 ₽</div>
+                      <div class="catalog_productsTileItemButtons">
+                        <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                        <a href="#" type="button" class="btn btn-dark">
+                          <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                          <img src="img/pay.svg" alt="Pay">
+                        </a>
+                      </div>
+                    </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsTileItem text-center catalog_productsTileItem__special" data-special="Акция">
+                    <a href="#" class="catalog_productsTileItemImage">
+                      <img src="img/page_files_catalog/product2.png" title="Чехол Gel для iPhone 6 Plus/6S Plus и еще одна строчка для примера отображения" alt="Чехол Gel для iPhone 6 Plus/6S Plus и еще одна строчка для примера отображения">
+                    </a>
+                    <form>
+                    <div class="catalog_productsTileItemVariations">
+                      <label>
+                        <input type="radio" id="product2tileVariation1" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation1.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product2tileVariation2" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation2.png" alt="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="catalog_productsTileItemSku">Арт 85205</div>
+                    <a href="#" class="catalog_productsTileItemTitle">Чехол Gel для iPhone 6 Plus/6S Plus и еще одна строчка для примера отображения</a>
+                    <div class="catalog_productsTileItemBottom">
+                      <div class="catalog_productsTileItemPrice">890 ₽</div>
+                      <div class="catalog_productsTileItemButtons">
+                        <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                        <a href="#" type="button" class="btn btn-dark">
+                          <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                          <img src="img/pay.svg" alt="Pay">
+                        </a>
+                      </div>
+                    </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsTileItem text-center">
+                    <a href="#" class="catalog_productsTileItemImage">
+                      <img src="img/page_files_catalog/product3.png" title="Чехол Art Nature для iPhone 6/6S" alt="Чехол Art Nature для iPhone 6/6S">
+                    </a> 
+                    <form>                   
+                    <div class="catalog_productsTileItemVariations">
+                      <label>
+                        <input type="radio" id="product3tileVariation1" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation1.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product3tileVariation2" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation2.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product3tileVariation3" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation3.png" alt="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="catalog_productsTileItemSku">Арт 101111</div>
+                    <a href="#" class="catalog_productsTileItemTitle">Чехол Art Nature для iPhone 6/6S</a>
+                    <div class="catalog_productsTileItemBottom">
+                      <div class="catalog_productsTileItemPrice">890 ₽</div>
+                      <div class="catalog_productsTileItemButtons">
+                        <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                        <a href="#" type="button" class="btn btn-dark">
+                          <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                          <img src="img/pay.svg" alt="Pay">
+                        </a>
+                      </div>
+                    </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsTileItem text-center">
+                    <a href="#" class="catalog_productsTileItemImage">
+                      <img src="img/page_files_catalog/product4.png" title="Чехол Art для Samsung Galaxy S7 edge" alt="Чехол Art для Samsung Galaxy S7 edge">
+                    </a>
+                    <form> 
+                    <div class="catalog_productsTileItemVariations"></div>
+                    <div class="catalog_productsTileItemSku">Арт 102683</div>
+                    <a href="#" class="catalog_productsTileItemTitle">Чехол Art для Samsung Galaxy S7 edge</a>
+                    <div class="catalog_productsTileItemBottom">
+                      <div class="catalog_productsTileItemPrice">890 ₽</div>
+                      <div class="catalog_productsTileItemButtons">
+                        <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                        <a href="#" type="button" class="btn btn-dark">
+                          <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                          <img src="img/pay.svg" alt="Pay">
+                        </a>
+                      </div>
+                    </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsTileItem text-center">
+                    <a href="#" class="catalog_productsTileItemImage">
+                      <img src="img/page_files_catalog/product5.png" title="Чехол White Diamonds Liquids для iPhone X/XS" alt="Чехол White Diamonds Liquids для iPhone X/XS">
+                    </a> 
+                    <form>                    
+                    <div class="catalog_productsTileItemVariations">
+                      <label>
+                        <input type="radio" id="product5tileVariation1" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation1.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product5tileVariation2" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation2.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product5tileVariation3" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation3.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product5tileVariation4" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation4.png" alt="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="catalog_productsTileItemSku">Арт 11250</div>
+                    <a href="#" class="catalog_productsTileItemTitle">Чехол White Diamonds Liquids для iPhone X/XS</a>
+                    <div class="catalog_productsTileItemBottom">
+                      <div class="catalog_productsTileItemPrice">890 ₽</div>
+                      <div class="catalog_productsTileItemButtons">
+                        <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                        <a href="#" type="button" class="btn btn-dark">
+                          <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                          <img src="img/pay.svg" alt="Pay">
+                        </a>
+                      </div>
+                    </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsTileItem text-center">
+                    <a href="#" class="catalog_productsTileItemImage">
+                      <img src="img/page_files_catalog/product6.png" title="Clamshell Case для Samsung Galaxy J2" alt="Clamshell Case для Samsung Galaxy J2">
+                    </a> 
+                    <form>                   
+                    <div class="catalog_productsTileItemVariations">
+                      <label>
+                        <input type="radio" id="product6tileVariation1" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation1.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product6tileVariation2" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation2.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product6tileVariation3" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation3.png" alt="">
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" id="product6tileVariation4" name="productVariation">
+                        <span class="catalog_productsTileItemVariation">
+                          <img src="img/page_files_catalog/variation4.png" alt="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="catalog_productsTileItemSku">Арт 86615</div>
+                    <a href="#" class="catalog_productsTileItemTitle">Чехол White Diamonds Liquids для iPhone X/XS</a>
+                    <div class="catalog_productsTileItemBottom">
+                      <div class="catalog_productsTileItemPrice">890 ₽</div>
+                      <div class="catalog_productsTileItemButtons">
+                        <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                        <a href="#" type="button" class="btn btn-dark">
+                          <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+                          <img src="img/pay.svg" alt="Pay">
+                        </a>
+                      </div>
+                    </div>
+                    </form>
+                  </li>
+                </ul>
+                
+                <ul class="catalog_productsList list-unstyled">
+                  <li class="catalog_productsListItem catalog_productsListItem__special" data-special="Новинка">
+                      <a href="#" class="catalog_productsListItemImage">
+                          <img src="img/page_files_catalog/product1.png" title="Чехол Art Nature для iPhone 6/6S"
+                              alt="Чехол Art Nature для iPhone 6/6S">
+                      </a>
+                      <form>
+                      <div class="catalog_productsListItemInfo">
+                          <div class="catalog_productsListItemSku">Арт 101108<span class="catalog_productsListItemSkuSeparator"></span>В наличии 466 шт.</div>
+                          <a href="#" class="catalog_productsListItemTitle">Чехол Art Nature для iPhone 6/6S</a>
+                          <div class="catalog_productsListItemVariations">
+                            <label>
+                              <input type="radio" id="product1listVariation1" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation1.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product1listVariation2" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation2.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product1listVariation3" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation3.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product1listVariation4" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation4.png" alt="">
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="catalog_productsListItemBottom">
+                            <div class="catalog_productsListItemDescription">
+                              Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас! Профессиональная
+                              консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное качество.
+                            </div>
+                              <div class="catalog_productsListItemPriceBlock">
+                                <span class="catalog_productsListItemInputCount js-inputCount">
+                                  <span class="minus"></span>
+                                  <input type="number" name="productsAmount" value="1" readonly>
+                                  <span class="plus"></span>
+                                </span>
+                                <span class="catalog_productsListItemPrice">890 ₽</span>
+                                <span class="catalog_productsListItemBonus">+ 89 баллов</span>
+                              </div>
+                              <div class="catalog_productsListItemButtons">
+                                  <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                                  <a href="#" type="button" class="btn btn-dark">
+                                      <img src="img/apple.svg" class="catalog_productsListItemButtonsIcon" alt="">
+                                      <img src="img/pay.svg" alt="Pay">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsListItem catalog_productsListItem__special" data-special="Акция">
+                      <a href="#" class="catalog_productsListItemImage">
+                          <img src="img/page_files_catalog/product2.png"
+                              title="Чехол Gel для iPhone 6 Plus/6S Plus и еще одна строчка для примера отображения"
+                              alt="Чехол Gel для iPhone 6 Plus/6S Plus и еще одна строчка для примера отображения">
+                      </a>
+                      <form>
+                      <div class="catalog_productsListItemInfo">
+                        <div class="catalog_productsListItemSku">Арт 85205<span class="catalog_productsListItemSkuSeparator"></span>В наличии 466 шт.</div>
+                          <a href="#" class="catalog_productsListItemTitle">
+                            Чехол Gel для iPhone 6 Plus/6S Plus и еще одна строчка для
+                            примера отображения
+                          </a>
+                          <div class="catalog_productsListItemVariations">
+                            <label>
+                              <input type="radio" id="product2listVariation1" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation1.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product2listVariation2" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation2.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product2listVariation3" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation3.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product2listVariation4" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation4.png" alt="">
+                              </span>
+                            </label>
+                          </div>
+                          
+                          <div class="catalog_productsListItemBottom">
+                            <div class="catalog_productsListItemDescription">
+                              Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас! Профессиональная
+                              консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное качество.
+                            </div>
+                              <div class="catalog_productsListItemPriceBlock">
+                                <span class="catalog_productsListItemInputCount js-inputCount">
+                                  <span class="minus"></span>
+                                  <input type="number" name="productsAmount" value="1" readonly>
+                                  <span class="plus"></span>
+                                </span>
+                                <span class="catalog_productsListItemPrice">890 ₽</span>
+                                <span class="catalog_productsListItemBonus">+ 89 баллов</span>
+                              </div>
+                              <div class="catalog_productsListItemButtons">
+                                  <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                                  <a href="#" type="button" class="btn btn-dark">
+                                      <img src="img/apple.svg" class="catalog_productsListItemButtonsIcon" alt="">
+                                      <img src="img/pay.svg" alt="Pay">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      </form>
+                  </li>
+                  <li class="catalog_productsListItem">
+                      <a href="#" class="catalog_productsListItemImage">
+                          <img src="img/page_files_catalog/product3.png" title="Чехол Art Nature для iPhone 6/6S"
+                              alt="Чехол Art Nature для iPhone 6/6S">
+                      </a>
+                      <form>
+                      <div class="catalog_productsListItemInfo">
+                        <div class="catalog_productsListItemSku">Арт 101111<span class="catalog_productsListItemSkuSeparator"></span>В наличии 466 шт.</div>
+                        <a href="#" class="catalog_productsListItemTitle">Чехол Art Nature для iPhone 6/6S</a>
+                          <div class="catalog_productsListItemVariations">
+                            <label>
+                              <input type="radio" id="product3listVariation1" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation1.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product3listVariation2" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation2.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product3listVariation3" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation3.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product3listVariation4" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation4.png" alt="">
+                              </span>
+                            </label>
+                          </div>
+                          
+                          <div class="catalog_productsListItemBottom">
+                            <div class="catalog_productsListItemDescription">
+                              Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас! Профессиональная
+                              консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное качество.
+                            </div>
+                            <div class="catalog_productsListItemPriceBlock">
+                              <span class="catalog_productsListItemInputCount js-inputCount">
+                                <span class="minus"></span>
+                                <input type="number" name="productsAmount" value="1" readonly>
+                                <span class="plus"></span>
+                              </span>
+                              <span class="catalog_productsListItemPrice">890 ₽</span>
+                              <span class="catalog_productsListItemBonus">+ 89 баллов</span>
+                            </div>
+                              <div class="catalog_productsListItemButtons">
+                                  <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                                  <a href="#" type="button" class="btn btn-dark">
+                                      <img src="img/apple.svg" class="catalog_productsListItemButtonsIcon" alt="">
+                                      <img src="img/pay.svg" alt="Pay">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      </form>
+                  </li>
+                  <li class="catalog_productsListItem">
+                      <a href="#" class="catalog_productsListItemImage">
+                          <img src="img/page_files_catalog/product4.png" title="Чехол Art для Samsung Galaxy S7 edge"
+                              alt="Чехол Art для Samsung Galaxy S7 edge">
+                      </a>
+                      <form>
+                      <div class="catalog_productsListItemInfo">
+                        <div class="catalog_productsListItemSku">Арт 102683<span class="catalog_productsListItemSkuSeparator"></span>В наличии 466 шт.</div>
+                        <a href="#" class="catalog_productsListItemTitle">Чехол Art для Samsung Galaxy S7 edge</a>
+                          <div class="catalog_productsListItemVariations">
+                            <label>
+                              <input type="radio" id="product4listVariation1" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation1.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product4listVariation2" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation2.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product4listVariation3" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation3.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product4listVariation4" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation4.png" alt="">
+                              </span>
+                            </label>
+                          </div>
+                          
+                          <div class="catalog_productsListItemBottom">
+                            <div class="catalog_productsListItemDescription">
+                              Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас! Профессиональная
+                              консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное качество.
+                            </div>
+                            <div class="catalog_productsListItemPriceBlock">
+                              <span class="catalog_productsListItemInputCount js-inputCount">
+                                <span class="minus"></span>
+                                <input type="number" name="productsAmount" value="1" readonly>
+                                <span class="plus"></span>
+                              </span>
+                              <span class="catalog_productsListItemPrice">890 ₽</span>
+                              <span class="catalog_productsListItemBonus">+ 89 баллов</span>
+                            </div>
+                              <div class="catalog_productsListItemButtons">
+                                  <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                                  <a href="#" type="button" class="btn btn-dark">
+                                      <img src="img/apple.svg" class="catalog_productsListItemButtonsIcon" alt="">
+                                      <img src="img/pay.svg" alt="Pay">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsListItem">
+                      <a href="#" class="catalog_productsListItemImage">
+                          <img src="img/page_files_catalog/product5.png" title="Чехол White Diamonds Liquids для iPhone X/XS"
+                              alt="Чехол White Diamonds Liquids для iPhone X/XS">
+                      </a>
+                      <form>
+                      <div class="catalog_productsListItemInfo">
+                        <div class="catalog_productsListItemSku">Арт 11250<span class="catalog_productsListItemSkuSeparator"></span>В наличии 466 шт.</div>
+                        <a href="#" class="catalog_productsListItemTitle">Чехол White Diamonds Liquids для iPhone X/XS</a>
+                          <div class="catalog_productsListItemVariations">
+                            <label>
+                              <input type="radio" id="product5listVariation1" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation1.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product5listVariation2" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation2.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product5listVariation3" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation3.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product5listVariation4" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation4.png" alt="">
+                              </span>
+                            </label>
+                          </div>
+                          
+                          <div class="catalog_productsListItemBottom">
+                            <div class="catalog_productsListItemDescription">
+                              Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас! Профессиональная
+                              консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное качество.
+                            </div>
+                            <div class="catalog_productsListItemPriceBlock">
+                              <span class="catalog_productsListItemInputCount js-inputCount">
+                                <span class="minus"></span>
+                                <input type="number" name="productsAmount" value="1" readonly>
+                                <span class="plus"></span>
+                              </span>
+                              <span class="catalog_productsListItemPrice">890 ₽</span>
+                              <span class="catalog_productsListItemBonus">+ 89 баллов</span>
+                            </div>
+                              <div class="catalog_productsListItemButtons">
+                                  <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                                  <a href="#" type="button" class="btn btn-dark">
+                                      <img src="img/apple.svg" class="catalog_productsListItemButtonsIcon" alt="">
+                                      <img src="img/pay.svg" alt="Pay">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                  </li>
+                  <li class="catalog_productsListItem">
+                      <a href="#" class="catalog_productsListItemImage">
+                          <img src="img/page_files_catalog/product6.png" title="Clamshell Case для Samsung Galaxy J2"
+                              alt="Clamshell Case для Samsung Galaxy J2">
+                      </a>
+                      <form>
+                      <div class="catalog_productsListItemInfo">
+                        <div class="catalog_productsListItemSku">Арт 86615<span class="catalog_productsListItemSkuSeparator"></span>В наличии 466 шт.</div>
+                        <a href="#" class="catalog_productsListItemTitle">Чехол White Diamonds Liquids для iPhone X/XS</a>
+                          <div class="catalog_productsListItemVariations">
+                            <label>
+                              <input type="radio" id="product6listVariation1" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation1.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product6listVariation2" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation2.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product6listVariation3" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation3.png" alt="">
+                              </span>
+                            </label>
+                            <label>
+                              <input type="radio" id="product6listVariation4" name="productVariation">
+                              <span class="catalog_productsListItemVariation">
+                                <img src="img/page_files_catalog/variation4.png" alt="">
+                              </span>
+                            </label>
+                          </div>
+                          
+                          <div class="catalog_productsListItemBottom">
+                            <div class="catalog_productsListItemDescription">
+                              Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас! Профессиональная
+                              консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное качество.
+                            </div>
+                            <div class="catalog_productsListItemPriceBlock">
+                              <span class="catalog_productsListItemInputCount js-inputCount">
+                                <span class="minus"></span>
+                                <input type="number" name="productsAmount" value="1" readonly>
+                                <span class="plus"></span>
+                              </span>
+                              <span class="catalog_productsListItemPrice">890 ₽</span>
+                              <span class="catalog_productsListItemBonus">+ 89 баллов</span>
+                            </div>
+                              <div class="catalog_productsListItemButtons">
+                                  <a href="#" type="button" class="btn btn-outline-dark">Добавить в корзину</a>
+                                  <a href="#" type="button" class="btn btn-dark">
+                                      <img src="img/apple.svg" class="catalog_productsListItemButtonsIcon" alt="">
+                                      <img src="img/pay.svg" alt="Pay">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      </form>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <div class="catalog_right cart_wrapper">
+      <div class="cart_title">
+        <span>Корзина</span>
+        <span class="cart_close"></span>
+      </div>
+      <form class="cart_form">
+      <ul class="cart list-unstyled">
+        <li class="cart_item">
+          <div class="cart_itemImage">
+            <img src="img/page_files_catalog/cartItem1.png">
+          </div>
+          <div class="cart_itemInfo">
+            <div class="cart_itemSku">Арт 55155</div>
+            <div class="cart_itemDescription">
+              Автомобильный держатель Crab Qi, с функцией беспроводной зарядки
+            </div>
+            <div class="cart_itemPriceBlock">
+              <span class="cart_itemInputCount js-inputCount">
+                <span class="minus"></span>
+                <input type="number" name="productsAmount" value="1" readonly>
+                <span class="plus"></span>
+              </span>
+              <span class="cart_itemPrice">1 990 ₽</span>
+            </div>
+          </div>
+          <span class="cart_itemDelete" title="удалить из корзины"></span>
+        </li>
+        <li class="cart_item">
+          <div class="cart_itemImage">
+            <img src="img/page_files_catalog/cartItem2.png">
+          </div>
+          <div class="cart_itemInfo">
+            <div class="cart_itemSku">Арт 101107</div>
+            <div class="cart_itemDescription">
+              Чехол Art Nature для iPhone 6/6S
+            </div>
+            <div class="cart_itemPriceBlock">
+              <span class="cart_itemInputCount js-inputCount">
+                <span class="minus"></span>
+                <input type="number" name="productsAmount" value="1" readonly>
+                <span class="plus"></span>
+              </span>
+              <span class="cart_itemPrice">890 ₽</span>
+            </div>
+          </div>
+          <span class="cart_itemDelete" title="удалить из корзины"></span>
+        </li>
+      </ul>
+      <div class="cart_footer">
+        <div class="cart_footerPromocode">
+          <input type="text" class="form-control" id="promoCode" placeholder="Промокод">
+          <a href="#" class="cart_footerPromocodeAccept"></a>
+        </div>
+        <div class="cart_footerTotal">
+          <span>Итого</span>
+          <span>
+            <span class="cart_footerBonus">+ 288 баллов</span>
+            <span class="cart_footerTotalPrice">2 880 ₽</span>
+          </span>
+        </div>
+        <div class="cart_footerButtons">
+          <a href="#" type="button" class="btn btn-dark w-100 cart_footerButton cart_footerButton__checkout">Оформить заказ</a>
+          <a href="#" type="button" class="btn btn-outline-dark cart_footerButton cart_footerButton__purchase">Купить в один клик</a>
+          <a href="#" type="button" class="btn btn-dark cart_footerButton cart_footerButton__applepay">
+            <img src="img/apple.svg" class="catalog_productsTileItemButtonsIcon" alt="">
+            <img src="img/pay.svg" alt="Pay">
+          </a>
+        </div>        
+      </div>
+      </form>
+    </div>
+
   </div>
-  <a href="/" class="btn btn-secondary">Главная</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script>
+    $(function() {
+
+      // cart toggle
+      $('#cart').on('click', function() { 
+        $('.cart_wrapper').animate({width: 'toggle'}); 
+        $('.catalog_productsTile').toggleClass('catalog_productsTile__2');
+      });
+
+      $('.cart_close').on('click', function() { 
+        $('.cart_wrapper').animate({width: 'toggle'}); 
+        $('.catalog_productsTile').toggleClass('catalog_productsTile__2');
+      });
+
+      if ($('.cart_wrapper').is(':hidden')) {
+        $('.catalog_productsTile').removeClass('catalog_productsTile__2');
+      }
+
+      // cart - delete Item
+      $('.cart_itemDelete').on('click', function() {
+        $(this).parents('.cart_item').remove();
+      });
+
+      // js-range-slider init
+      $.each($('.js-range-slider'), function() {
+        let $irsFrom = $('.js-range-slider-from', this);
+        let $irsTo = $('.js-range-slider-to', this);
+        let $irsSlider = $('.js-range-slider-range', this);
+        let min = $irsFrom.val();
+        let max = $irsTo.val();
+        
+        $irsSlider.ionRangeSlider({
+          type: 'double',
+          skin: 'round',
+          min: min,
+          max: max,
+          from: min,
+          to: max,
+          prettify_enabled: true
+        });
+
+        prettify();
+
+        $irsSlider.on('change', function() {
+          $irsFrom.val($(this).data('ionRangeSlider').result.from_pretty);
+          $irsTo.val($(this).data('ionRangeSlider').result.to_pretty);
+        });
+
+        $irsFrom.on('change', function() {
+          let formVal = +$(this).val().split(' ').join('');
+          let formValTo = +$irsTo.val().split(' ').join('');
+
+          if (formVal < min) {
+            formVal = min;            
+          } else if (formVal > max) {
+            formVal = max;        
+          } else if (formVal > formValTo) {
+            formVal = formValTo;
+          }
+
+          $(this).val(formVal);
+
+          $irsSlider.data('ionRangeSlider').update({
+            from: formVal
+          });
+        });
+
+        $irsTo.on('change', function() {
+          let formVal = +$(this).val().split(' ').join('');
+          let formValFrom = +$irsFrom.val().split(' ').join('');
+
+          if (formVal < min) {
+            formVal = min;            
+          } else if (formVal > max) {
+            formVal = max;        
+          } else if (formVal < formValFrom) {
+            formVal = formValFrom;
+          }
+
+          $(this).val(formVal);
+
+          $irsSlider.data('ionRangeSlider').update({
+            to: formVal
+          });
+        });
+
+        function prettify() {
+          $irsFrom.val($irsSlider.data('ionRangeSlider').result.from_pretty);
+          $irsTo.val($irsSlider.data('ionRangeSlider').result.to_pretty);
+        }
+      });
+
+      // catalog view toggle
+      $('#js-catalog__tile').on('click', function() {
+        $(this).addClass('active');
+        $('#js-catalog__list').removeClass('active');
+        $('.catalog_productsTile').show();
+        $('.catalog_productsList').hide();
+      });
+
+      $('#js-catalog__list').on('click', function() {
+        $(this).addClass('active');
+        $('#js-catalog__tile').removeClass('active');
+        $('.catalog_productsList').show();
+        $('.catalog_productsTile').hide();
+      });
+
+      // inputCount (js-inputCount)
+      $('.js-inputCount .minus').on('click', function() {
+        if (+$(this).siblings('input').val() > 1) {
+          $(this).siblings('input').val(+$(this).siblings('input').val() - 1);
+        }
+      });
+      $('.js-inputCount .plus').on('click', function() {
+        if (+$(this).siblings('input').val() >= 1) {
+          $(this).siblings('input').val(+$(this).siblings('input').val() + 1);
+        }
+      });
+
+    });
+  </script>
+
   //= template/footer.html
 </body>
+
 </html>
