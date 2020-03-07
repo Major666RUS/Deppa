@@ -1,5 +1,3 @@
-@import "variables";
-
 .catalog{
     * {
         box-sizing: border-box;
@@ -736,17 +734,6 @@
             height: 2.5rem;
             width: 5.125rem;
         }
-    }
-}
-
-/* Custom media queries */
-@media (min-width: 1200px) {
-    .container, 
-    .container-lg, 
-    .container-md, 
-    .container-sm, 
-    .container-xl {
-        max-width: 1168px;
     }
 }
 

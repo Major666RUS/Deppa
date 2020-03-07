@@ -7816,6 +7816,158 @@ body {
     .carousel-caption .btn {
       margin-top: 1.75rem; } }
 
+.productCarousel {
+  padding-top: 5rem;
+  padding-bottom: 120px; }
+  .productCarousel_title {
+    font-size: 2rem;
+    margin-bottom: 3.25rem;
+    text-align: center; }
+  .productCarousel_productsTile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -2rem;
+    margin-top: -4rem; }
+    .productCarousel_productsTileItem {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.5s; }
+      .productCarousel_productsTileItem > form {
+        display: flex;
+        flex-direction: column;
+        flex: 1; }
+      .productCarousel_productsTileItem__special:before {
+        content: attr(data-special);
+        position: absolute;
+        top: 4%;
+        left: 4%;
+        color: #FFFFFF;
+        font-size: 0.625rem;
+        background: #19222A;
+        border-radius: 1.6875rem;
+        padding: 0.5rem 0.75rem;
+        z-index: 2; }
+    .productCarousel_productsTile__2 .productCarousel_productsTileItem {
+      width: 100%; }
+    .productCarousel_productsTileItemImage {
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative;
+      overflow: hidden; }
+      .productCarousel_productsTileItemImage img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: none;
+        min-width: 100%;
+        min-height: 100%;
+        height: 100%;
+        width: auto;
+        display: block;
+        margin: auto; }
+    .productCarousel_productsTileItemVariations {
+      margin: 0.5rem 0 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .productCarousel_productsTileItemVariations label {
+        margin: 0; }
+      .productCarousel_productsTileItemVariations input[type="radio"] {
+        display: none; }
+    .productCarousel_productsTileItemVariation {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0 0.125rem;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      overflow: hidden;
+      cursor: pointer; }
+      .productCarousel_productsTileItemVariation:hover,
+      input[type="radio"]:checked + .productCarousel_productsTileItemVariation {
+        border-color: #7BB5B1; }
+      .productCarousel_productsTileItemVariation img {
+        width: 100%;
+        height: auto;
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid #fff;
+        border-radius: 50%; }
+    .productCarousel_productsTileItemSku {
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+      color: #888c92;
+      margin: 0 auto 0.5rem; }
+    .productCarousel_productsTileItemTitle {
+      display: block;
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.3;
+      height: 70px;
+      overflow: hidden; }
+    .productCarousel_productsTileItemBottom {
+      margin-top: auto; }
+    .productCarousel_productsTileItemPrice {
+      margin-bottom: 1.5rem;
+      line-height: 1;
+      font-size: 1.125rem;
+      font-weight: 400; }
+    .productCarousel_productsTileItemButtons {
+      display: flex;
+      justify-content: space-between; }
+      .productCarousel_productsTileItemButtons .btn {
+        font-size: 0.875rem;
+        padding: 0.8125rem 0.25rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center; }
+      .productCarousel_productsTileItemButtons > .btn:first-child {
+        flex: 3;
+        margin-right: 0.5rem; }
+      .productCarousel_productsTileItemButtons > .btn:last-child {
+        flex: 1;
+        padding: 0.8125rem 1rem; }
+      .productCarousel_productsTileItemButtonsIcon {
+        margin-bottom: 0.375rem;
+        margin-right: 0.125rem; }
+
+@media (min-width: 768px) {
+  .catalog_productsTile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -2rem;
+    margin-top: -4rem; }
+    .catalog_productsTileItem {
+      width: calc(33% - 2rem);
+      margin-right: 2rem;
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.5s; }
+      .catalog_productsTileItem__special:before {
+        content: attr(data-special);
+        position: absolute;
+        top: 4%;
+        left: 4%;
+        color: #FFFFFF;
+        font-size: 0.625rem;
+        background: #19222A;
+        border-radius: 1.6875rem;
+        padding: 0.5rem 0.75rem;
+        z-index: 2; }
+    .catalog_productsTile__2 .catalog_productsTileItem {
+      width: calc(50% - 2rem); } }
+
 .promotions_list {
   list-style: none;
   margin-bottom: 0; }
@@ -9255,15 +9407,6 @@ Build date: 2019-12-19 16:51:02
     .cart_footerButton__applepay {
       height: 2.5rem;
       width: 5.125rem; }
-
-/* Custom media queries */
-@media (min-width: 1200px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
-    max-width: 1168px; } }
 
 @media (min-width: 768px) {
   .catalog_productsWrapper {
