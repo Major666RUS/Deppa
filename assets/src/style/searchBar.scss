@@ -256,6 +256,36 @@
         outline: none;
       }
     }
+    &Results {
+      display: none;
+      position: absolute;
+      width: 100%;
+      padding: 36px 3rem 52px;
+      top: 100%;
+      left: 0;
+      z-index: 100;
+      background-color: #fff;
+      color: $gray-900;
+      font-size: .875rem;
+      line-height: 1.125rem;
+      &Line {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E8E9EA;
+        margin-bottom: 28px;
+      }
+      &Count {
+        &:after {
+          content: "•";
+          margin: 0 .625rem;
+        }
+      }
+      &Link {
+        color: #7BB5B1;
+        &:hover {
+          color: #7BB5B1;
+        }
+      }
+    }
     &__mobile {
       display: none;
     }

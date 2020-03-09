@@ -7575,6 +7575,29 @@ body {
       color: #fff; }
       .searchBar_searchInput:focus {
         outline: none; }
+    .searchBar_searchResults {
+      display: none;
+      position: absolute;
+      width: 100%;
+      padding: 36px 3rem 52px;
+      top: 100%;
+      left: 0;
+      z-index: 100;
+      background-color: #fff;
+      color: #19222A;
+      font-size: .875rem;
+      line-height: 1.125rem; }
+      .searchBar_searchResultsLine {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E8E9EA;
+        margin-bottom: 28px; }
+      .searchBar_searchResultsCount:after {
+        content: "•";
+        margin: 0 .625rem; }
+      .searchBar_searchResultsLink {
+        color: #7BB5B1; }
+        .searchBar_searchResultsLink:hover {
+          color: #7BB5B1; }
     .searchBar_search__mobile {
       display: none; }
   .searchBar_close {
@@ -8874,11 +8897,6 @@ Build date: 2019-12-19 16:51:02
     margin: 0 0.75rem;
     color: rgba(57, 64, 73, 0.5) !important; }
 
-.catalog * {
-  box-sizing: border-box; }
-  .catalog *:after, .catalog *:before {
-    box-sizing: border-box; }
-
 .catalog_grid {
   display: flex; }
 
@@ -9047,6 +9065,13 @@ Build date: 2019-12-19 16:51:02
       z-index: 2; }
   .catalog_productsTile__2 .catalog_productsTileItem {
     width: 100%; }
+  .catalog_productsTile__search {
+    flex-wrap: nowrap !important;
+    margin-bottom: 0 !important;
+    overflow: hidden; }
+  .catalog_productsTile__search .catalog_productsTileItem {
+    width: calc(20% - 2rem);
+    flex: 1 0 auto !important; }
   .catalog_productsTileItemImage {
     display: block;
     width: 100%;
@@ -9484,6 +9509,15 @@ Build date: 2019-12-19 16:51:02
       height: 2.5rem;
       width: 5.125rem; }
 
+/* Custom media queries */
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1168px; } }
+
 @media (min-width: 768px) {
   .catalog_productsWrapper {
     padding-left: 1.875rem;
@@ -9581,6 +9615,25 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield; }
+
+@media (max-width: 1439px) {
+  .catalog_productsTile__search .catalog_productsTileItem {
+    width: calc(25% - 2rem); } }
+
+@media (max-width: 1199.98px) {
+  .catalog_productsTile__search .catalog_productsTileItem {
+    width: calc(100% / 3 - 2rem); } }
+
+@media (max-width: 991.98px) {
+  .catalog_productsTile__search .catalog_productsTileItem {
+    width: calc(100% / 2 - 2rem); } }
+
+@media (max-width: 767.98px) {
+  .catalog_productsTile__search {
+    flex-wrap: wrap !important;
+    overflow: visible !important; }
+  .catalog_productsTile__search .catalog_productsTileItem {
+    width: 100%; } }
 
 .product * {
   box-sizing: border-box; }

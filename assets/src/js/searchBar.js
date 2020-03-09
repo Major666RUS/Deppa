@@ -1,7 +1,75 @@
+// function debounce(func, wait, immediate){
+//   var timeout, args, context, timestamp, result;
+//   if (null == wait) wait = 100;
+
+//   function later() {
+//     var last = Date.now() - timestamp;
+
+//     if (last < wait && last >= 0) {
+//       timeout = setTimeout(later, wait - last);
+//     } else {
+//       timeout = null;
+//       if (!immediate) {
+//         result = func.apply(context, args);
+//         context = args = null;
+//       }
+//     }
+//   };
+
+//   var debounced = function(){
+//     context = this;
+//     args = arguments;
+//     timestamp = Date.now();
+//     var callNow = immediate && !timeout;
+//     if (!timeout) timeout = setTimeout(later, wait);
+//     if (callNow) {
+//       result = func.apply(context, args);
+//       context = args = null;
+//     }
+
+//     return result;
+//   };
+
+//   debounced.clear = function() {
+//     if (timeout) {
+//       clearTimeout(timeout);
+//       timeout = null;
+//     }
+//   };
+  
+//   debounced.flush = function() {
+//     if (timeout) {
+//       result = func.apply(context, args);
+//       context = args = null;
+      
+//       clearTimeout(timeout);
+//       timeout = null;
+//     }
+//   };
+
+//   return debounced;
+// };
+
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
 $(function(){
   $('.js-search, .js-searchClose').click(function(event) {
     $('.js-searchBarNav').toggle();
     $('.js-searchInput').toggle();
+    $('.js-searchResults').hide();
     $('.searchBar_search__desktop').toggle();
     if ($(event.target).is('.js-search')) {
       $('.searchBar_close').css('display', 'flex');
@@ -37,4 +105,11 @@ $(function(){
     $('.searchBar_devicesListItem, .searchBar_devicesListItem > .searchBar_devicesList').removeClass('active');
     $('[data-id=' + $(this).attr('data-id') + ']').addClass('active');
   })
+
+  var debounceFunc = debounce(function() {
+    // имитация запроса
+    $('.js-searchResults').show();
+  }, 1000);
+
+  $('.js-searchInput').on('input', debounceFunc);
 })
