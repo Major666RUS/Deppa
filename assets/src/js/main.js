@@ -22,3 +22,4 @@
 //= ion.rangeSlider.min.js
 //= searchBar.js
 //= mainMenu.js
+//= footer.js

@@ -20,7 +20,9 @@
       list-style: none;
       &Item {
         list-style: none;
-        margin-bottom: .75rem;
+        &:not(:last-of-type) {
+          margin-bottom: .75rem;
+        }
         &__phone {
           margin-top: 1.5rem;
           margin-bottom: 1rem;
@@ -105,6 +107,74 @@
   .footer {
     &_copyrights {
       margin-top: 16px;
+    }
+  }
+}
+
+@include media-breakpoint-between(md, lg) {
+  .footer {
+    &_section {
+      margin: 0 4rem 4rem 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    padding: 52px 0 24px;
+    &_section {
+      width: 100%;
+      margin: 0 0 1.5rem;
+      &Title {
+        cursor: pointer;
+        &:not(&__support) {
+          margin-bottom: 0;
+        }
+        &:after {
+          content: "";
+          background: url('../img/arrow-bottom.svg') center no-repeat;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: .5rem;
+          width: 8px;
+          height: 4px;
+          transition: all .25s cubic-bezier(.25,.46,.45,.94);
+        }
+        &.active {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        &__support {
+          margin-bottom: 1rem;
+          &:after {
+            content: none;
+          }
+        }
+      }
+      &List {
+        margin-top: 1rem;
+        display: none;
+      }
+    }
+    &_socials {
+      &Item {
+        margin-right: 1.25rem;
+        &Link {
+          & > img {
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+    &_copyrights {
+      margin-top: 46px;
+      &Value {
+        text-align: right;
+      }
+      &Desc {
+        margin-top: 1rem;
+      }
     }
   }
 }

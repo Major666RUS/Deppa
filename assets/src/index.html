@@ -8,21 +8,39 @@
   //= template/searchBar.html
   //= template/mainMenu.html
   //= template/carousel.html
-  <div class="productCarousel container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="productCarousel_title">Хиты продаж</h2>
-        //= template/productCarousel.html
+  <div class="productCarousel">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="productCarousel_title">Хиты продаж</h2>
+          //= template/productCarousel.html
+        </div>
       </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="productCarousel_button productCarousel_button__prev" onclick="swiper[0].navigation.prevEl.click()">
+      <img src="img/carousel-arrow.svg" alt="">
+    </div>
+    <div class="productCarousel_button productCarousel_button__next" onclick="swiper[0].navigation.nextEl.click()">
+      <img src="img/carousel-arrow.svg" alt="">
     </div>
   </div>
   //= template/promotions.html
-  <div class="productCarousel container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="productCarousel_title">Новинки</h2>
-        //= template/productCarousel.html
+  <div class="productCarousel">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="productCarousel_title">Новинки</h2>
+          //= template/productCarousel.html
+        </div>
       </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="productCarousel_button productCarousel_button__prev" onclick="swiper[1].navigation.prevEl.click()">
+      <img src="img/carousel-arrow.svg" alt="">
+    </div>
+    <div class="productCarousel_button productCarousel_button__next" onclick="swiper[1].navigation.nextEl.click()">
+      <img src="img/carousel-arrow.svg" alt="">
     </div>
   </div>
   //= template/footer.html

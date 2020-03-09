@@ -1326,10 +1326,10 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="row justify-content-between">
+      <div class="row justify-content-xl-between">
         <!-- Интернет-магазин -->
-        <div class="footer_section mb-4 mb-xl-0">
-          <span class="footer_sectionTitle">Интернет-магазин</span>
+        <div class="footer_section">
+          <span class="footer_sectionTitle js-footerToggle">Интернет-магазин</span>
           <ul class="footer_sectionList">
             <li class="footer_sectionListItem">
               <a href="/" class="footer_sectionListItemLink">Доставка</a>
@@ -1352,8 +1352,8 @@
           </ul>
         </div>
         <!-- Компания -->
-        <div class="footer_section mb-4 mb-xl-0">
-          <span class="footer_sectionTitle">Компания</span>
+        <div class="footer_section">
+          <span class="footer_sectionTitle js-footerToggle">Компания</span>
           <ul class="footer_sectionList">
             <li class="footer_sectionListItem">
               <a href="/" class="footer_sectionListItemLink">О нас</a>
@@ -1367,8 +1367,8 @@
           </ul>
         </div>
         <!-- Партнерам -->
-        <div class="footer_section mb-4 mb-xl-0">
-          <span class="footer_sectionTitle">Партнерам</span>
+        <div class="footer_section">
+          <span class="footer_sectionTitle js-footerToggle">Партнерам</span>
           <ul class="footer_sectionList">
             <li class="footer_sectionListItem">
               <a href="/" class="footer_sectionListItemLink">Контакты</a>
@@ -1382,8 +1382,8 @@
           </ul>
         </div>
         <!-- Контакты -->
-        <div class="footer_section mb-4 mb-xl-0">
-          <span class="footer_sectionTitle">Контакты</span>
+        <div class="footer_section">
+          <span class="footer_sectionTitle js-footerToggle">Контакты</span>
           <ul class="footer_sectionList">
             <li class="footer_sectionListItem">
               <span class="footer_sectionListItemTitle">Адрес:</span>
@@ -1404,8 +1404,8 @@
           </ul>
         </div>
         <!-- Нужна поддержка? -->
-        <div class="footer_section mb-4 mb-xl-0">
-          <span class="footer_sectionTitle">Нужна поддержка?</span>
+        <div class="footer_section">
+          <span class="footer_sectionTitle footer_sectionTitle__support">Нужна поддержка?</span>
           <a href="mailto:test@yandex.ru" class="footer_sectionListItemLink footer_sectionListItemLink__mail">
             <img src="img/mail.svg" alt="mail" class="mr-1">
             <span class="footer_sectionListItemValue footer_sectionListItemValue__dashed">Напишите нам</span> 
@@ -1448,12 +1448,15 @@
       <div class="footer_copyrights d-flex justify-content-between">
         <div class="d-flex align-items-end">
           <img src="img/logo_footer.svg" alt="logo_footer" class="footer_copyrightsLogo">
-          <p class="footer_copyrightsDesc">Информация на сайте<br> не является публичной офертой</p>
+          <p class="footer_copyrightsDesc d-none d-md-block">Информация на сайте<br> не является публичной офертой</p>
         </div>
         <div class="d-flex flex-column">
           <span class="footer_copyrightsValue">© 2020 Deppa</span>
           <span class="footer_copyrightsValue footer_copyrightsValue__gray">Все права защищены</span>
         </div>
+      </div>
+      <div class="w-100 d-md-none">
+        <p class="footer_copyrightsDesc">Информация на сайте<br> не является публичной офертой</p>
       </div>
     </div>
   </footer>
