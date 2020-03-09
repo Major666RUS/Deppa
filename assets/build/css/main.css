@@ -7586,7 +7586,7 @@ body {
       padding: 36px 3rem 52px;
       top: 100%;
       left: 0;
-      z-index: 100;
+      z-index: 50;
       background-color: #fff;
       color: #19222A;
       font-size: .875rem;
