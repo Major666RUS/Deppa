@@ -5,6 +5,14 @@ body {
   color: $gray-900;
 }
 
+@include media-breakpoint-up(md) {
+  .modal-open {
+    & .header {
+      padding-right: calc(17px + 3rem);
+    }
+  }
+}
+
 .noScroll {
   overflow: hidden;
 }

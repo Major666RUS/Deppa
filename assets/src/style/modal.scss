@@ -1,0 +1,64 @@
+.modal {
+  &-body {
+    padding: 3.25rem 2.5rem;
+  }
+  &_close {
+    position: absolute;
+    display: flex;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: .875rem;
+    height: .875rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  &_title {
+    margin-bottom: 1.5rem;
+  }
+  &_btn {
+    height: 3rem;
+    margin-top: 2rem;
+  }
+  &_link {
+    color: #7BB5B1;
+    font-size: .75rem;
+    line-height: 1.0625rem;
+    &:hover {
+      color: #7BB5B1;
+    }
+  }
+  &_divider {
+    line-height: 1.0625rem;
+    opacity: 0.6;
+  }
+  &_socials {
+    display: flex;
+    justify-content: center;
+    &Wrapper {
+      margin-top: 2rem;
+    }
+    &Text {
+      font-size: .75rem;
+      line-height: .875rem;
+      margin-bottom: .75rem;
+      opacity: .6;
+      text-align: center;
+    }
+    &Item {
+      &:not(:last-of-type) {
+        margin-right: .75rem;
+      }
+    }
+  }
+  & .custom-control-label {
+    font-size: .75rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .modal {
+    &-dialog {
+      max-width: 400px;
+    }
+  }
+}

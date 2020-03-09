@@ -28,7 +28,7 @@
       </span>
     </div>
     <div class="header_menu">
-      <div class="header_menuItem header_menuItem__link header_menuItem__separator">
+      <div class="header_menuItem header_menuItem__link header_menuItem__separator" data-toggle="modal" data-target="#loginModal">
         <img src="img/user.svg" class="mr-2" alt="user">
         <span class="header_menuItemName header_menuItemName__dashed">Войти</span>
       </div>
@@ -2106,5 +2106,72 @@
       </div>
     </div>
   </footer>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <span class="modal_close" data-dismiss="modal" aria-label="Close">
+          <img src="../img/modal-close.svg" alt="close">
+        </span>
+        <div class="modal-body">
+          <h4 class="modal_title">Вход</h4>
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" id="login" placeholder="Электронная почта">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password" placeholder="Пароль">
+            </div>
+            <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+              <input class="custom-control-input" type="checkbox" value="remember" id="remember">
+              <label class="custom-control-label" for="remember">
+                Запомнить меня
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 modal_btn">Войти</button>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <a href="/" class="modal_link">Регистрация</a>
+              <span class="modal_divider mx-2">•</span>
+              <a href="/" class="modal_link">Забыли пароль?</a>
+            </div>
+          </form>
+          <div class="modal_socialsWrapper">
+            <div class="modal_socialsText">или продолжить через</div>
+            <ul class="modal_socials list-unstyled">
+              <li class="modal_socialsItem">
+                <a href="/" class="modal_socialsLink">
+                  <img src="../img/vk-auth.svg" alt="">
+                </a>
+              </li>
+              <li class="modal_socialsItem">
+                <a href="/" class="modal_socialsLink">
+                  <img src="../img/ok-auth.svg" alt="">
+                </a>
+              </li>
+              <li class="modal_socialsItem">
+                <a href="/" class="modal_socialsLink">
+                  <img src="../img/fb-auth.svg" alt="">
+                </a>
+              </li>
+              <li class="modal_socialsItem">
+                <a href="/" class="modal_socialsLink">
+                  <img src="../img/tg-auth.svg" alt="">
+                </a>
+              </li>
+              <li class="modal_socialsItem">
+                <a href="/" class="modal_socialsLink">
+                  <img src="../img/gp-auth.svg" alt="">
+                </a>
+              </li>
+              <li class="modal_socialsItem">
+                <a href="/" class="modal_socialsLink">
+                  <img src="../img/ya-auth.svg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
