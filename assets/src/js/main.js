@@ -23,3 +23,4 @@
 //= searchBar.js
 //= mainMenu.js
 //= footer.js
+//= modal.js

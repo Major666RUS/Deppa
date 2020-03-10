@@ -8234,20 +8234,63 @@ body {
 .modal_title {
   margin-bottom: 1.5rem; }
 
+.modal_desc {
+  font-weight: 300;
+  font-size: .75rem;
+  line-height: .875rem;
+  opacity: 0.6;
+  margin-bottom: 1.5rem; }
+  .modal_desc__dark {
+    opacity: 1; }
+
 .modal_btn {
+  display: block;
   height: 3rem;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  letter-spacing: 1px; }
+  .modal_btnText {
+    font-weight: 300;
+    font-size: .625rem;
+    line-height: 1.5;
+    text-align: center; }
+    .modal_btnText > .modal_link {
+      font-weight: 300;
+      font-size: .625rem;
+      line-height: 1.5; }
 
 .modal_link {
+  cursor: pointer;
   color: #7BB5B1;
   font-size: .75rem;
   line-height: 1.0625rem; }
   .modal_link:hover {
-    color: #7BB5B1; }
+    color: #7BB5B1;
+    text-decoration: underline; }
 
 .modal_divider {
   line-height: 1.0625rem;
   opacity: 0.6; }
+
+.modal_citySearch {
+  background: url("../../img/search-dark.svg") center left 1rem no-repeat;
+  padding-left: 44px; }
+
+.modal_cities {
+  margin-top: 2rem;
+  margin-bottom: -.75rem;
+  display: flex;
+  flex-wrap: wrap; }
+  .modal_citiesItem {
+    font-size: .875rem;
+    line-height: 1.0625rem;
+    margin-bottom: .75rem; }
+    .modal_citiesItem:nth-child(odd) {
+      width: 120px;
+      margin-right: 52px; }
+    .modal_citiesItem:nth-child(even) {
+      width: 50%; }
+    .modal_citiesItemLink {
+      opacity: .8; }
 
 .modal_socials {
   display: flex;
@@ -8264,11 +8307,29 @@ body {
     margin-right: .75rem; }
 
 .modal .custom-control-label {
-  font-size: .75rem; }
+  padding-top: .5rem;
+  font-size: .75rem;
+  line-height: 1.0625rem !important; }
+
+.custom-control-input.is-valid:checked ~ .custom-control-label::before,
+.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before {
+  background-color: transparent;
+  border-color: #e8e9ea; }
+
+.custom-control-input.is-valid ~ .custom-control-label,
+.was-validated .custom-control-input:valid ~ .custom-control-label {
+  color: #19222A; }
+
+.custom-file-label:after {
+  content: "Обзор"; }
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 400px; } }
+    max-width: 400px; }
+    .modal-dialog-city {
+      max-width: 510px; }
+    .modal-dialog-contactUs {
+      max-width: 480px; } }
 
 /**
 Ion.RangeSlider, 2.3.1

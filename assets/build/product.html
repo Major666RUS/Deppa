@@ -35,7 +35,7 @@
           <img src="img/user.svg" class="mr-2" alt="user">
           <span class="header_menuItemName header_menuItemName__dashed">Войти</span>
         </div>
-        <div class="header_menuItem header_menuItem__link header_menuItem__margin">
+        <div class="header_menuItem header_menuItem__link header_menuItem__margin" data-toggle="modal" data-target="#cityModal">
           <img src="img/map-locator.svg" class="mr-2" alt="map-locator">
           <span class="header_menuItemName header_menuItemName__dashed">Санкт-Петербург</span>
         </div>
@@ -1863,10 +1863,10 @@
         <!-- Нужна поддержка? -->
         <div class="footer_section">
           <span class="footer_sectionTitle footer_sectionTitle__support">Нужна поддержка?</span>
-          <a href="mailto:test@yandex.ru" class="footer_sectionListItemLink footer_sectionListItemLink__mail">
+          <span class="footer_sectionListItemLink footer_sectionListItemLink__mail" data-toggle="modal" data-target="#contactUsModal">
             <img src="img/mail.svg" alt="mail" class="mr-1">
             <span class="footer_sectionListItemValue footer_sectionListItemValue__dashed">Напишите нам</span> 
-          </a>
+          </span>
           <p class="footer_sectionDesc mb-4">Мы ответим на ваше обращение<br> в будние дни в течение суток</p>
           <ul class="footer_socials">
             <li class="footer_socialsItem mr-3">

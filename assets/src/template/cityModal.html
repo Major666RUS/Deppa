@@ -1,26 +1,46 @@
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-city modal-dialog-centered" role="document">
     <div class="modal-content">
       <span class="modal_close" data-dismiss="modal" aria-label="Close">
         <img src="./img/modal-close.svg" alt="close">
       </span>
       <div class="modal-body">
-        <h4 class="modal_title">Выберите город</h4>
+        <h4>Выберите город</h4>
+        <p class="modal_desc">Введите свой город в поиске или выберите город из списка</p>
         <form>
           <div class="form-group">
-            <input type="email" class="form-control" id="login" placeholder="Электронная почта">
+            <input type="email" class="form-control modal_citySearch" id="login" placeholder="Город">
           </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="password" placeholder="Пароль">
-          </div>
-          <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
-            <input class="custom-control-input" type="checkbox" value="remember" id="remember">
-            <label class="custom-control-label" for="remember">
-              Запомнить меня
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg w-100 modal_btn">Войти</button>
         </form>
+        <ul class="modal_cities list-unstyled">
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Москва</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Санкт-Петербург</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Новосибирск</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Екатеринбург</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Нижний Новгород</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Казань</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Ростов-на-Дону</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Омск</a>
+          </li>
+          <li class="modal_citiesItem">
+            <a href="/" class="modal_citiesItemLink">Самара</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

@@ -1,29 +1,39 @@
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <span class="modal_close" data-dismiss="modal" aria-label="Close">
         <img src="./img/modal-close.svg" alt="close">
       </span>
       <div class="modal-body">
-        <h4 class="modal_title">Вход</h4>
+        <h4 class="modal_title">Регистрация</h4>
         <form class="needs-validation" novalidate>
           <div class="form-group">
             <input type="email" class="form-control" id="login" placeholder="Электронная почта" required>
+            <div class="invalid-feedback">
+              Заполните это поле
+            </div>
           </div>
           <div class="form-group">
             <input type="password" class="form-control" id="password" placeholder="Пароль" required>
+            <div class="invalid-feedback">
+              Заполните это поле
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="repeatPassword" placeholder="Повторите пароль" required>
+            <div class="invalid-feedback">
+              Заполните это поле
+            </div>
           </div>
           <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
-            <input class="custom-control-input" type="checkbox" value="remember" id="remember">
-            <label class="custom-control-label" for="remember">
-              Запомнить меня
+            <input class="custom-control-input" type="checkbox" value="agreement" id="agreement" required>
+            <label class="custom-control-label" for="agreement">
+              Я согласен с <a href="/" class="modal_link">условиями обработки</a>  моих персональных данных
             </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg w-100 modal_btn">Войти</button>
+          <button type="submit" class="btn btn-primary btn-lg w-100 modal_btn">Зарегистрироваться</button>
           <div class="d-flex justify-content-center align-items-center mt-3">
-            <span class="modal_link js-registrationModal">Регистрация</span>
-            <span class="modal_divider mx-2">•</span>
-            <a href="/" class="modal_link">Забыли пароль?</a>
+            <span class="modal_link js-loginModal">Войти</span>
           </div>
         </form>
         <div class="modal_socialsWrapper">

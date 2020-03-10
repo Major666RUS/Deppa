@@ -15,21 +15,71 @@
   &_title {
     margin-bottom: 1.5rem;
   }
+  &_desc {
+    font-weight: 300;
+    font-size: .75rem;
+    line-height: .875rem;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+    &__dark {
+      opacity: 1;
+    }
+  }
   &_btn {
+    display: block;
     height: 3rem;
     margin-top: 2rem;
+    letter-spacing: 1px;
+    &Text {
+      font-weight: 300;
+      font-size: .625rem;
+      line-height: 1.5;
+      text-align: center;
+      & > .modal_link {
+        font-weight: 300;
+        font-size: .625rem;
+        line-height: 1.5;
+      }
+    }
   }
   &_link {
+    cursor: pointer;
     color: #7BB5B1;
     font-size: .75rem;
     line-height: 1.0625rem;
     &:hover {
       color: #7BB5B1;
+      text-decoration: underline;
     }
   }
   &_divider {
     line-height: 1.0625rem;
     opacity: 0.6;
+  }
+  &_citySearch {
+    background: url('../../img/search-dark.svg') center left 1rem no-repeat;
+    padding-left: 44px;
+  }
+  &_cities {
+    margin-top: 2rem;
+    margin-bottom: -.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    &Item {
+      font-size: .875rem;
+      line-height: 1.0625rem;
+      margin-bottom: .75rem;
+      &:nth-child(odd) {
+        width: 120px;
+        margin-right: 52px;
+      }
+      &:nth-child(even) {
+        width: 50%;
+      }
+      &Link {
+        opacity: .8;
+      }
+    }
   }
   &_socials {
     display: flex;
@@ -51,14 +101,37 @@
     }
   }
   & .custom-control-label {
+    padding-top: .5rem;
     font-size: .75rem;
+    line-height: 1.0625rem !important;
   }
+}
+
+.custom-control-input.is-valid:checked~.custom-control-label::before, 
+.was-validated .custom-control-input:valid:checked~.custom-control-label::before {
+  background-color: transparent;
+  border-color: #e8e9ea;
+}
+
+.custom-control-input.is-valid~.custom-control-label, 
+.was-validated .custom-control-input:valid~.custom-control-label {
+  color: $gray-900;
+}
+
+.custom-file-label:after {
+  content: "Обзор";
 }
 
 @include media-breakpoint-up(sm) {
   .modal {
     &-dialog {
       max-width: 400px;
+      &-city {
+        max-width: 510px;
+      }
+      &-contactUs {
+        max-width: 480px;
+      }
     }
   }
 }
