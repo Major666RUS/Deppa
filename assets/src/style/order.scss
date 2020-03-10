@@ -1,0 +1,337 @@
+.order {
+    * {
+        box-sizing: border-box;
+
+        &:after,
+        &:before {
+            box-sizing: border-box;
+        }
+    }
+
+    &_grid {
+        display: flex;
+    }
+
+    &_left {
+        flex: 1;
+    }
+
+    &_header {
+        margin-bottom: 5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2.375rem;
+        color: #19222A;
+    }
+
+    &_form {
+        & .form-group {
+            position: relative;
+            margin-bottom: 0.75rem;
+            &__submit {
+                margin-bottom: 0;
+                margin-top: 1.25rem;
+                &Description {
+                    display: block;
+                    margin-top: 1.25rem;
+                    font-size: 0.625rem;
+                    font-weight: 300;
+                    line-height: 150%;
+                    color: #19222A;
+                    & a {
+                        color: #7bb5b1;
+                    }
+                }
+            }
+            & label {
+                font-size: 0.75rem;
+                font-weight: 300;
+                line-height: 1;
+                color: #888c92;
+                position: absolute;
+                left: 1rem;
+                top: 0.75rem;
+            }
+        }
+        & .btn-dark {
+            background: #464C57 !important;
+            height: 3.75rem;
+            &:hover {
+                background: #19222A !important;
+            }
+        }
+    }
+
+    &_customer {
+        &Block {
+            margin-bottom: 5rem; 
+            &__action {
+                margin-bottom: 7.5rem;
+                & .btn {
+                    width: 100%;
+                }
+            }      
+            &Title {
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1.8125rem;
+                color: #19222A;
+                margin: 0;
+            }       
+            &Subtitle {
+                font-size: 1.125rem;
+                font-weight: 300;
+                line-height: 1.375rem;
+                color: #8c9195;
+                margin: 2rem 0 0 0;
+            }
+        } 
+        &Loginlink {
+            font-size: 0.75rem;
+            font-weight: 300;
+            line-height: 0.875rem;
+            margin-top: 0.5rem;
+            color: #19222A;
+            & a {
+                color: #7bb5b1;
+            }
+        }
+        
+        &Info {
+            margin-top: 1.5rem;
+            & input {
+                padding-top: 1.5rem;
+                height: 3.75rem;
+                font-size: 0.875rem;
+                font-weight: 300;
+                line-height: 1.0625rem;
+                color: #19222A;
+            }
+            & textarea {
+                padding-top: 1.5rem;
+                font-size: 0.875rem;
+                font-weight: 300;
+                line-height: 1.0625rem;
+                color: #19222A;
+            }
+            & .form-group {
+                position: relative;
+                margin-bottom: 0.75rem;
+                &__submit {
+                    margin-bottom: 0;
+                    margin-top: 1.25rem;
+                    &Description {
+                        display: block;
+                        margin-top: 1.25rem;
+                        font-size: 0.625rem;
+                        font-weight: 300;
+                        line-height: 150%;
+                        color: #19222A;
+                        & a {
+                            color: #7bb5b1;
+                        }
+                    }
+                }
+                & label {
+                    font-size: 0.875rem;
+                    font-weight: 300;
+                    line-height: 1;
+                    color: #888c92;
+                    position: absolute;
+                    left: calc(1rem + 15px);
+                    top: 1.5rem;
+                    cursor: text;
+                    transition: all 0.3s ease;
+                }
+                & input:focus + label,
+                & textarea:focus + label,
+                & .filled + label {
+                    font-size: 0.75rem;
+                    font-weight: 300;
+                    line-height: 1;
+                    color: #888c92;
+                    position: absolute;
+                    top: 0.75rem;
+                }
+            }
+        }
+        & .btn-dark {
+            background: #464C57 !important;
+            height: 3.75rem;
+            &:hover {
+                background: #1C1F27 !important;
+            }
+        }
+        &AcceptLink {
+            margin-top: 1rem;
+            font-size: 0.625rem;
+            font-weight: 300;
+            line-height: 150%;
+            color: #19222A;
+            & a {
+                color: #7bb5b1;
+            }
+        }
+    }
+    &_shippingType {
+        margin-top: 0.75rem;
+        &List {
+            margin-bottom: 0;
+            margin-top: 0.25rem;
+        }
+        & input[type="radio"] {
+            display: none;
+        }
+        & label {
+            margin: 0;
+            height: 100%;
+        }
+        &Info {
+            border: 1px solid #e8e9ea;
+            border-radius: 0.25rem;
+            padding: 1.25rem 1.5rem 1rem;
+            height: 100%;
+            cursor: pointer;
+            &:hover,
+            input[type="radio"]:checked + & {
+                border-color: #19222A;
+            }
+        }
+        &Title {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.1875rem;
+            color: #19222A;
+            margin-bottom: 0.25rem;
+        }
+        &Time {
+            font-size: 0.75rem;
+            font-weight: 300;
+            line-height: 0.875rem;
+            color: #888c92;
+            margin-bottom: 0.75rem;
+        }
+        &Cost {
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 1.0625rem;
+            color: #19222A;
+        }        
+    }
+    &_payment {
+        &Method {
+            margin-top: 0.75rem;
+            &List {
+                margin-bottom: 0;
+                margin-top: 1.25rem;
+            }
+            & input[type="radio"] {
+                display: none;
+            }
+            & label {
+                margin: 0;
+            }
+            &Info {
+                display: flex;
+                align-items: center;
+                border: 1px solid #e8e9ea;
+                border-radius: 0.25rem;
+                padding: 1.25rem 1.5rem 1rem;
+                cursor: pointer;
+                &:hover,
+                input[type="radio"]:checked + & {
+                    border-color: #19222A;
+                }
+            }
+            &Image {
+                margin-right: 1.375rem;
+            }
+            &Title {
+                font-size: 0.875rem;
+                font-weight: 400;
+                line-height: 1.1875rem;
+                color: #19222A;
+                margin-bottom: 0.25rem;
+            }
+            &Comment {
+                font-size: 0.75rem;
+                font-weight: 300;
+                color: #888c92;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    &_confirmType {
+        margin-top: 0.75rem;
+        &List {
+            margin-bottom: 0;
+            margin-top: 0.75rem;
+        }
+        & input[type="radio"] {
+            display: none;
+        }
+        & label {
+            margin: 0;
+            height: 100%;
+        }
+        &Info {
+            border: 1px solid #e8e9ea;
+            border-radius: 0.25rem;
+            padding: 1.25rem 1.5rem 1rem;
+            height: 100%;
+            cursor: pointer;
+            &:hover,
+            input[type="radio"]:checked + & {
+                border-color: #19222A;
+            }
+        }
+        &Title {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.1875rem;
+            color: #19222A;
+            margin-bottom: 0.25rem;
+        }
+        &Description {
+            font-size: 0.75rem;
+            font-weight: 300;
+            line-height: 0.875rem;
+            color: #888c92;
+        }  
+    }
+}
+
+@media (min-width: 768px) {
+    .order {
+        &_shippingType {
+            padding-right: 0;
+        }
+        &_customer {
+            &Block { 
+                &__action {
+                    & > * {
+                        max-width: 16.875rem;
+                    }
+                }      
+            }
+            &Info {
+                & .form-group {
+                    padding-right: 0;
+                }
+            }
+        }
+        &_payment {
+            &Method {
+                padding-right: 0;
+            }
+        }
+        &_confirmType {
+            padding-right: 0;
+        }
+    }
+}

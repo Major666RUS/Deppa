@@ -8323,6 +8323,9 @@ body {
 .custom-file-label:after {
   content: "Обзор"; }
 
+.custom-select {
+  background-image: url("../img/select_arrow.svg"); }
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px; }
@@ -10531,3 +10534,261 @@ input[type=number] {
     right: 0; }
   .product_similarProducts .swiper-button-prev {
     left: 0; } }
+
+.order * {
+  box-sizing: border-box; }
+  .order *:after, .order *:before {
+    box-sizing: border-box; }
+
+.order_grid {
+  display: flex; }
+
+.order_left {
+  flex: 1; }
+
+.order_header {
+  margin-bottom: 5rem; }
+
+.order h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.375rem;
+  color: #19222A; }
+
+.order_form .form-group {
+  position: relative;
+  margin-bottom: 0.75rem; }
+  .order_form .form-group__submit {
+    margin-bottom: 0;
+    margin-top: 1.25rem; }
+    .order_form .form-group__submitDescription {
+      display: block;
+      margin-top: 1.25rem;
+      font-size: 0.625rem;
+      font-weight: 300;
+      line-height: 150%;
+      color: #19222A; }
+      .order_form .form-group__submitDescription a {
+        color: #7bb5b1; }
+  .order_form .form-group label {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #888c92;
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem; }
+
+.order_form .btn-dark {
+  background: #464C57 !important;
+  height: 3.75rem; }
+  .order_form .btn-dark:hover {
+    background: #19222A !important; }
+
+.order_customerBlock {
+  margin-bottom: 5rem; }
+  .order_customerBlock__action {
+    margin-bottom: 7.5rem; }
+    .order_customerBlock__action .btn {
+      width: 100%; }
+  .order_customerBlockTitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.8125rem;
+    color: #19222A;
+    margin: 0; }
+  .order_customerBlockSubtitle {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+    color: #8c9195;
+    margin: 2rem 0 0 0; }
+
+.order_customerLoginlink {
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 0.875rem;
+  margin-top: 0.5rem;
+  color: #19222A; }
+  .order_customerLoginlink a {
+    color: #7bb5b1; }
+
+.order_customerInfo {
+  margin-top: 1.5rem; }
+  .order_customerInfo input {
+    padding-top: 1.5rem;
+    height: 3.75rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.0625rem;
+    color: #19222A; }
+  .order_customerInfo textarea {
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.0625rem;
+    color: #19222A; }
+  .order_customerInfo .form-group {
+    position: relative;
+    margin-bottom: 0.75rem; }
+    .order_customerInfo .form-group__submit {
+      margin-bottom: 0;
+      margin-top: 1.25rem; }
+      .order_customerInfo .form-group__submitDescription {
+        display: block;
+        margin-top: 1.25rem;
+        font-size: 0.625rem;
+        font-weight: 300;
+        line-height: 150%;
+        color: #19222A; }
+        .order_customerInfo .form-group__submitDescription a {
+          color: #7bb5b1; }
+    .order_customerInfo .form-group label {
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1;
+      color: #888c92;
+      position: absolute;
+      left: calc(1rem + 15px);
+      top: 1.5rem;
+      cursor: text;
+      transition: all 0.3s ease; }
+    .order_customerInfo .form-group input:focus + label,
+    .order_customerInfo .form-group textarea:focus + label,
+    .order_customerInfo .form-group .filled + label {
+      font-size: 0.75rem;
+      font-weight: 300;
+      line-height: 1;
+      color: #888c92;
+      position: absolute;
+      top: 0.75rem; }
+
+.order_customer .btn-dark {
+  background: #464C57 !important;
+  height: 3.75rem; }
+  .order_customer .btn-dark:hover {
+    background: #1C1F27 !important; }
+
+.order_customerAcceptLink {
+  margin-top: 1rem;
+  font-size: 0.625rem;
+  font-weight: 300;
+  line-height: 150%;
+  color: #19222A; }
+  .order_customerAcceptLink a {
+    color: #7bb5b1; }
+
+.order_shippingType {
+  margin-top: 0.75rem; }
+  .order_shippingTypeList {
+    margin-bottom: 0;
+    margin-top: 0.25rem; }
+  .order_shippingType input[type="radio"] {
+    display: none; }
+  .order_shippingType label {
+    margin: 0;
+    height: 100%; }
+  .order_shippingTypeInfo {
+    border: 1px solid #e8e9ea;
+    border-radius: 0.25rem;
+    padding: 1.25rem 1.5rem 1rem;
+    height: 100%;
+    cursor: pointer; }
+    .order_shippingTypeInfo:hover,
+    input[type="radio"]:checked + .order_shippingTypeInfo {
+      border-color: #19222A; }
+  .order_shippingTypeTitle {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    color: #19222A;
+    margin-bottom: 0.25rem; }
+  .order_shippingTypeTime {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 0.875rem;
+    color: #888c92;
+    margin-bottom: 0.75rem; }
+  .order_shippingTypeCost {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.0625rem;
+    color: #19222A; }
+
+.order_paymentMethod {
+  margin-top: 0.75rem; }
+  .order_paymentMethodList {
+    margin-bottom: 0;
+    margin-top: 1.25rem; }
+  .order_paymentMethod input[type="radio"] {
+    display: none; }
+  .order_paymentMethod label {
+    margin: 0; }
+  .order_paymentMethodInfo {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e8e9ea;
+    border-radius: 0.25rem;
+    padding: 1.25rem 1.5rem 1rem;
+    cursor: pointer; }
+    .order_paymentMethodInfo:hover,
+    input[type="radio"]:checked + .order_paymentMethodInfo {
+      border-color: #19222A; }
+  .order_paymentMethodImage {
+    margin-right: 1.375rem; }
+  .order_paymentMethodTitle {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    color: #19222A;
+    margin-bottom: 0.25rem; }
+  .order_paymentMethodComment {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #888c92;
+    line-height: 1;
+    display: flex;
+    align-items: center; }
+
+.order_confirmType {
+  margin-top: 0.75rem; }
+  .order_confirmTypeList {
+    margin-bottom: 0;
+    margin-top: 0.75rem; }
+  .order_confirmType input[type="radio"] {
+    display: none; }
+  .order_confirmType label {
+    margin: 0;
+    height: 100%; }
+  .order_confirmTypeInfo {
+    border: 1px solid #e8e9ea;
+    border-radius: 0.25rem;
+    padding: 1.25rem 1.5rem 1rem;
+    height: 100%;
+    cursor: pointer; }
+    .order_confirmTypeInfo:hover,
+    input[type="radio"]:checked + .order_confirmTypeInfo {
+      border-color: #19222A; }
+  .order_confirmTypeTitle {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    color: #19222A;
+    margin-bottom: 0.25rem; }
+  .order_confirmTypeDescription {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 0.875rem;
+    color: #888c92; }
+
+@media (min-width: 768px) {
+  .order_shippingType {
+    padding-right: 0; }
+  .order_customerBlock__action > * {
+    max-width: 16.875rem; }
+  .order_customerInfo .form-group {
+    padding-right: 0; }
+  .order_paymentMethod {
+    padding-right: 0; }
+  .order_confirmType {
+    padding-right: 0; } }

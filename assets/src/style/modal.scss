@@ -122,6 +122,10 @@
   content: "Обзор";
 }
 
+.custom-select {
+  background-image: url("../img/select_arrow.svg");
+}
+
 @include media-breakpoint-up(sm) {
   .modal {
     &-dialog {
