@@ -39,10 +39,10 @@
             display: flex;
             align-items: center;
             margin-top: 2rem;
-            color: #19222A;
+            color: $gray-900;
             & img {
                 margin-right: 0.75rem;
-                fill: #19222A;
+                fill: $gray-900;
             }
         }
     }
@@ -65,7 +65,7 @@
             &__small {
                 font-weight: 300;
                 font-size: 0.875rem;
-                color: #888c92;
+                color: $gray-500;
                 text-align: center;
                 margin-bottom: 0;
             }
@@ -201,7 +201,7 @@
                     left: 4%;
                     color: #FFFFFF;
                     font-size: 0.625rem;
-                    background: #19222A;
+                    background: $gray-900;
                     border-radius: 1.6875rem;
                     padding: 0.5rem 0.75rem;
                     z-index: 2;
@@ -277,7 +277,7 @@
             &ItemSku {
                 font-size: 0.75rem;
                 line-height: 0.875rem;
-                color: #888c92;
+                color: $gray-500;
                 margin: 0 auto 0.5rem;
             }
             &ItemTitle {
@@ -351,7 +351,7 @@
             &ItemSku {
                 font-size: 0.75rem;
                 font-weight: 300;
-                color: #888c92;
+                color: $gray-500;
                 line-height: 0.875rem;
                 margin-bottom: 0.5rem;
                 display: flex;
@@ -369,7 +369,7 @@
             }
             &ItemTitle {
                 display: block;
-                color: #19222A;
+                color: $gray-900;
                 font-size: 1.125rem;
                 font-weight: 300;
                 line-height: 1.3;
@@ -435,7 +435,7 @@
                     border-radius: 0.25rem;
                     border: 1px solid #e8e9ea;
                     padding: 0.75rem 1.25rem;
-                    color: #888c92;
+                    color: $gray-500;
                     text-align: center;
                     font-size: 0.875rem;
                     line-height: 1.6025rem;
@@ -453,7 +453,7 @@
                     background-image: url('../img/minus.svg');
                     background-repeat: no-repeat;
                     background-position: right center;
-                    color: #19222A;
+                    color: $gray-900;
                     z-index: 1;
                     cursor: pointer;
                 }
@@ -465,7 +465,7 @@
                     background-image: url('../img/plus.svg');
                     background-repeat: no-repeat;
                     background-position: left center;
-                    color: #19222A;
+                    color: $gray-900;
                     z-index: 1;
                     cursor: pointer;
                 }
@@ -473,13 +473,13 @@
             &ItemPrice {
                 display: block;
                 margin: 0 1rem 0 0;
-                color: #19222A;
+                color: $gray-900;
                 font-size: 1.125rem;
                 font-weight: 400;
                 line-height: 1.375rem;
             }
             &ItemBonus {
-                color: #888c92;
+                color: $gray-500;
                 font-size: 0.75rem;
                 font-weight: 300;
                 line-height: 0.875rem;
@@ -575,7 +575,7 @@
     &_itemSku {
         font-size: 0.75rem;
         font-weight: 300;
-        color: #888c92;
+        color: $gray-500;
         line-height: 0.875rem;
         margin-bottom: 0.25rem;
         display: flex;
@@ -584,7 +584,7 @@
     &_itemDescription {
         font-size: 0.875rem;
         line-height: 130%;
-        color: #19222A;
+        color: $gray-900;
         margin-bottom: 0.5rem;
     }
     &_itemPriceBlock {
@@ -602,7 +602,7 @@
             border-radius: 0.25rem;
             border: 1px solid #e8e9ea;
             padding: 0.75rem 1.25rem;
-            color: #888c92;
+            color: $gray-500;
             text-align: center;
             font-size: 0.875rem;
             line-height: 1.6025rem;
@@ -620,7 +620,7 @@
             background-image: url('../img/minus.svg');
             background-repeat: no-repeat;
             background-position: right center;
-            color: #19222A;
+            color: $gray-900;
             z-index: 1;
             cursor: pointer;
         }
@@ -632,7 +632,7 @@
             background-image: url('../img/plus.svg');
             background-repeat: no-repeat;
             background-position: left center;
-            color: #19222A;
+            color: $gray-900;
             z-index: 1;
             cursor: pointer;
         }
@@ -672,7 +672,7 @@
             height: 2.5rem;
             padding-left: 1rem;
             padding-right: 3rem;
-            color: #888c92;
+            color: $gray-500;
             font-size: 0.875rem;
             font-weight: 300;
             line-height: 1.0625rem;
@@ -688,13 +688,17 @@
             background-repeat: no-repeat;
             background-position: left center;
             cursor: pointer;
+            &__accepted {
+                pointer-events: none;
+                background-image: url('../img/cart_bonus_accepted.svg');
+            }
         }
     }
     &_footerTotal {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: #19222A;
+        color: $gray-900;
         font-size: 0.875rem;
         font-weight: 400;
         line-height: 1.0625rem;
@@ -704,11 +708,11 @@
         font-size: 0.75rem;
         font-weight: 300;
         line-height: 0.875rem;
-        color: #888c92;
+        color: $gray-500;
         margin-right: 0.5rem;
     }
     &_footerTotalPrice {
-        color: #19222A;
+        color: $gray-900;
         font-size: 1.125rem;
         font-weight: 400;
         line-height: 1.375rem;
@@ -734,17 +738,6 @@
             height: 2.5rem;
             width: 5.125rem;
         }
-    }
-}
-
-/* Custom media queries */
-@media (min-width: 1200px) {
-    .container, 
-    .container-lg, 
-    .container-md, 
-    .container-sm, 
-    .container-xl {
-        max-width: 1168px;
     }
 }
 

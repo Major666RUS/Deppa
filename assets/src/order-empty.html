@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    //= template/head.html
+</head>
+
+<body class="order">
+    //= template/header.html
+    //= template/searchBar.html
+
+    <div class="order_grid">
+        <div class="order_left order_wrapper mw-100">
+            <div class="container">
+                //= template/breadcrumbsOrder.html
+
+                <div class="order_header row">
+                    <h1 class="col-12 p-md-0">Оформление заказа</h1>
+                </div>
+
+                <div class="order_customer row">
+
+                    <div class="order_customerBlock col-lg-8 col-md-12 col-sm-12 p-md-0">
+                        <div class="row">
+                            <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Получатель</h2>
+                            <div class="order_customerLoginlink col-lg-12 col-md-12 col-sm-12">
+                                Уже зарегистрированы? <a href="#">Войдите</a>
+                            </div>
+                        </div>
+                        <div class="order_customerInfo row align-items-center">
+                            <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" class="floating-input form-control" id="orderFormInputName" required>
+                                <label for="orderFormInputName">Ваше имя</label>
+                            </div>
+                            <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
+                                <input type="email" class="floating-input form-control" id="orderFormInputEmail"
+                                    required>
+                                <label for="orderFormInputEmail">Электронная почта</label>
+                            </div>
+                            <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" class="floating-input form-control" id="orderFormInputPhone"
+                                    required>
+                                <label for="orderFormInputPhone">Телефон</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order_customerBlock col-lg-8 col-md-12 col-sm-12 p-md-0">
+                        <div class="row">
+                            <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Доставка</h2>
+                        </div>
+                        <div class="order_customerBlockSubtitle">Как доставить</div>
+                        <ul class="order_shippingTypeList row list-unstyled">
+                            <li class="order_shippingType col-lg-4 col-md-4 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="orderShippingType1" name="orderShippingType">
+                                    <div class="order_shippingTypeInfo w-100">
+                                        <div class="order_shippingTypeTitle">
+                                            Курьером до квартиры
+                                        </div>
+                                        <div class="order_shippingTypeTime">
+                                            2 часа - 2 дня
+                                        </div>
+                                        <div class="order_shippingTypeCost">
+                                            210 ₽ - 500 ₽
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="order_shippingType col-lg-4 col-md-4 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="orderShippingType2" name="orderShippingType">
+                                    <div class="order_shippingTypeInfo w-100">
+                                        <div class="order_shippingTypeTitle">
+                                            До пункта выдачи
+                                        </div>
+                                        <div class="order_shippingTypeTime">
+                                            1 день
+                                        </div>
+                                        <div class="order_shippingTypeCost">
+                                            210 ₽ - 500 ₽
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="order_shippingType col-lg-4 col-md-4 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="orderShippingType3" name="orderShippingType">
+                                    <div class="order_shippingTypeInfo w-100">
+                                        <div class="order_shippingTypeTitle">
+                                            Почтой
+                                        </div>
+                                        <div class="order_shippingTypeTime">
+                                            1-3 дня
+                                        </div>
+                                        <div class="order_shippingTypeCost">
+                                            210 ₽ - 500 ₽
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="order_customerBlock col-lg-8 col-md-12 col-sm-12 p-md-0">
+                        <div class="row">
+                            <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Способ оплаты</h2>
+                        </div>
+                        <div class="row">
+                            <div class="order_paymentBlock col-lg-8 col-md-8 col-sm-12">
+                                <ul class="order_paymentMethodList row list-unstyled">
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod1" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/delivery.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        При получении
+                                                    </div>
+                                                    <div class="order_paymentMethodComment">
+                                                        Наличными или картой
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod2" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/creditcard.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        Банковская карта
+                                                    </div>
+                                                    <div class="order_paymentMethodComment">
+                                                        Онлайн скидка 2%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod3" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/sberbank.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        Сбербанк-онлайн
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod4" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/alfabank.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        Альфа-клик
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod5" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/yandexmoney.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        Яндекс-деньги
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod6" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/qiwi.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        QIWI-кошелек
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod7" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/webmoney.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        Webmoney
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="order_paymentMethod col-lg-6 col-md-6 col-sm-12">
+                                        <label class="w-100">
+                                            <input type="radio" id="orderPaymentMethod8" name="orderPaymentMethod">
+                                            <div class="order_paymentMethodInfo w-100">
+                                                <div class="order_paymentMethodImage">
+                                                    <img src="img/bill.svg">
+                                                </div>
+                                                <div>
+                                                    <div class="order_paymentMethodTitle">
+                                                        Счет для юр. лиц
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order_customerBlock col-lg-8 col-md-12 col-sm-12 p-md-0">
+                        <div class="row">
+                            <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Подтверждение заказа</h2>
+                        </div>
+                        <ul class="order_confirmTypeList row list-unstyled">
+                            <li class="order_confirmType col-lg-4 col-md-4 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="orderConfirmType1" name="orderConfirmType">
+                                    <div class="order_confirmTypeInfo w-100">
+                                        <div class="order_confirmTypeTitle">
+                                            По СМС
+                                        </div>
+                                        <div class="order_confirmTypeDescription">
+                                            Оператор позвонит только если часть товара отсутствует или условия
+                                            доставки притерпят изменения
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="order_confirmType col-lg-4 col-md-4 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="orderConfirmType2" name="orderConfirmType">
+                                    <div class="order_confirmTypeInfo w-100">
+                                        <div class="order_confirmTypeTitle">
+                                            По телефону
+                                        </div>
+                                        <div class="order_confirmTypeDescription">
+                                            Оператор позвонит для уточнения деталей заказа
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="order_customerBlock__action col-lg-8 col-md-12 col-sm-12 p-md-0">
+                        <button type="submit" class="btn btn-dark">
+                            Создать заказ
+                        </button>
+                        <div class="order_customerAcceptLink">
+                            Создавая заказ, вы соглашаетесь с <a href="#">условиями обработки</a> персональных данных
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="order_right cart_wrapper">
+            <div class="cart_title">
+                <span>Корзина</span>
+                <span class="cart_close"></span>
+            </div>
+            <form class="cart_form">
+                <ul class="cart list-unstyled">
+                    <li class="cart_item">
+                        <div class="cart_itemImage">
+                            <img src="img/page_files_catalog/cartItem1.png">
+                        </div>
+                        <div class="cart_itemInfo">
+                            <div class="cart_itemSku">Арт 55155</div>
+                            <div class="cart_itemDescription">
+                                Автомобильный держатель Crab Qi, с функцией беспроводной зарядки
+                            </div>
+                            <div class="cart_itemPriceBlock">
+                                <span class="cart_itemInputCount js-inputCount">
+                                    <span class="minus"></span>
+                                    <input type="number" name="productsAmount" value="1" readonly>
+                                    <span class="plus"></span>
+                                </span>
+                                <span class="cart_itemPrice">1 990 ₽</span>
+                            </div>
+                        </div>
+                        <span class="cart_itemDelete" title="удалить из корзины"></span>
+                    </li>
+                    <li class="cart_item">
+                        <div class="cart_itemImage">
+                            <img src="img/page_files_catalog/cartItem2.png">
+                        </div>
+                        <div class="cart_itemInfo">
+                            <div class="cart_itemSku">Арт 101107</div>
+                            <div class="cart_itemDescription">
+                                Чехол Art Nature для iPhone 6/6S
+                            </div>
+                            <div class="cart_itemPriceBlock">
+                                <span class="cart_itemInputCount js-inputCount">
+                                    <span class="minus"></span>
+                                    <input type="number" name="productsAmount" value="1" readonly>
+                                    <span class="plus"></span>
+                                </span>
+                                <span class="cart_itemPrice">890 ₽</span>
+                            </div>
+                        </div>
+                        <span class="cart_itemDelete" title="удалить из корзины"></span>
+                    </li>
+                </ul>
+                <div class="cart_footer">
+                    <div class="cart_footerPromocode">
+                        <input type="text" class="form-control" id="promoCode" placeholder="Промокод" value="GIFT">
+                        <a href="#" class="cart_footerPromocodeAccept cart_footerPromocodeAccept__accepted"></a>
+                    </div>
+                    <div class="cart_footerTotal">
+                        <span>Итого</span>
+                        <span>
+                            <span class="cart_footerBonus">+ 288 баллов</span>
+                            <span class="cart_footerTotalPrice">2 880 ₽</span>
+                        </span>
+                    </div>
+                    <div class="cart_footerButtons">
+                        <a href="#" type="button"
+                            class="btn btn-dark w-100 cart_footerButton cart_footerButton__checkout">Оформить заказ</a>
+                        <a href="#" type="button"
+                            class="btn btn-outline-dark cart_footerButton cart_footerButton__purchase">Купить в один
+                            клик</a>
+                        <a href="#" type="button" class="btn btn-dark cart_footerButton cart_footerButton__applepay">
+                            <img src="img/apple.svg" class="order_productsTileItemButtonsIcon" alt="">
+                            <img src="img/pay.svg" alt="Pay">
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    //= template/footer.html
+
+    <script>
+        $(function () {
+
+            // cart toggle
+            $('#cart').on('click', function () {
+                $('.cart_wrapper').animate({
+                    width: 'toggle'
+                });
+            });
+
+            $('.cart_close').on('click', function () {
+                $('.cart_wrapper').animate({
+                    width: 'toggle'
+                });
+            });
+
+            // cart - delete Item
+            $('.cart_itemDelete').on('click', function () {
+                $(this).parents('.cart_item').remove();
+            });
+
+            // inputCount (js-inputCount)
+            $('.js-inputCount .minus').on('click', function () {
+                if (+$(this).siblings('input').val() > 1) {
+                    $(this).siblings('input').val(+$(this).siblings('input').val() - 1);
+                }
+            });
+            $('.js-inputCount .plus').on('click', function () {
+                if (+$(this).siblings('input').val() >= 1) {
+                    $(this).siblings('input').val(+$(this).siblings('input').val() + 1);
+                }
+            });
+
+            // js-dropdown (toggle)
+            $('.js-dropdown__trigger').on('click', function () {
+                $('.js-dropdown[data-toggle="' + $(this).attr('data-toggle') + '"').slideToggle();
+            });
+
+            //  floating-label check (if input is filled, the label is over it,
+            //  if not, the label works like a placeholder)
+            $.each($('.floating-label .floating-input'), function () {
+                if ($(this).val()) {
+                    $(this).addClass('filled');
+                }
+            });
+
+            $('.floating-label .floating-input').on('change', function () {
+                if ($(this).val()) {
+                    $(this).addClass('filled');
+                } else {
+                    $(this).removeClass('filled');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
