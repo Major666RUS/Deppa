@@ -466,6 +466,9 @@
 
 @media (max-width: 768px) {
     .order {
+        &_right {
+            display: none !important;
+        }
         &_header {
             margin-bottom: 2.5rem;
         }

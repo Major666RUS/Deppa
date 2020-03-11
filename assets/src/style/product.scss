@@ -882,6 +882,9 @@
 
 @media (max-width: 768px) {
     .product {
+        &_right {
+            display: none !important;
+        }
         &_photo {
             padding: 0 15px;
             margin-bottom: 1rem;
