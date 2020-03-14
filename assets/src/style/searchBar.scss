@@ -4,6 +4,10 @@
   background-color: $gray-900;
   color: #fff;
   position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   &_nav {
     display: flex;
     list-style: none;
@@ -265,6 +269,7 @@
       left: 0;
       z-index: 50;
       background-color: #fff;
+      box-shadow: 0 1px 0 #E8E9EA;
       color: $gray-900;
       font-size: .875rem;
       line-height: 1.125rem;
@@ -304,6 +309,9 @@
     & > img {
       cursor: pointer;
     }
+    &Mobile {
+      display: none;
+    }
   }
   &_cart {
     position: relative;
@@ -332,21 +340,81 @@
     padding: 0 1.25rem;
     flex-direction: row-reverse;
     &_nav,
-    &_cart {
-      display: none;
+    &_cart,
+    &_close {
+      display: none !important;
     }
     &_search {
       margin-right: .75rem;
       &Input {
         display: block !important;
-        font-size: 1rem;
+        font-size: .875rem;
       }
       &__desktop {
-        display: none;
+        display: none !important;
       }
       &__mobile {
-        display: block;
+        display: flex;
+      }
+      &Results {
+        padding: 1.25rem;
+        &Line {
+          display: none !important;
+          &__mobile {
+            display: flex !important;
+            margin: 0;
+            padding: 0;
+            border: none;
+          }
+        }
       }
     }
+    &_closeMobile {
+      display: none;
+      cursor: pointer;
+      margin-left: .75rem;
+    }
+    & .catalog_productsTile {
+      margin: 0;
+      &Item {
+        margin: 0 0 1rem 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E8E9EA;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        &:before {
+          content: none;
+        }
+        &Image {
+          width: 3rem;
+          max-width: 3rem;
+          height: 3rem;
+          flex: 1 0 auto;
+          padding: 0;
+          margin-right: .375rem;
+        }
+        &Title {
+          margin-bottom: .25rem;
+        }
+        &Price {
+          margin: 0;
+        }
+        &Variations,
+        &Sku,
+        &Buttons {
+          display: none;
+        }
+        & > form {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-between(md, xl) {
+  .searchBar {
+    //
   }
 }

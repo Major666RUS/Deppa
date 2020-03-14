@@ -5,6 +5,7 @@
   line-height: 1.6;
   color: $gray-300;
   &_section {
+    position: relative;
     padding-left: 15px;
     padding-right: 15px;
     &Title {
@@ -100,6 +101,11 @@
         opacity: 0.4;
       }
     }
+    &Block {
+      position: absolute;
+      left: 15px;
+      top: calc(100% + 40px + 3px);
+    }
   }
 }
 
@@ -115,6 +121,9 @@
   .footer {
     &_section {
       margin: 0 4rem 4rem 0;
+    }
+    &_copyrightsBlock {
+      top: calc(100% + 5rem + 3px);
     }
   }
 }

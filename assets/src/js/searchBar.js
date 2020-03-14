@@ -25,6 +25,7 @@ $(function(){
     }
     else {
       $('.searchBar_close').hide();
+      $('.js-searchInput').val('');
     }
   });
   $('.js-catalog').click(function(event) {
@@ -55,9 +56,27 @@ $(function(){
   })
 
   var debounceFunc = debounce(function() {
+
     // имитация запроса
-    $('.js-searchResults').show();
+    //if (window.innerWidth > 979) {
+      $('.js-searchResults').show();
+    //}
   }, 1000);
 
-  $('.js-searchInput').on('input', debounceFunc);
+  $('.js-searchClear').on('click', function() {
+    $('.js-searchInput').val('');
+    $('.js-searchResults').hide();
+    $('.searchBar_closeMobile').css('display', 'none');
+  });
+
+  $('.js-searchInput').on('input', function() {
+    if (window.innerWidth < 979) {
+      if ($('.js-searchInput').val()) {
+        $('.searchBar_closeMobile').css('display', 'flex');
+      } else {
+        $('.searchBar_closeMobile').css('display', 'none');
+      }
+    }
+    debounceFunc();
+  });
 })

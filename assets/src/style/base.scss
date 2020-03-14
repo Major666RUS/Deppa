@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  // padding-top: calc(70px + 62px);
   font-family: "PF Beau Sans Pro", Helvetica, sans-serif;
   font-size: 16px;
   color: $gray-900;
@@ -15,6 +15,10 @@ body {
 
 .noScroll {
   overflow: hidden;
+}
+
+.rouble {
+  vertical-align: inherit;
 }
 
 @media (max-width: 979px) {
