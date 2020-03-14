@@ -18500,12 +18500,14 @@ $(function(){
     // имитация запроса
     //if (window.innerWidth > 979) {
       $('.js-searchResults').show();
+      $('body').addClass('noScroll');
     //}
   }, 1000);
 
   $('.js-searchClear').on('click', function() {
     $('.js-searchInput').val('');
     $('.js-searchResults').hide();
+    $('body').removeClass('noScroll');
     $('.searchBar_closeMobile').css('display', 'none');
   });
 
