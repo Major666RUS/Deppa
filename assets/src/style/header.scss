@@ -169,8 +169,8 @@
 
 @media (max-width: 979px) {
   .header {
-    position: fixed;
-    height: 64px;
+    position: fixed !important;
+    height: 64px !important;
     &_menu {
       display: none;
     }

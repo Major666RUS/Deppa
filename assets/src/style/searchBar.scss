@@ -4,7 +4,6 @@
   background-color: $gray-900;
   color: #fff;
   position: relative;
-  transition: top .25s linear;
   top: 0;
   left: 0;
   right: 0;
@@ -337,8 +336,8 @@
 
 @media (max-width: 979px) {
   .searchBar {
-    position: fixed;
-    top: 64px;
+    position: fixed !important;
+    top: 64px !important;
     height: 52px;
     padding: 0 1.25rem;
     flex-direction: row-reverse;
