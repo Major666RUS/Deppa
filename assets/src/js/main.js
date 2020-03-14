@@ -29,55 +29,60 @@
 $(function(){
   var scrollDif = window.scrollY
 
-  if (window.scrollY < 70) {
-    $('body').css('paddingTop', '0px');
-    $('.searchBar').removeClass('position-fixed');
-    $('.header').removeClass('position-fixed');
-    $('.searchBar').css('top', '0px');
-  } else {
-    if (window.innerWidth < 980) {
-      $('body').css('paddingTop', '116px');
-      $('.searchBar').css('top', '64px');
-    } else {
-      $('body').css('paddingTop', '132px');
-      $('.searchBar').css('top', '70px');
-    }
-    $('.searchBar').addClass('position-fixed');
-    $('.header').addClass('position-fixed');
-  }
-
-  $(window).on('scroll', function(e) {
-    scrollDif = window.scrollY - scrollDif;
-    
-    if (scrollDif > 10) {
-      if (window.scrollY >= 70) {
-        if (window.innerWidth < 980) {
-          $('body').css('paddingTop', '52px');
-        } else {
-          $('body').css('paddingTop', '62px');
-        }
-        $('.searchBar').addClass('position-fixed');
-        $('.searchBar').css('top', '0px');
-        $('.header').removeClass('position-fixed');
-      }
-    } else if (scrollDif < -10) {
+  function scrollInit() {
+    if (window.innerWidth >= 980) {
       if (window.scrollY < 70) {
         $('body').css('paddingTop', '0px');
         $('.searchBar').removeClass('position-fixed');
         $('.header').removeClass('position-fixed');
         $('.searchBar').css('top', '0px');
       } else {
-        if (window.innerWidth < 980) {
-          $('body').css('paddingTop', '116px');
-          $('.searchBar').css('top', '64px');
-        } else {
-          $('body').css('paddingTop', '132px');
-          $('.searchBar').css('top', '70px');
-        }
+        $('body').css('paddingTop', '132px');
+        $('.searchBar').css('top', '70px');
+        $('.searchBar').addClass('position-fixed');
         $('.header').addClass('position-fixed');
       }
     }
+    else {
+      $('.searchBar').css('top', '64px');
+      $('body').css('paddingTop', '116px');
+    }
+  }
 
-    scrollDif = window.scrollY;
+  scrollInit();
+
+  $(window).on('resize', scrollInit);
+
+  $(window).on('scroll', function(e) {
+    if (window.innerWidth >= 980) {
+      scrollDif = window.scrollY - scrollDif;
+      if (scrollDif > 10) {
+        if (window.scrollY >= 70) {
+          $('body').css('paddingTop', '62px');
+          $('.searchBar').addClass('position-fixed');
+          $('.searchBar').css('top', '0px');
+          $('.header').animate({
+            height: '0'
+          }, 250, 'linear', function() {
+            $('.header').removeClass('position-fixed');
+          })
+        }
+      } else if (scrollDif < -10) {
+        if (window.scrollY < 70) {
+          $('body').css('paddingTop', '0px');
+          $('.searchBar').removeClass('position-fixed');
+          $('.header').removeClass('position-fixed');
+          $('.searchBar').css('top', '0px');
+        } else {
+          $('body').css('paddingTop', '132px');
+          $('.searchBar').css('top', '70px');
+          $('.header').addClass('position-fixed');
+          $('.header').animate({
+            height: '70px'
+          }, 250, 'linear');
+        }
+      }
+      scrollDif = window.scrollY;
+    }
   })
 })

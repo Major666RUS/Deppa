@@ -7245,7 +7245,7 @@ body {
 
 @media (max-width: 979px) {
   body {
-    padding-top: 64px; } }
+    padding-top: 116px; } }
 
 .btn-lg, .btn-group-lg > .btn {
   font-size: .875rem;
@@ -7383,6 +7383,7 @@ body {
 
 @media (max-width: 979px) {
   .header {
+    position: fixed;
     height: 64px; }
     .header_menu {
       display: none; }
@@ -7396,6 +7397,7 @@ body {
   background-color: #19222A;
   color: #fff;
   position: relative;
+  transition: top .25s linear;
   top: 0;
   left: 0;
   right: 0;
@@ -7644,6 +7646,8 @@ body {
 
 @media (max-width: 979px) {
   .searchBar {
+    position: fixed;
+    top: 64px;
     height: 52px;
     padding: 0 1.25rem;
     flex-direction: row-reverse; }
