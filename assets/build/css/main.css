@@ -7582,7 +7582,6 @@ body {
       line-height: 1.375rem;
       letter-spacing: 0.05em;
       width: 100%;
-      -webkit-appearance: none;
       color: #fff; }
       .searchBar_searchInput:focus {
         outline: none; }
