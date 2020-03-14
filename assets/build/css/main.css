@@ -7663,7 +7663,7 @@ body {
         display: flex; }
       .searchBar_searchResults {
         padding: 1.25rem;
-        max-height: calc(100vh - 64px - 52px);
+        max-height: calc(99vh - 64px - 52px);
         overflow-y: auto; }
         .searchBar_searchResultsLine {
           display: none !important; }
