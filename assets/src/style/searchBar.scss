@@ -360,6 +360,8 @@
       }
       &Results {
         padding: 1.25rem;
+        max-height: 350px;
+        overflow: auto;
         &Line {
           display: none !important;
           &__mobile {

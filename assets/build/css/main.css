@@ -7662,7 +7662,9 @@ body {
       .searchBar_search__mobile {
         display: flex; }
       .searchBar_searchResults {
-        padding: 1.25rem; }
+        padding: 1.25rem;
+        max-height: 350px;
+        overflow: auto; }
         .searchBar_searchResultsLine {
           display: none !important; }
           .searchBar_searchResultsLine__mobile {
