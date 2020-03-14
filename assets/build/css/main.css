@@ -7238,7 +7238,8 @@ body {
     padding-right: calc(17px + 3rem); } }
 
 .noScroll {
-  overflow: hidden; }
+  overflow: hidden;
+  pointer-events: none; }
 
 .rouble {
   vertical-align: inherit; }
@@ -7400,7 +7401,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100; }
+  z-index: 100;
+  pointer-events: auto; }
   .searchBar_nav {
     display: flex;
     list-style: none;
