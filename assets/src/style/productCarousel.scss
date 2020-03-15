@@ -45,18 +45,6 @@
 					flex-direction: column;
 					flex: 1;
 				}
-				&__special:before {
-					content: attr(data-special);
-					position: absolute;
-					top: 4%;
-					left: 4%;
-					color: #FFFFFF;
-					font-size: 0.625rem;
-					background: #19222A;
-					border-radius: 1.6875rem;
-					padding: 0.5rem 0.75rem;
-					z-index: 2;
-				}
 			}
 			&__2 &Item {
 				width: 100%;
@@ -207,18 +195,6 @@
           flex-direction: column;
           position: relative;
           transition: all 0.5s;
-          &__special:before {
-              content: attr(data-special);
-              position: absolute;
-              top: 4%;
-              left: 4%;
-              color: #FFFFFF;
-              font-size: 0.625rem;
-              background: #19222A;
-              border-radius: 1.6875rem;
-              padding: 0.5rem 0.75rem;
-              z-index: 2;
-          }
         }
         &__2 &Item {
             width: calc(50% - 2rem);

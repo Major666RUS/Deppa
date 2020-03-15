@@ -9,13 +9,14 @@
 
     &_jumbotron {
         background: $catalog-header-background;
-        background-size: cover;
+        background-position: left center;
+        background-size: 100vw;
         padding: 0;
         position: relative;
         &Text {
             width: 100%;
             height: 100%;
-            padding: 90px 0 120px;
+            padding: 95px 0;
             background: rgba(25,34,42,.4);
         }
     }
@@ -35,6 +36,9 @@
         border: 1px solid #e8e9ea;
         border-radius: 0.25rem;
         padding: 2.5rem 1.5rem 2rem;
+        &Column {
+            padding-right: 0;
+        }
         &Clear {
             display: flex;
             align-items: center;
@@ -44,6 +48,16 @@
                 margin-right: 0.75rem;
                 fill: $gray-900;
             }
+        }
+        &Apply {
+            width: 100%;
+            margin-top: 1.5rem;
+            height: 3rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -56,6 +70,19 @@
             padding: 2rem 0;
             &:first-child {
                 padding-top: 0;
+            }
+            & .form-control {
+                padding-left: 0.375rem;
+                padding-right: 0.375rem;
+            }
+            &__range {
+                margin-top: 1.25rem;
+            }
+            &__short {
+                width: 10%;
+            }
+            &__long {
+                width: 34%;
             }
         }
         &Label {
@@ -71,7 +98,10 @@
             }
         }
         &Range {
-            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
         &Checkbox {
             min-height: 1.875rem;
@@ -117,6 +147,7 @@
         &Wrapper {
             padding-left: 1.25rem;
             padding-right: 1.25rem;
+            margin-bottom: 5rem;
         }
         &Filters {
             display: flex;
@@ -194,17 +225,23 @@
                     flex-direction: column;
                     flex: 1;
                 }
-                &__special:before {
+                &__special &Image:before {
                     content: attr(data-special);
                     position: absolute;
-                    top: 4%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    bottom: 4%;
                     left: 4%;
                     color: #FFFFFF;
                     font-size: 0.625rem;
-                    background: $gray-900;
-                    border-radius: 1.6875rem;
+                    background: #394049;
+                    border-radius: 50%;
+                    text-transform: uppercase;
                     padding: 0.5rem 0.75rem;
                     z-index: 2;
+                    width: 68px;
+                    height: 68px;
                 }
             }
             &__2 &Item {
@@ -329,13 +366,33 @@
                 display: flex;
                 align-items: flex-start;
                 & form {
-                    max-width: 70%;
+                    max-width: calc(100% - 268px - 1rem);
+                }
+                &__special &Image:before {
+                    content: attr(data-special);
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    bottom: 4%;
+                    left: 4%;
+                    color: #FFFFFF;
+                    font-size: 0.625rem;
+                    background: #394049;
+                    border-radius: 50%;
+                    text-transform: uppercase;
+                    padding: 0.5rem 0.75rem;
+                    z-index: 2;
+                    width: 68px;
+                    height: 68px;
                 }
             }
             &ItemImage {
                 display: block;
                 margin-right: 1rem;
-                max-width: 30%;
+                max-width: 268px;
+                width: 268px;
+                position: relative;
                 flex: 1;
                 & img {
                     max-width: 100%;
@@ -487,10 +544,9 @@
             }
             &ItemButtons {
                 display: flex;
-                align-items: center;
                 & .btn {
                     width: 11.375rem;
-                    height: 3rem;
+                    min-height: 3rem;
                     margin-right: 0.5rem;
                     font-size: 0.875rem;
                     padding: 0.8125rem 0.25rem;
@@ -515,20 +571,26 @@
 .cart {
     padding: 1.5rem 2rem 2rem;
     &_wrapper {
+        z-index: 22;
         display: none;
         position: sticky;
         overflow-y: scroll;
         top: 0;
         right: 0;
-        max-width: 400px;
-        width: 28%;
+        width: 400px;
         display: flex;
         flex-direction: column;
         height: 100vh;
+        background: #fff;
         border-left: 1px solid #E8E9EA;
     }
     &_title {
-        padding: 1rem 2rem;
+        padding: 1.125rem 2rem;
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background: #fff;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -794,11 +856,30 @@
     }
 }
 
+.leftColumn {
+    &__thin {
+        .container {
+            width: calc(100vw - 400px - 30px - ((100vw - 1198px)/2));
+        }
+    }
+    & .container {
+        transition: width 0.1s ease;
+    }
+}
+
+@media (min-width: 1198px) {
+    .leftColumn {
+        & .container {
+            margin-left: calc((100vw - 1198px - 15px)/2);
+            margin-right: 15px;
+        }
+    }    
+}
+
 @media (min-width: 768px) {
     .catalog {
         &_products {
             &Wrapper {
-                padding-left: 1.875rem;
                 padding-right: 0;
             }            
             &Tile {
@@ -816,17 +897,22 @@
                     flex-direction: column;
                     position: relative;
                     transition: all 0.5s;
-                    &__special:before {
+                    &__special &Image:before {
                         content: attr(data-special);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         position: absolute;
-                        top: 4%;
+                        bottom: 4%;
                         left: 4%;
                         color: #FFFFFF;
-                        font-size: 0.625rem;
-                        background: #19222A;
-                        border-radius: 1.6875rem;
+                        background: #394049;
+                        border-radius: 50%;
+                        text-transform: uppercase;
                         padding: 0.5rem 0.75rem;
                         z-index: 2;
+                        width: 68px;
+                        height: 68px;
                     }
                 }
                 &__2 &Item {
@@ -848,6 +934,20 @@
             display: none !important;
         }
     }
+    .leftColumn {
+        &__thin {
+            .container {
+                width: 100% !important;
+            }
+        }
+    }
+    .catalog {
+        &_jumbotron {
+            margin-top: 0;
+            background-size: cover;
+            background-position: center;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -856,9 +956,21 @@
             display: none !important;
         }
         &_products {
+            &ListItemImage {
+                width: 30%;
+                max-width: 30%;
+            }
+            &ListItem form {
+                width: calc(70% - 1rem);
+                max-width: calc(70% - 1rem);
+            }
+            &Wrapper {
+                padding-left: 0;
+                padding-right: 0;
+            }
             &Filters {
                 justify-content: center;
-                margin-top: 2rem;
+                margin-top: 0;
                 &Left {
                     display: flex;
                     flex-wrap: wrap;
@@ -868,17 +980,92 @@
                 }
                 &Right {
                     margin-left: auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    & .modal-dialog {
+                        margin: 0;
+                        & .modal-title {
+                            font-weight: 400;
+                        }
+                        & .modal-header {
+                            padding-top: 1.25rem;
+                            padding-bottom: 1.25rem;
+                        }
+                        & .modal-body,
+                        & .catalog_filtersColumn {
+                            padding: 0;
+                        }
+                        & .catalog_filters {
+                            border: none;
+                            padding: 1.5rem 1.25rem;
+                        }
+                        & .catalog_filtersClear {
+                            border-bottom: 1px solid #ebeced;
+                            padding-bottom: 2rem;
+                        }
+                        & .catalog_filtersApply {
+                            margin-top: 1.25rem;
+                        }
+                        & .close {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            margin: 0;
+                            width: 3.375rem;
+                            height: 4rem;
+                            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADsSURBVHgBnZLLDYJAEIZnd4++QhQDnlZOQhWWYAdagh1AB9iCHViCduBNT4abJhzU6MGLu4IGggksO8xlN/P4Mo+fDLk7YxT4+XRYQQOzHXcpkpemEAASjhwvAKT9akgoxTv6Oizu+bbjSQwszU1rLD6Z/wUwsEoIBlYL0YFpQ1SwOggrcz5v8a7dM5ODQNA1TNIxzKkE8KUQi0t0XAPWss50xqHKIE16yv90rMplVYF0J9k4IMk+G/Nxjbega2WLRYtWdR1tmI5OamEYsVXC0IotgbHidTBiK4q2ZQzurGX0OQi5aaLYHCbh9QEmAYKWYBSTJgAAAABJRU5ErkJggg==');
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            outline: none;
+                        }
+                    }
+                    & > .btn {
+                        width: 173px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #E8E9EA;
+                        box-sizing: border-box;
+                        border-radius: 4px;
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABzSURBVHgB5ZE7DoAgEEQHwyXokE4rb+JR1JtxFBttoeMUukJBYvxQKB1TbWays5s8JlRrAEjkEMFygGkidMggol2jPLE4/ILjYTiz1mHkp+7PcAqFEcWeTKGa0Sd9cnOrZmeX6WrzlzuDJyeRfIVCfis8ALAyH4mE6cIUAAAAAElFTkSuQmCC');
+                        background-position: 1rem center;
+                        background-repeat: no-repeat;
+                        font-size: 0.875rem;
+                        font-weight: 300;
+                        color: #19222A;
+                        &__active {
+                            &:after {
+                                content: '';
+                                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABbSURBVHgBdY2xEYAwDANljwcFbAAbADUUoYAWj5ARSBHGizFcaHLHN7Z0J4lgzDE4AobnV1K/Ve1ESwyi2fww7dhuhwJLj4wfOAFSmknV0zt+nYet9rlf9rpZb2i9GWPa8Oe0AAAAAElFTkSuQmCC');
+                                background-repeat: no-repeat;
+                                background-position: center top;
+                                display: inline-block;
+                                width: 6px;
+                                height: 10px;
+                            }
+                        }
+                    }
                 }
                 &Sort {
                     flex-wrap: wrap;
                     justify-content: space-between;
                     width: 100%;
-                    margin-bottom: 1rem;
+                    margin-top: 0.875rem;
                     & label {
                         margin-right: auto;
                     }
                     &Result {
                         display: none;
+                    }
+                    & .custom-select {
+                        width: 100%;
+                    }
+                }
+                &Trigger {
+                    &__tile {
+                        margin-left: auto;
                     }
                 }
             }

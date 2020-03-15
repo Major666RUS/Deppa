@@ -1,0 +1,24 @@
+.homePage {
+    &_grid {
+        display: flex;
+    }
+
+    &_left {
+        flex: 1;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .homePage {
+        &_right {
+            display: none !important;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .homePage {
+        overflow-x: hidden;
+    }
+}

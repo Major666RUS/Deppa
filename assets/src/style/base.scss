@@ -25,5 +25,8 @@ body {
 @media (max-width: 979px) {
   body {
     padding-top: 116px;
+    &.order {
+      padding-top: 62px;
+    }
   }
 }
