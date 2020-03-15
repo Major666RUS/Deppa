@@ -19,16 +19,38 @@
                 <form>
                     <div class="row">
                         <div class="product_photo col-lg-6 col-md-6 col-sm-12">
+                            <div class="product_sku d-flex d-sm-flex d-md-none d-lg-none">Арт 101108<span class="product_skuSeparator"></span>В наличии 466
+                                шт.
+                            </div>
+                            <h1 class="product_title d-block d-sm-block d-md-none d-lg-none">Чехол Art Nature для iPhone 6/6S</h1>
                             <span class="product_photoWrapper">
                                 <img src="img/page_files_product/productBigPhoto.png"
                                     alt="Чехол Art Nature для iPhone 6/6S">
                             </span>
                         </div>
                         <div class="product_info col-lg-6 col-md-6 col-sm-12">
-                            <div class="product_sku">Арт 101108<span class="product_skuSeparator"></span>В наличии 466
+                            <div class="product_variations d-flex d-sm-flex d-md-none d-lg-none">
+                                <label>
+                                    <input type="radio" id="productVariation11" name="productVariation">
+                                    <span class="product_variation"><img src="img/page_files_product/variation1.png" data-src="img/page_files_product/productBigPhoto.png"></span>
+                                </label>
+                                <label>
+                                    <input type="radio" id="productVariation12" name="productVariation">
+                                    <span class="product_variation"><img src="img/page_files_product/variation2.png" data-src="img/page_files_product/variation2.png"></span>
+                                </label>
+                                <label>
+                                    <input type="radio" id="productVariation13" name="productVariation">
+                                    <span class="product_variation"><img src="img/page_files_product/variation3.png" data-src="img/page_files_product/variation3.png"></span>
+                                </label>
+                                <label>
+                                    <input type="radio" id="productVariation14" name="productVariation">
+                                    <span class="product_variation"><img src="img/page_files_product/variation4.png" data-src="img/page_files_product/variation4.png"></span>
+                                </label>
+                            </div>
+                            <div class="product_sku d-none d-sm-none d-md-flex d-lg-flex">Арт 101108<span class="product_skuSeparator"></span>В наличии 466
                                 шт.
                             </div>
-                            <h1 class="product_title">Чехол Art Nature для iPhone 6/6S</h1>
+                            <h1 class="product_title d-none d-sm-none d-md-block d-lg-block">Чехол Art Nature для iPhone 6/6S</h1>
                             <div class="product_description">
                                 Клип Кейс Art Nature для iPhone 6/6S в интернет-магазине Deppa.ru. Закажите уже сейчас!
                                 Профессиональная консультация: 8 (800) 700 45 61. Доставка по РФ, отзывы, достойное
@@ -52,7 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row d-none d-sm-none d-md-block d-lg-block">
                         <div class="product_variations col-lg-6 col-md-6 col-sm-12">
                             <label>
                                 <input type="radio" id="productVariation1" name="productVariation">
@@ -74,7 +96,9 @@
                     </div>
                 </form>
 
-                <div class="product_tabsBlock row">
+                //= template/productTabsBlockMobile.html
+
+                <div class="product_tabsBlock row d-none d-sm-none d-md-flex d-lg-flex">
                     <nav class="col-lg-12 col-md-12 col-sm-12">
                         <div id="product_tabsNav" class="product_tabsNav nav nav-tabs" role="tablist">
                             <a href="#product_description" id="product_description-tab" class="product_tabsNavItem"
@@ -1003,6 +1027,8 @@
             // js-dropdown (toggle)
             $('.js-dropdown__trigger').on('click', function () {
                 $('.js-dropdown[data-toggle="' + $(this).attr('data-toggle') + '"').slideToggle();
+                $(this).toggleClass('js-dropdown__triggerActive');
+                return false;
             });
 
             //  floating-label check (if input is filled, the label is over it,

@@ -893,21 +893,89 @@
         &_right {
             display: none !important;
         }
+        &_sku {
+            margin-bottom: 0.5rem;
+        }
+        &_title {
+            border: none !important;
+            padding-bottom: 0;
+            margin-bottom: 1rem;
+        }
         &_photo {
             padding: 0 15px;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
+        }
+        &_variations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            & label:nth-child(4n) {
+                & .product_variation {
+                    margin-right: 0;
+                }
+            }
+        }
+        &_variation {
+            margin-top: 0.75rem;
+            margin-right: 0.5rem;
         }
         &_info {
             padding: 0 15px;
+        }
+        &_description {
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 160%;
+            color: #61666d;
+            margin-bottom: 1.25rem;
+        }
+        &_priceBlock {
+            margin-bottom: 1.5rem;
         }
         &_tabsNav {
             margin-top: -1rem;
             &Item {
                 margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 400;
+                text-transform: none;
+                color: #19222A;
+                border: none !important;
+                margin-bottom: 1rem;
+            }
+        }
+        &_tabsBlock {
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            & .js-dropdown {
+                display: none;
+                margin-bottom: 2.5rem;
+            }
+            & .js-dropdown__triggerActive + .js-dropdown {
+                display: block;
+            }
+            & .js-dropdown__trigger:after {
+                content: '';
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABnSURBVHgBdY4xDoAwCEWBOrk4aRydvVDP2As562bSxcE4GdRv0oQ0LQPw4RE+99M80hdxXXYqRNrLn+TxaZBDjYhH764jnm03bIBRoS10qwZ8Y3sNWJUDtIWgOX8FWMiRhahmvuT3BTvyMBnwSvl4AAAAAElFTkSuQmCC');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 8px;
+                height: 4px;
+                display: block;
+                margin-left: 10px;
+                transition: all .25s cubic-bezier(.25,.46,.45,.94);
+            }
+            & .js-dropdown__triggerActive:after {
+                transform: rotate(180deg);
             }
         }
         &_tabsContent {
             &Specification {
+                margin-top: 1.5rem;
                 margin-bottom: 2rem;
                 &File {
                     width: 100%;
@@ -918,12 +986,43 @@
                         width: 100%;
                     }
                 }
+                &Link {
+                    font-size: 0.75rem;
+                }
+            }
+            &Options {
+                &Barcode {
+                    text-align: left;
+                }
+            }
+            &Option {
+                &Title {
+                    width: auto;
+                    flex: 1;
+                    &:after {
+                        min-width: 40px;
+                    }
+                }
+                &Content {
+                    width: auto;
+                    flex: inherit;
+                }
+            }
+            &Review {
+                padding-bottom: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            &ShippingDetails {
+                & img,
+                & iframe {
+                    max-width: 100%;
+                }
             }
         }
         &_additionalProducts,
         &_similarProducts {
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding: 2.5rem 1rem;
+            margin-bottom: 0;
         }
     }
 }
