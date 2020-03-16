@@ -24,6 +24,7 @@
 //= mainMenu.js
 //= footer.js
 //= modal.js
+//= cart.js
 
 /* scroll script */
 $(function(){
