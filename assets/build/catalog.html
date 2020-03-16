@@ -1391,7 +1391,7 @@
 
         <div class="row">        
           
-          <div class="catalog_filtersColumn d-none d-md-block d-lg-block col-lg-3 col-md-3">
+          <div class="catalog_filtersColumn d-none d-md-block d-lg-block col-md-4">
             <div class="catalog_filters">
               <form class="catalog_filterForm">
                 <div class="form-group catalog_filterFormField">
@@ -1472,7 +1472,7 @@
               <button class="btn btn-dark catalog_filtersApply">Применить</button>
             </div>        
           </div>
-          <div class="col-lg-9 col-md-9">
+          <div class="col-md-8">
             <div class="catalog_productsWrapper">
               <div class="catalog_productsFilters">
                 <div class="catalog_productsFiltersLeft d-none d-md-flex d-lg-flex">
@@ -2313,26 +2313,40 @@
       });
 
       function checkCartVisibility(reverse) {  
+        var containerWidth = parseInt($('.container').css('maxWidth'));
+        var cartWrapperWidth = containerWidth / 12 * 3 - 15 + (($('body').innerWidth() - containerWidth) / 2);
           if (reverse) {                   
               if ($('#cart').attr('data-cart-visible') == 'hidden') {
-                  $('.leftColumn').css('width', '100%');
+                  // $('.leftColumn').css('width', '100%');
+                  $('.leftColumn .container').css({
+                    'width': containerWidth
+                  })
                   $('.leftColumn').removeClass('leftColumn__thin');
                   $('.catalog_productsTile').removeClass('catalog_productsTile__2');
                   $('#cart').attr('data-cart-visible', 'hidden');
               } else {
-                  $('.leftColumn').css('width', 'calc(100% - 400px)');
+                  // $('.leftColumn').css('width', 'calc(100% - 400px)');
+                  $('.leftColumn .container').css({
+                    'width': $('body').innerWidth() - cartWrapperWidth - (($('body').innerWidth() - containerWidth) / 2) - 15
+                  })
                   $('.leftColumn').addClass('leftColumn__thin');
                   $('.catalog_productsTile').addClass('catalog_productsTile__2');
                   $('#cart').attr('data-cart-visible', 'visible');
               }
           } else {                    
               if ($('#cart').attr('data-cart-visible') == 'visible') {
-                  $('.leftColumn').css('width', '100%');
+                  // $('.leftColumn').css('width', '100%');
+                  $('.leftColumn .container').css({
+                    'width': containerWidth
+                  })
                   $('.leftColumn').removeClass('leftColumn__thin');
                   $('.catalog_productsTile').removeClass('catalog_productsTile__2');
                   $('#cart').attr('data-cart-visible', 'hidden');
               } else {
-                  $('.leftColumn').css('width', 'calc(100% - 400px)');
+                  // $('.leftColumn').css('width', 'calc(100% - 400px)');
+                  $('.leftColumn .container').css({
+                    'width': $('body').innerWidth() - cartWrapperWidth - (($('body').innerWidth() - containerWidth) / 2) - 15
+                  })
                   $('.leftColumn').addClass('leftColumn__thin');
                   $('.catalog_productsTile').addClass('catalog_productsTile__2');
                   $('#cart').attr('data-cart-visible', 'visible');
