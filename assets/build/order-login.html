@@ -74,7 +74,7 @@
     </header>
 
     <div class="order_grid">
-        <div class="order_left leftColumn order_wrapper mw-100">
+        <div class="order_left leftColumn leftColumn__thin order_wrapper mw-100">
             <div class="container">
                 <div class="row breadcrumbs">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -638,25 +638,6 @@
 
     <script>
         $(function () {
-
-            // cart toggle
-            $('#cart').on('click', function () {
-                $('.cart_wrapper').animate({
-                    width: 'toggle'
-                });
-            });
-
-            $('.cart_close').on('click', function () {
-                $('.cart_wrapper').animate({
-                    width: 'toggle'
-                });
-            });
-
-            // cart - delete Item
-            $('.cart_itemDelete').on('click', function () {
-                $(this).parents('.cart_item').remove();
-            });
-
             // inputCount (js-inputCount)
             $('.js-inputCount .minus').on('click', function () {
                 if (+$(this).siblings('input').val() > 1) {

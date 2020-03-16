@@ -75,7 +75,7 @@
       </div>
     </header>
     <div class="product_grid">
-        <div class="product_left leftColumn product_wrapper mw-100">
+        <div class="product_left leftColumn leftColumn__thin product_wrapper mw-100">
             <section class="searchBar d-flex justify-content-between align-items-center">
               <ul class="searchBar_nav js-searchBarNav">
                 <li class="searchBar_navItem searchBar_navItem__hasChildren">
@@ -3468,48 +3468,6 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script>
         $(function () {
-            
-            // cart toggle + hook (designer fail)
-            checkCartVisibility(true);
-
-            $('#cart').on('click', function () { 
-                checkCartVisibility(); 
-                $('.cart_wrapper').animate({width: 'toggle'});
-            });
-
-            $('.cart_close').on('click', function () {
-                checkCartVisibility(); 
-                $('.cart_wrapper').animate({width: 'toggle'}); 
-            });
-
-            function checkCartVisibility(reverse) {  
-                if (reverse) {                   
-                    if ($('#cart').attr('data-cart-visible') == 'hidden') {
-                        $('.leftColumn').css('width', '100%');
-                        $('.leftColumn').removeClass('leftColumn__thin');
-                        $('#cart').attr('data-cart-visible', 'hidden');
-                    } else {
-                        $('.leftColumn').css('width', 'calc(100% - 400px)');
-                        $('.leftColumn').addClass('leftColumn__thin');
-                        $('#cart').attr('data-cart-visible', 'visible');
-                    }
-                } else {                    
-                    if ($('#cart').attr('data-cart-visible') == 'visible') {
-                        $('.leftColumn').css('width', '100%');
-                        $('.leftColumn').removeClass('leftColumn__thin');
-                        $('#cart').attr('data-cart-visible', 'hidden');
-                    } else {
-                        $('.leftColumn').css('width', 'calc(100% - 400px)');
-                        $('.leftColumn').addClass('leftColumn__thin');
-                        $('#cart').attr('data-cart-visible', 'visible');
-                    }
-                }
-            }
-
-            // cart - delete Item
-            $('.cart_itemDelete').on('click', function () {
-                $(this).parents('.cart_item').remove();
-            });
 
             // inputCount (js-inputCount)
             $('.js-inputCount .minus').on('click', function () {

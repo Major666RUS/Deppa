@@ -127,55 +127,6 @@
   //= template/registrationModal.html
   //= template/buyOneClickModal.html
   //= template/contactUsModal.html
-  <script>
-    $(function() {
-      // cart toggle + hook (designer fail)
-      checkCartVisibility(true);
-
-      $('#cart').on('click', function () { 
-          checkCartVisibility(); 
-          $('.cart_wrapper').animate({width: 'toggle'});
-          // swiper hook
-          $(window).trigger('resize');
-      });
-
-      $('.cart_close').on('click', function () {
-          checkCartVisibility(); 
-          $('.cart_wrapper').animate({width: 'toggle'}); 
-          // swiper hook
-          $(window).trigger('resize');
-      });
-
-      function checkCartVisibility(reverse) {  
-          if (reverse) {                   
-              if ($('#cart').attr('data-cart-visible') == 'hidden') {
-                  $('.leftColumn').css('width', '100%');
-                  $('.leftColumn').removeClass('leftColumn__thin');
-                  $('#cart').attr('data-cart-visible', 'hidden');
-              } else {
-                  $('.leftColumn').css('width', 'calc(100% - 400px)');
-                  $('.leftColumn').addClass('leftColumn__thin');
-                  $('#cart').attr('data-cart-visible', 'visible');
-              }
-          } else {                    
-              if ($('#cart').attr('data-cart-visible') == 'visible') {
-                  $('.leftColumn').css('width', '100%');
-                  $('.leftColumn').removeClass('leftColumn__thin');
-                  $('#cart').attr('data-cart-visible', 'hidden');
-              } else {
-                  $('.leftColumn').css('width', 'calc(100% - 400px)');
-                  $('.leftColumn').addClass('leftColumn__thin');
-                  $('#cart').attr('data-cart-visible', 'visible');
-              }
-          }
-      }
-
-      // cart - delete Item
-      $('.cart_itemDelete').on('click', function() {
-        $(this).parents('.cart_item').remove();
-      });
-    });
-  </script>
 </body>
 
 </html>
