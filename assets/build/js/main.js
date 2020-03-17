@@ -18612,14 +18612,25 @@ $(function(){
 
   checkCartVisibility(true);
 
-  $('#cart').on('click', function () { 
-      checkCartVisibility(); 
-      $('.cart_wrapper').animate({width: 'toggle'});
-  });
-
-  $('.cart_close').on('click', function () {
-      checkCartVisibility(); 
-      $('.cart_wrapper').animate({width: 'toggle'}); 
+  $('#cart, .cart_close').on('click', function () { 
+      var containerWidth = parseInt($('.container').css('maxWidth'));
+      var cartWrapperWidth = containerWidth / 12 * 3 - 15 + (($('body').innerWidth() - containerWidth) / 2);
+      if ($('#cart').attr('data-cart-visible') == 'hidden') {
+        checkCartVisibility(); 
+        $('.cart_wrapper').css('position', '');
+        $('.cart_wrapper').animate({
+          width: cartWrapperWidth
+        });
+      } else {
+        checkCartVisibility(); 
+        $('.cart_wrapper').css('position', 'fixed');
+        $('.cart_wrapper').animate({
+          width: 0
+        }); 
+      }
+      $('.catalog_productsFiltersSortResult').toggle();
+      $('.catalog_filtersColumn').toggleClass('col-md-3').toggleClass('col-md-4');
+      $('.catalog_productsWrapper').parent().toggleClass('col-md-9').toggleClass('col-md-8');
   });
 
   function checkCartVisibility(reverse) {  
@@ -18692,13 +18703,6 @@ $(function(){
   calcColumnWidth();
 
   $(window).on('resize', function() {
-    calcColumnWidth();
-  })
-  
-  $('#cart, .cart_close').click(function() {
-    $('.catalog_filtersColumn').toggleClass('col-md-3').toggleClass('col-md-4');
-    $('.catalog_productsWrapper').parent().toggleClass('col-md-9').toggleClass('col-md-8');
-    $('.catalog_productsFiltersSortResult').toggle();
     calcColumnWidth();
   })
 })

@@ -3,6 +3,7 @@ body {
   font-family: "PF Beau Sans Pro", Helvetica, sans-serif;
   font-size: 16px;
   color: $gray-900;
+  overflow-x: hidden;
 }
 
 @include media-breakpoint-up(md) {
@@ -19,7 +20,7 @@ body {
 }
 
 .rouble {
-  vertical-align: inherit;
+  font-family: Roboto;
 }
 
 @media (max-width: 979px) {

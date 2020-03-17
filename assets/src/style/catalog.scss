@@ -572,7 +572,7 @@
 .cart {
     padding: 1.5rem 2rem 2rem;
     &_wrapper {
-        z-index: 22;
+        z-index: 1000;
         display: none;
         position: sticky;
         overflow-y: scroll;
