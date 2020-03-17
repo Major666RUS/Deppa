@@ -95,6 +95,7 @@
         }
         &LoginForm {
             width: 100%;
+            max-width: 350px;
             padding-bottom: 4rem;
             border-bottom: 1px solid #E8E9EA;
             margin-bottom: 5rem;
@@ -116,6 +117,7 @@
                     height: 3rem;
                 }
                 & .custom-control-label {
+                    font-size: .75rem;
                     line-height: 1.8625rem;
                 }
                 & .custom-control-label:before {

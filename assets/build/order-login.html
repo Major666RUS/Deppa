@@ -94,49 +94,62 @@
                 <div class="order_customer row">
 
                     <div class="order_customerLoginForm col-12">
-                        <form>
-                            <div class="form-group">
-                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Электронная почта" required>                              
-                            </div>
-                            <div class="form-group">
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль" required>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox">
-                                <input class="custom-control-input" type="checkbox" value="" id="rememberMe">
-                                <label class="custom-control-label" for="rememberMe">
-                                    Запомнить меня
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-dark">Войти</button>
-                            <div class="order_customerLoginFormLinks">
-                                <a href="#">Регистрация</a>
-                                <span class="order_customerLoginFormLinksSeparator"></span>
-                                <a href="#">Забыли пароль?</a>
-                            </div>
-                            <div class="order_customerLoginFormLoginWith">
-                                или продолжить через
-                                <div class="order_customerLoginFormLoginWithLinks">
-                                    <a href="#">
-                                        <img src="img/vk_login.svg" alt="VK">
-                                    </a>
-                                    <a href="#">
-                                        <img src="img/ok_login.svg" alt="OK">
-                                    </a>
-                                    <a href="#">
-                                        <img src="img/fb_login.svg" alt="FB">
-                                    </a>
-                                    <a href="#">
-                                        <img src="img/tg_login.svg" alt="TG">
-                                    </a>
-                                    <a href="#">
-                                        <img src="img/gp_login.svg" alt="GP">
-                                    </a>
-                                    <a href="#">
-                                        <img src="img/ya_login.svg" alt="YA">
-                                    </a>
-                                </div>
-                            </div>
+                        <h4 class="modal_title">Вход</h4>
+                        <form class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="login" placeholder="Электронная почта" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="Пароль" required>
+                        </div>
+                        <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+                            <input class="custom-control-input" type="checkbox" value="remember" id="remember">
+                            <label class="custom-control-label" for="remember">
+                            Запомнить меня
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100 modal_btn">Войти</button>
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                            <span class="modal_link js-registrationModal">Регистрация</span>
+                            <span class="modal_divider mx-2">•</span>
+                            <a href="/" class="modal_link">Забыли пароль?</a>
+                        </div>
                         </form>
+                        <div class="modal_socialsWrapper">
+                        <div class="modal_socialsText">или продолжить через</div>
+                        <ul class="modal_socials list-unstyled">
+                            <li class="modal_socialsItem">
+                            <a href="/" class="modal_socialsLink">
+                                <img src="./img/vk-auth.svg" alt="">
+                            </a>
+                            </li>
+                            <li class="modal_socialsItem">
+                            <a href="/" class="modal_socialsLink">
+                                <img src="./img/ok-auth.svg" alt="">
+                            </a>
+                            </li>
+                            <li class="modal_socialsItem">
+                            <a href="/" class="modal_socialsLink">
+                                <img src="./img/fb-auth.svg" alt="">
+                            </a>
+                            </li>
+                            <li class="modal_socialsItem">
+                            <a href="/" class="modal_socialsLink">
+                                <img src="./img/tg-auth.svg" alt="">
+                            </a>
+                            </li>
+                            <li class="modal_socialsItem">
+                            <a href="/" class="modal_socialsLink">
+                                <img src="./img/gp-auth.svg" alt="">
+                            </a>
+                            </li>
+                            <li class="modal_socialsItem">
+                            <a href="/" class="modal_socialsLink">
+                                <img src="./img/ya-auth.svg" alt="">
+                            </a>
+                            </li>
+                        </ul>
+                        </div>
                     </div>
 
                     <div class="order_customerBlock col-xl-10 col-lg-10 col-md-12 col-sm-12">

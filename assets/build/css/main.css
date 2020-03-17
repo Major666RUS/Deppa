@@ -7289,8 +7289,12 @@ body {
       align-items: center; }
       .header_menuItem__link {
         cursor: pointer; }
+        .header_menuItem__link:hover {
+          opacity: .6; }
       .header_menuItemName__link {
         cursor: pointer; }
+      .header_menuItemName__link:hover {
+        opacity: .6; }
       .header_menuItemName__dashed {
         padding-bottom: .125rem;
         border-bottom: 1px dashed rgba(255, 255, 255, 0.3); }
@@ -7302,9 +7306,10 @@ body {
         line-height: 1.375rem; }
         .header_menuItemName__phone:hover {
           color: #fff;
-          text-decoration: none; }
+          text-decoration: none;
+          opacity: .6; }
       .header_menuItemName__time {
-        opacity: 0.4; }
+        opacity: 0.4 !important; }
       .header_menuItem:hover .header_menuItemName__dashed {
         border-color: transparent; }
       .header_menuItem__separator {
@@ -10948,6 +10953,7 @@ input[type=number] {
 
 .order_customerLoginForm {
   width: 100%;
+  max-width: 350px;
   padding-bottom: 4rem;
   border-bottom: 1px solid #E8E9EA;
   margin-bottom: 5rem; }
@@ -10965,6 +10971,7 @@ input[type=number] {
       width: 100%;
       height: 3rem; }
     .order_customerLoginForm form .custom-control-label {
+      font-size: .75rem;
       line-height: 1.8625rem; }
     .order_customerLoginForm form .custom-control-label:before {
       border: 1px solid #e8e9ea;

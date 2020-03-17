@@ -28,10 +28,16 @@
       $this: &;
       &__link {
         cursor: pointer;
+        &:hover {
+          opacity: .6;
+        }
       }
       &Name {
         &__link {
           cursor: pointer;
+        }
+        &__link:hover {
+          opacity: .6;
         }
         &__dashed {
           padding-bottom: .125rem;
@@ -47,10 +53,11 @@
           &:hover {
             color: $white;
             text-decoration: none;
+            opacity: .6;
           }
         }
         &__time {
-          opacity: 0.4;
+          opacity: 0.4 !important;
         }
       }
       &:hover {
