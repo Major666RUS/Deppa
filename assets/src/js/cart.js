@@ -95,4 +95,12 @@ $(function(){
   $(window).on('resize', function() {
     calcColumnWidth();
   })
+
+  if ($('.homePage_grid .cart_wrapper').length) {
+    checkCartVisibility(); 
+    $('.cart_wrapper').css('position', 'fixed');
+    $('.cart_wrapper').animate({
+      width: 0
+    }); 
+  }
 })

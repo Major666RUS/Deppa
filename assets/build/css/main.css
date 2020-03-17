@@ -7472,7 +7472,8 @@ body {
       left: 0;
       padding: 0 3rem;
       z-index: 10;
-      background-color: #fff; }
+      background-color: #fff;
+      border-bottom: 1px solid #E8E9EA; }
     .searchBar_catalogItem {
       width: 147px;
       text-align: center;
