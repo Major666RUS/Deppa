@@ -18,28 +18,31 @@
                 </div>
 
                 <div class="order_customer row">
-
+                    <form class="needs-validation" novalidate>
                     <div class="order_customerBlock col-xl-10 col-lg-10 col-md-12 col-sm-12">
                         <div class="row">
                             <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Получатель</h2>
                             <div class="order_customerLoginlink col-lg-12 col-md-12 col-sm-12">
-                                Уже зарегистрированы? <a href="#">Войдите</a>
+                                Уже зарегистрированы? <a href="#" data-toggle="modal" data-target="#loginModal">Войдите</a>
                             </div>
                         </div>
-                        <div class="order_customerInfo row align-items-center">
+                        <div class="order_customerInfo row">
                             <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
                                 <input type="text" class="floating-input form-control" id="orderFormInputName" required>
                                 <label for="orderFormInputName">Ваше имя</label>
+                                <div class="invalid-feedback">Введите имя</div>
                             </div>
                             <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
                                 <input type="email" class="floating-input form-control" id="orderFormInputEmail"
                                     required>
                                 <label for="orderFormInputEmail">Электронная почта</label>
+                                <div class="invalid-feedback">Введите email</div>
                             </div>
                             <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
                                 <input type="text" class="floating-input form-control" id="orderFormInputPhone"
                                     required>
                                 <label for="orderFormInputPhone">Телефон</label>
+                                <div class="invalid-feedback">Введите телефон</div>
                             </div>
                         </div>
                     </div>
@@ -240,7 +243,7 @@
                                 <label for="orderDetailFormInputTime">Время доставки</label>
                             </div>
                             <div class="form-group floating-label col-lg-3 col-md-3 col-sm-12">
-                                <input type="email" class="floating-input form-control" id="orderDetailFormInputCity" value="Санкт-Петербург"
+                                <input type="text" class="floating-input form-control" id="orderDetailFormInputCity" value="Санкт-Петербург"
                                     required>
                                 <label for="orderDetailFormInputCity">Город / нас. пункт</label>
                             </div>
@@ -259,7 +262,7 @@
                             </div>
                             <div class="form-group floating-label col-lg-12 col-md-12 col-sm-12">
                                 <textarea class="floating-input form-control" id="shippingFormInputComment"
-                                rows="4" required></textarea>
+                                rows="4"></textarea>
                                 <label for="shippingFormInputComment">Комментарий</label>
                             </div>
                         </div>
@@ -410,6 +413,7 @@
                                 <input type="text" class="floating-input form-control" id="INN"
                                     required>
                                 <label for="INN">Поиск компании по названию или ИНН</label>
+                                <div class="invalid-feedback">Выберите компанию</div>
                             </div>
                         </div>
                     </div>
@@ -457,7 +461,7 @@
                             Создавая заказ, вы соглашаетесь с <a href="#">условиями обработки</a> персональных данных
                         </div>
                     </div>
-
+                    </form>
                 </div>
 
             </div>
@@ -572,6 +576,11 @@
     </div>
     
     //= template/footer.html
+    //= template/loginModal.html
+    //= template/cityModal.html
+    //= template/registrationModal.html
+    //= template/buyOneClickModal.html
+    //= template/contactUsModal.html
 
     <script>
         $(function () {

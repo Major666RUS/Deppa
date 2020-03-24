@@ -355,7 +355,7 @@
                 }
                 &Icon {
                     margin-bottom: 0.375rem;
-                    margin-right: 0.125rem;
+                    margin-right: 0.375rem;
                 }
             }
         }
@@ -576,6 +576,7 @@
         display: none;
         position: sticky;
         overflow-y: scroll;
+        max-width: 405px;
         top: 0;
         right: 0;
         width: 400px;

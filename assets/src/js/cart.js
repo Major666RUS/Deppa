@@ -38,7 +38,8 @@ $(function(){
           } else {
               // $('.leftColumn').css('width', 'calc(100% - 400px)');
               $('.leftColumn .container').css({
-                'width': $('body').innerWidth() - cartWrapperWidth - (($('body').innerWidth() - containerWidth) / 2) - 15
+                'width': $('body').innerWidth() - cartWrapperWidth - (($('body').innerWidth() - containerWidth) / 2) - 15,
+                // 'minWidth': $('body').innerWidth() - Math.min(cartWrapperWidth, 405) - (($('body').innerWidth() - containerWidth) / 2) - 15
               })
               $('.leftColumn').addClass('leftColumn__thin');
               $('.catalog_productsTile').addClass('catalog_productsTile__2');
@@ -56,7 +57,8 @@ $(function(){
           } else {
               // $('.leftColumn').css('width', 'calc(100% - 400px)');
               $('.leftColumn .container').css({
-                'width': $('body').innerWidth() - cartWrapperWidth - (($('body').innerWidth() - containerWidth) / 2) - 15
+                'width': $('body').innerWidth() - cartWrapperWidth - (($('body').innerWidth() - containerWidth) / 2) - 15,
+                // 'minWidth': $('body').innerWidth() - Math.min(cartWrapperWidth, 405) - (($('body').innerWidth() - containerWidth) / 2) - 15
               })
               $('.leftColumn').addClass('leftColumn__thin');
               $('.catalog_productsTile').addClass('catalog_productsTile__2');

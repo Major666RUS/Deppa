@@ -92,28 +92,31 @@
                 </div>
 
                 <div class="order_customer row">
-
+                    <form class="needs-validation" novalidate>
                     <div class="order_customerBlock col-xl-10 col-lg-10 col-md-12 col-sm-12">
                         <div class="row">
                             <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Получатель</h2>
                             <div class="order_customerLoginlink col-lg-12 col-md-12 col-sm-12">
-                                Уже зарегистрированы? <a href="#">Войдите</a>
+                                Уже зарегистрированы? <a href="#" data-toggle="modal" data-target="#loginModal">Войдите</a>
                             </div>
                         </div>
-                        <div class="order_customerInfo row align-items-center">
+                        <div class="order_customerInfo row">
                             <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
                                 <input type="text" class="floating-input form-control" id="orderFormInputName" required>
                                 <label for="orderFormInputName">Ваше имя</label>
+                                <div class="invalid-feedback">Введите имя</div>
                             </div>
                             <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
                                 <input type="email" class="floating-input form-control" id="orderFormInputEmail"
                                     required>
                                 <label for="orderFormInputEmail">Электронная почта</label>
+                                <div class="invalid-feedback">Введите email</div>
                             </div>
                             <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
                                 <input type="text" class="floating-input form-control" id="orderFormInputPhone"
                                     required>
                                 <label for="orderFormInputPhone">Телефон</label>
+                                <div class="invalid-feedback">Введите телефон</div>
                             </div>
                         </div>
                     </div>
@@ -135,7 +138,7 @@
                                             2 часа - 2 дня
                                         </div>
                                         <div class="order_shippingTypeCost">
-                                            210 <span class="rouble">₽</span> - 500 <span class="rouble">₽</span>
+                                            210 ₽ - 500 ₽
                                         </div>
                                     </div>
                                 </label>
@@ -151,7 +154,7 @@
                                             1 день
                                         </div>
                                         <div class="order_shippingTypeCost">
-                                            210 <span class="rouble">₽</span> - 500 <span class="rouble">₽</span>
+                                            210 ₽ - 500 ₽
                                         </div>
                                     </div>
                                 </label>
@@ -167,12 +170,176 @@
                                             1-3 дня
                                         </div>
                                         <div class="order_shippingTypeCost">
-                                            210 <span class="rouble">₽</span> - 500 <span class="rouble">₽</span>
+                                            210 ₽ - 500 ₽
                                         </div>
                                     </div>
                                 </label>
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="order_customerBlock order_customerBlock__closerToTop col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                        <div class="order_customerBlockSubtitle m-0">Чем доставить</div>
+                        <ul class="order_shippingCompanyList row list-unstyled">                            
+                            <li
+                            class="order_shippingCompany col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="productShippingCompany1"
+                                        name="productShippingCompany">
+                                    <div class="order_shippingCompanyInfo w-100">
+                                        <div class="order_shippingCompanyImage">
+                                            <img src="img/shipping_department.svg">
+                                        </div>
+                                        <div>
+                                            <div class="order_shippingCompanyTitle">
+                                                Отдел доставки
+                                            </div>
+                                            <div class="order_shippingCompanyTimeCost">
+                                                <span
+                                                    class="order_shippingCompanyTime">
+                                                    1 день
+                                                </span>
+                                                <span
+                                                    class="order_shippingCompanyTimeCostSeparator"></span>
+                                                <span
+                                                    class="order_shippingCompanyCost">
+                                                    210 ₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li
+                                class="order_shippingCompany col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="productShippingCompany2"
+                                        name="productShippingCompany">
+                                    <div class="order_shippingCompanyInfo w-100">
+                                        <div class="order_shippingCompanyImage">
+                                            <img src="img/gett.svg">
+                                        </div>
+                                        <div>
+                                            <div class="order_shippingCompanyTitle">
+                                                Gett
+                                            </div>
+                                            <div class="order_shippingCompanyTimeCost">
+                                                <span
+                                                    class="order_shippingCompanyTime">
+                                                    2 часа
+                                                </span>
+                                                <span
+                                                    class="order_shippingCompanyTimeCostSeparator"></span>
+                                                <span
+                                                    class="order_shippingCompanyCost">
+                                                    500 ₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li
+                                class="order_shippingCompany col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="productShippingCompany3"
+                                        name="productShippingCompany">
+                                    <div class="order_shippingCompanyInfo w-100">
+                                        <div class="order_shippingCompanyImage">
+                                            <img src="img/boxberry.svg">
+                                        </div>
+                                        <div>
+                                            <div class="order_shippingCompanyTitle">
+                                                Boxberry
+                                            </div>
+                                            <div class="order_shippingCompanyTimeCost">
+                                                <span
+                                                    class="order_shippingCompanyTime">
+                                                    2 дня
+                                                </span>
+                                                <span
+                                                    class="order_shippingCompanyTimeCostSeparator"></span>
+                                                <span
+                                                    class="order_shippingCompanyCost">
+                                                    321 ₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li
+                                class="order_shippingCompany col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                <label class="w-100">
+                                    <input type="radio" id="productShippingCompany4"
+                                        name="productShippingCompany">
+                                    <div class="order_shippingCompanyInfo w-100">
+                                        <div class="order_shippingCompanyImage">
+                                            <img src="img/sdek.svg">
+                                        </div>
+                                        <div>
+                                            <div class="order_shippingCompanyTitle">
+                                                СДЭК
+                                            </div>
+                                            <div class="order_shippingCompanyTimeCost">
+                                                <span
+                                                    class="order_shippingCompanyTime">
+                                                    2 дня
+                                                </span>
+                                                <span
+                                                    class="order_shippingCompanyTimeCostSeparator"></span>
+                                                <span
+                                                    class="order_shippingCompanyCost">
+                                                    265 ₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="order_customerBlock order_customerBlock__closerToTop col-xl-10 col-lg-10 col-md-12 col-sm-12">
+                        <div class="order_customerBlockSubtitle m-0">
+                            Детали доставки
+                            <a href="#" class="d-sm-block d-md-none">
+                                <img src="img/map_marker.svg">Выбрать на карте
+                            </a>
+                        </div>
+                        <div class="order_customerInfo row align-items-center">
+                            <div class="form-group floating-label col-lg-3 col-md-3 col-sm-12">
+                                <select type="text" class="form-control filled custom-select" id="orderDetailFormInputTime" required>
+                                    <option>10:00 - 14:00</option>
+                                    <option>14:00 - 18:00</option>
+                                    <option>18:00 - 22:00</option>                                    
+                                </select>
+                                <label for="orderDetailFormInputTime">Время доставки</label>
+                            </div>
+                            <div class="form-group floating-label col-lg-3 col-md-3 col-sm-12">
+                                <input type="text" class="floating-input form-control" id="orderDetailFormInputCity" value="Санкт-Петербург"
+                                    required>
+                                <label for="orderDetailFormInputCity">Город / нас. пункт</label>
+                            </div>
+                            <div class="form-group floating-label col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" class="floating-input form-control" id="orderDetailFormInputAddress" value="Московский проспект, 55"
+                                    required>
+                                <label for="orderDetailFormInputAddress">Адрес</label>
+                            </div>
+                            <div class="form-group floating-label col-lg-2 col-md-2 col-sm-12">
+                                <input type="text" class="floating-input form-control" id="orderDetailFormInputApartment" value="3 этаж"
+                                    required>
+                                <label for="orderDetailFormInputApartment">Кв. / Офис</label>
+                            </div>
+                            <div class="order_customerInfoMap d-none d-md-block col-lg-12 col-md-12 col-sm-12">
+                                <img src="img/yamap_detailsform.png" style="width: 100%; height: auto;">
+                            </div>
+                            <div class="form-group floating-label col-lg-12 col-md-12 col-sm-12">
+                                <textarea class="floating-input form-control" id="shippingFormInputComment"
+                                rows="4"></textarea>
+                                <label for="shippingFormInputComment">Комментарий</label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="order_customerBlock col-xl-10 col-lg-10 col-md-12 col-sm-12">
@@ -313,6 +480,18 @@
                         </div>
                     </div>
 
+                    <div class="order_customerBlock order_customerBlock__closerToTop col-xl-10 col-lg-10 col-md-12 col-sm-12">
+                        <div class="order_customerBlockSubtitle m-0">Создавая заказ вы принимаете договор <a href="#">поставки товара</a></div>
+                        <div class="order_customerInfo order_shippingCompanyContract row align-items-center">
+                            <div class="form-group floating-label col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                                <input type="text" class="floating-input form-control" id="INN"
+                                    required>
+                                <label for="INN">Поиск компании по названию или ИНН</label>
+                                <div class="invalid-feedback">Выберите компанию</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="order_customerBlock col-xl-10 col-lg-10 col-md-12 col-sm-12">
                         <div class="row">
                             <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Подтверждение заказа</h2>
@@ -356,7 +535,7 @@
                             Создавая заказ, вы соглашаетесь с <a href="#">условиями обработки</a> персональных данных
                         </div>
                     </div>
-
+                    </form>
                 </div>
 
             </div>
@@ -524,7 +703,7 @@
                 </p>
               </li>
               <li class="footer_sectionListItem">
-                <span class="footer_sectionListItemTitle">Мы работа��м пн-пт:</span>
+                <span class="footer_sectionListItemTitle">Мы работаем пн-пт:</span>
                 <p class="footer_sectionListItemValue">9:00–18:00</p>
               </li>
             </ul>
