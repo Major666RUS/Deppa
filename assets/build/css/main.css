@@ -3460,12 +3460,10 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-columns {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
     .card-columns .card {
@@ -9361,6 +9359,11 @@ Build date: 2019-12-19 16:51:02
     line-height: 1;
     font-size: 1.125rem;
     font-weight: 400; }
+    .catalog_productsTileItemPrice__noPrice {
+      font-size: 1.125rem;
+      color: #757a7f; }
+  .catalog_productsTileItemPrice__noPrice + .catalog_productsTileItemButtons {
+    visibility: hidden; }
   .catalog_productsTileItemButtons {
     display: flex;
     justify-content: space-between; }
@@ -9485,6 +9488,12 @@ Build date: 2019-12-19 16:51:02
     display: flex;
     align-items: center;
     margin-bottom: 2.5rem; }
+    .catalog_productsListItemPriceBlock__noPrice .catalog_productsListItemInputCount {
+      display: none; }
+    .catalog_productsListItemPriceBlock__noPrice .catalog_productsListItemBonus {
+      display: none; }
+    .catalog_productsListItemPriceBlock__noPrice + .catalog_productsListItemButtons {
+      display: none; }
   .catalog_productsListItemInputCount {
     display: flex;
     align-items: center;
@@ -9533,6 +9542,9 @@ Build date: 2019-12-19 16:51:02
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.375rem; }
+    .catalog_productsListItemPrice__noPrice {
+      font-size: 1.125rem;
+      color: #757a7f; }
   .catalog_productsListItemBonus {
     color: #888C92;
     font-size: 0.75rem;

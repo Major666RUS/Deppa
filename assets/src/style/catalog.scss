@@ -334,6 +334,13 @@
                 line-height: 1;
                 font-size: 1.125rem;
                 font-weight: 400;
+                &__noPrice {
+                    font-size: 1.125rem;
+                    color: #757a7f;
+                }
+            }
+            &ItemPrice__noPrice + &ItemButtons {
+                visibility: hidden;
             }
             &ItemButtons {
                 display: flex;
@@ -482,6 +489,17 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 2.5rem;
+                &__noPrice {
+                    & .catalog_productsListItemInputCount {
+                        display: none;
+                    }
+                    & .catalog_productsListItemBonus {
+                        display: none;
+                    }
+                    & + .catalog_productsListItemButtons {
+                        display: none;
+                    }
+                }
             }
             &ItemInputCount {
                 display: flex;
@@ -536,6 +554,10 @@
                 font-size: 1.125rem;
                 font-weight: 400;
                 line-height: 1.375rem;
+                &__noPrice {
+                    font-size: 1.125rem;
+                    color: #757a7f;
+                }
             }
             &ItemBonus {
                 color: $gray-500;
