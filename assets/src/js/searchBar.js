@@ -73,7 +73,7 @@ $(function(){
   });
 
   $('.js-searchInput').on('input', function() {
-    if (window.innerWidth < 979) {
+    if (window.innerWidth < 1199) {
       if ($('.js-searchInput').val()) {
         $('.searchBar_closeMobile').css('display', 'flex');
       } else {

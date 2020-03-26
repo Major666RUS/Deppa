@@ -1,6 +1,6 @@
 .searchBar {
   height: 62px;
-  padding: 0 3rem;
+  // padding: 0 3rem;
   background-color: $gray-900;
   color: #fff;
   position: relative;
@@ -320,7 +320,7 @@
   }
   &_cart {
     position: relative;
-    margin-right: 2.125rem;
+    margin-right: 1.125rem;
     cursor: pointer;
     &Count {
       position: absolute;
@@ -339,13 +339,15 @@
   }
 }
 
-@media (max-width: 979px) {
+@media (max-width: 992px) {
   .searchBar {
     position: fixed !important;
     top: 64px !important;
     height: 52px;
-    padding: 0 1.25rem;
-    flex-direction: row-reverse;
+    // padding: 0 1.25rem;
+    & > .container {
+      flex-direction: row-reverse;
+    }
     &_nav,
     &_cart,
     &_close {
@@ -391,6 +393,7 @@
     & .catalog_productsTile {
       margin: 0;
       &Item {
+        width: 100% !important;
         margin: 0 0 1rem 0;
         padding-bottom: 1rem;
         border-bottom: 1px solid #E8E9EA;
@@ -422,6 +425,10 @@
         & > form {
           text-align: left;
         }
+      }
+      &__search {
+          flex-wrap: wrap!important;
+          overflow: visible!important;
       }
     }
   }

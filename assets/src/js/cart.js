@@ -89,7 +89,7 @@ $(function(){
       })
     }
 
-    $('.cart_wrapper').css('width', cartWrapperWidth + 'px');
+    if ($('.cart_wrapper').innerWidth() > 0) $('.cart_wrapper').css('width', cartWrapperWidth + 'px');
   }
   
   calcColumnWidth();

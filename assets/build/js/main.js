@@ -18513,7 +18513,7 @@ $(function(){
   });
 
   $('.js-searchInput').on('input', function() {
-    if (window.innerWidth < 979) {
+    if (window.innerWidth < 1199) {
       if ($('.js-searchInput').val()) {
         $('.searchBar_closeMobile').css('display', 'flex');
       } else {
@@ -18700,7 +18700,7 @@ $(function(){
       })
     }
 
-    $('.cart_wrapper').css('width', cartWrapperWidth + 'px');
+    if ($('.cart_wrapper').innerWidth() > 0) $('.cart_wrapper').css('width', cartWrapperWidth + 'px');
   }
   
   calcColumnWidth();
