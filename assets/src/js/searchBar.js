@@ -19,6 +19,7 @@ $(function(){
     $('.js-searchInput').toggle();
     $('.js-searchResults').hide();
     $('.searchBar_search__desktop').toggle();
+    $('body').removeClass('noScroll');
     if ($(event.target).is('.js-search')) {
       $('.searchBar_close').css('display', 'flex');
       $('.js-searchInput').focus();

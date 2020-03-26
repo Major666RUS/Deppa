@@ -18459,6 +18459,7 @@ $(function(){
     $('.js-searchInput').toggle();
     $('.js-searchResults').hide();
     $('.searchBar_search__desktop').toggle();
+    $('body').removeClass('noScroll');
     if ($(event.target).is('.js-search')) {
       $('.searchBar_close').css('display', 'flex');
       $('.js-searchInput').focus();
@@ -18719,7 +18720,7 @@ $(function(){
 
 /* scroll script */
 $(function(){
-  var scrollDif = window.scrollY
+  var scrollDif = window.scrollY;
 
   function scrollInit() {
     if (window.innerWidth >= 980) {
@@ -18747,5 +18748,225 @@ $(function(){
         $('.searchBar').removeClass('position-sticky');
       }
     }
-  })
-})
+  });
+
+  // Varitations
+
+  var originalSrc, originalSku, originalHref, originalTitle, originalPrice, originalInStock, original = 1;
+
+  $('.catalog_productsTileItem').hover(function() {
+    original = 1;
+  });
+
+  $('.catalog_productsListItem').hover(function() {
+    original = 1;
+  });
+
+
+  $('.catalog_productsTileItemVariationsForm').on('change', function() {
+    var $this = $(this);
+    var $productItem = $(this).parents('.catalog_productsTileItem');
+
+    $productItem.find('.catalog_productsTileItemImage img').attr('src', $this.find('input[type="radio"]:checked').attr('data-image'));
+    $productItem.find('.catalog_productsTileItemImage img').attr('alt', $this.find('input[type="radio"]:checked').attr('data-title'));
+    $productItem.find('.catalog_productsTileItemImage img').attr('title', $this.find('input[type="radio"]:checked').attr('data-title'));
+    originalSrc = $this.find('input[type="radio"]:checked').attr('data-image');
+    $productItem.find('.catalog_productsTileItemSku').html($this.find('input[type="radio"]:checked').attr('data-sku'));
+    originalSku = $this.find('input[type="radio"]:checked').attr('data-sku');
+    
+    if (+$this.find('input[type="radio"]:checked').attr('data-instock') == 1) {
+      $productItem.find('.catalog_productsTileItemPrice').removeClass('catalog_productsTileItemPrice__noPrice').html($this.find('input[type="radio"]:checked').attr('data-price') + '<span class="rouble">₽</span>');          
+      originalPrice = $this.find('input[type="radio"]:checked').attr('data-price') + '<span class="rouble">₽</span>';
+      originalInStock = 1;
+    } else {
+      $productItem.find('.catalog_productsTileItemPrice').addClass('catalog_productsTileItemPrice__noPrice').html('Нет в наличии');
+      originalPrice = 'Нет в наличии';
+      originalInStock = 0;
+    }
+
+    $productItem.find('.catalog_productsTileItemImage').attr('href', $this.find('input[type="radio"]:checked').attr('data-href'));
+    originalHref = $this.find('input[type="radio"]:checked').attr('data-href');
+    $productItem.find('.catalog_productsTileItemTitle').attr('href', $this.find('input[type="radio"]:checked').attr('data-href'));
+
+    $productItem.find('.catalog_productsTileItemTitle').html($this.find('input[type="radio"]:checked').attr('data-title'));
+    originalTitle = $this.find('input[type="radio"]:checked').attr('data-title');
+  });
+  
+  $('.catalog_productsListItem form').on('change', function() {
+    var $this = $(this);
+    var $productItem = $(this).parents('.catalog_productsListItem');
+
+    $productItem.find('.catalog_productsListItemImage img').attr('src', $this.find('input[type="radio"]:checked').attr('data-image'));
+    $productItem.find('.catalog_productsListItemImage img').attr('alt', $this.find('input[type="radio"]:checked').attr('data-title'));
+    $productItem.find('.catalog_productsListItemImage img').attr('title', $this.find('input[type="radio"]:checked').attr('data-title'));
+    originalSrc = $this.find('input[type="radio"]:checked').attr('data-image');
+    $productItem.find('.catalog_productsListItemSku > .sku').html($this.find('input[type="radio"]:checked').attr('data-sku'));
+    originalSku = $this.find('input[type="radio"]:checked').attr('data-sku');
+    
+    if (+$this.find('input[type="radio"]:checked').attr('data-instock') == 1) {
+      $productItem.find('.catalog_productsListItemPrice').removeClass('catalog_productsListItemPrice__noPrice').html($this.find('input[type="radio"]:checked').attr('data-price') + '<span class="rouble">₽</span>');          
+      $productItem.find('.catalog_productsListItemPriceBlock').removeClass('catalog_productsListItemPriceBlock__noPrice');
+      originalPrice = $this.find('input[type="radio"]:checked').attr('data-price') + '<span class="rouble">₽</span>';
+      originalInStock = 1;
+    } else {
+      $productItem.find('.catalog_productsListItemPrice').addClass('catalog_productsListItemPrice__noPrice').html('Нет в наличии');
+      $productItem.find('.catalog_productsListItemPriceBlock').addClass('catalog_productsListItemPriceBlock__noPrice');
+      originalPrice = 'Нет в наличии';
+      originalInStock = 0;
+    }
+
+    $productItem.find('.catalog_productsListItemImage').attr('href', $this.find('input[type="radio"]:checked').attr('data-href'));
+    originalHref = $this.find('input[type="radio"]:checked').attr('data-href');
+    $productItem.find('.catalog_productsListItemTitle').attr('href', $this.find('input[type="radio"]:checked').attr('data-href'));
+
+    $productItem.find('.catalog_productsListItemTitle').html($this.find('input[type="radio"]:checked').attr('data-title'));
+    originalTitle = $this.find('input[type="radio"]:checked').attr('data-title');
+  });
+
+  $('.catalog_productsTileItemVariations > label').hover(function() {
+    var $this = $(this).find('input[name="productVariation"]');
+    var $productItem = $(this).parents('.catalog_productsTileItem');
+    
+
+    if (original == 1) {
+      originalSrc = $productItem.find('.catalog_productsTileItemImage img').attr('src');
+      originalSku = $productItem.find('.catalog_productsTileItemSku').html();
+      originalInStock = $productItem.find('.catalog_productsTileItemPrice .rouble').length > 0 ? 1 : 0;
+      originalPrice = $productItem.find('.catalog_productsTileItemPrice').html();
+      originalHref = $productItem.find('.catalog_productsTileItemImage').attr('href');
+      originalTitle =  $productItem.find('.catalog_productsTileItemTitle').html();
+      original = 0;
+    }
+
+    $productItem.find('.catalog_productsTileItemImage img').attr('src', $this.attr('data-image'));
+    $productItem.find('.catalog_productsTileItemImage img').attr('title', $this.attr('data-title'));
+    $productItem.find('.catalog_productsTileItemImage img').attr('alt', $this.attr('data-title'));
+    $productItem.find('.catalog_productsTileItemSku').html($this.attr('data-sku'));
+
+    if (+$this.attr('data-instock') == 1) {
+      $productItem.find('.catalog_productsTileItemPrice').removeClass('catalog_productsTileItemPrice__noPrice').html($this.attr('data-price') + '<span class="rouble">₽</span>');          
+    } else {
+      $productItem.find('.catalog_productsTileItemPrice').addClass('catalog_productsTileItemPrice__noPrice').html('Нет в наличии');
+    }
+
+    $productItem.find('.catalog_productsTileItemImage').attr('href', $this.attr('data-href'));
+    $productItem.find('.catalog_productsTileItemTitle').attr('href', $this.attr('data-href'));
+
+    $productItem.find('.catalog_productsTileItemTitle').html($this.attr('data-title'));
+
+  }, function() {
+    var $this = $(this).find('input[name="productVariation"]');
+    var $productItem = $(this).parents('.catalog_productsTileItem');
+
+    $productItem.find('.catalog_productsTileItemImage img').attr('src', originalSrc);
+    $productItem.find('.catalog_productsTileItemImage img').attr('title', originalTitle);
+    $productItem.find('.catalog_productsTileItemImage img').attr('alt', originalTitle);
+    $productItem.find('.catalog_productsTileItemSku').html(originalSku);
+
+    if (+originalInStock == 1) {
+      $productItem.find('.catalog_productsTileItemPrice').removeClass('catalog_productsTileItemPrice__noPrice').html(originalPrice);          
+    } else {
+      $productItem.find('.catalog_productsTileItemPrice').addClass('catalog_productsTileItemPrice__noPrice').html('Нет в наличии');
+    }
+
+    $productItem.find('.catalog_productsTileItemImage').attr('href', originalHref);
+    $productItem.find('.catalog_productsTileItemTitle').attr('href', originalHref);
+
+    $productItem.find('.catalog_productsTileItemTitle').html(originalTitle);
+  });
+  
+  //List
+
+  $('.catalog_productsListItemVariations > label').hover(function() {
+    var $this = $(this).find('input[name="productVariation"]');
+    var $productItem = $(this).parents('.catalog_productsListItem');
+    
+
+    if (original == 1) {
+      originalSrc = $productItem.find('.catalog_productsListItemImage img').attr('src');
+      originalSku = $productItem.find('.catalog_productsListItemSku > .sku').html();
+      originalInStock = $productItem.find('.catalog_productsListItemPrice .rouble').length > 0 ? 1 : 0;
+      originalPrice = $productItem.find('.catalog_productsListItemPrice').html();
+      originalHref = $productItem.find('.catalog_productsListItemImage').attr('href');
+      originalTitle =  $productItem.find('.catalog_productsListItemTitle').html();
+      original = 0;
+    }
+
+    $productItem.find('.catalog_productsListItemImage img').attr('src', $this.attr('data-image'));
+    $productItem.find('.catalog_productsListItemImage img').attr('title', $this.attr('data-title'));
+    $productItem.find('.catalog_productsListItemImage img').attr('alt', $this.attr('data-title'));
+    $productItem.find('.catalog_productsListItemSku > .sku').html($this.attr('data-sku'));
+
+    if (+$this.attr('data-instock') == 1) {
+      $productItem.find('.catalog_productsListItemPrice').removeClass('catalog_productsListItemPrice__noPrice').html($this.attr('data-price') + '<span class="rouble">₽</span>');          
+      $productItem.find('.catalog_productsListItemPriceBlock').removeClass('catalog_productsListItemPriceBlock__noPrice');
+    } else {
+      $productItem.find('.catalog_productsListItemPrice').addClass('catalog_productsListItemPrice__noPrice').html('Нет в наличии');
+      $productItem.find('.catalog_productsListItemPriceBlock').addClass('catalog_productsListItemPriceBlock__noPrice');
+    }
+
+    $productItem.find('.catalog_productsListItemImage').attr('href', $this.attr('data-href'));
+    $productItem.find('.catalog_productsListItemTitle').attr('href', $this.attr('data-href'));
+
+    $productItem.find('.catalog_productsListItemTitle').html($this.attr('data-title'));
+
+  }, function() {
+    var $productItem = $(this).parents('.catalog_productsListItem');
+
+    $productItem.find('.catalog_productsListItemImage img').attr('src', originalSrc);
+    $productItem.find('.catalog_productsListItemImage img').attr('title', originalTitle);
+    $productItem.find('.catalog_productsListItemImage img').attr('alt', originalTitle);
+    $productItem.find('.catalog_productsListItemSku > .sku').html(originalSku);
+
+    if (+originalInStock == 1) {
+      $productItem.find('.catalog_productsListItemPrice').removeClass('catalog_productsListItemPrice__noPrice').html(originalPrice);          
+      $productItem.find('.catalog_productsListItemPriceBlock').removeClass('catalog_productsListItemPriceBlock__noPrice');
+    } else {
+      $productItem.find('.catalog_productsListItemPrice').addClass('catalog_productsListItemPrice__noPrice').html('Нет в наличии');
+      $productItem.find('.catalog_productsListItemPriceBlock').addClass('catalog_productsListItemPriceBlock__noPrice');
+    }
+
+    $productItem.find('.catalog_productsListItemImage').attr('href', originalHref);
+    $productItem.find('.catalog_productsListItemTitle').attr('href', originalHref);
+
+    $productItem.find('.catalog_productsListItemTitle').html(originalTitle);
+  });
+
+  // Product image hover data-changing effect
+  $.each( $('.catalog_productsTileItem'), function() { 
+    var variationsNumber = $(this).find('input[name="productVariation"]').length;
+    var hoverBlockWidth = 100/variationsNumber;
+
+    for (var i = 0; i < variationsNumber; i++) {
+      $(this).find('.catalog_productsTileItemImage').append('<span class="productImageHover" data-id="' + i + '" style="width:' + hoverBlockWidth + '%;left:' + hoverBlockWidth*i + '%;"></span>');
+    }
+  });
+
+  $.each( $('.catalog_productsTileItem'), function() {
+    var $item = $(this);
+    $item.find('.productImageHover').hover(function() {
+      $item.find('.catalog_productsTileItemVariations > label').eq($(this).attr('data-id')).trigger('mouseover');
+    }, function() {
+      $item.find('.catalog_productsTileItemVariations > label').eq($(this).attr('data-id')).trigger('mouseout');
+    });
+  });
+
+  // List
+  $.each( $('.catalog_productsListItem'), function() { 
+    var variationsNumber = $(this).find('input[name="productVariation"]').length;
+    var hoverBlockWidth = 100/variationsNumber;
+
+    for (var i = 0; i < variationsNumber; i++) {
+      $(this).find('.catalog_productsListItemImage').append('<span class="productImageHover" data-id="' + i + '" style="width:' + hoverBlockWidth + '%;left:' + hoverBlockWidth*i + '%;"></span>');
+    }
+  });
+
+  $.each( $('.catalog_productsListItem'), function() {
+    var $item = $(this);
+    $item.find('.productImageHover').hover(function() {
+      $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).trigger('mouseover');
+    }, function() {
+      $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).trigger('mouseout');
+    });
+  });
+});

@@ -7243,6 +7243,12 @@ body {
 .rouble {
   font-family: Roboto; }
 
+.productImageHover {
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%; }
+
 @media (max-width: 979px) {
   body {
     padding-top: 116px; }
