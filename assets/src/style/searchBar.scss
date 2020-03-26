@@ -279,6 +279,9 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid #E8E9EA;
         margin-bottom: 28px;
+        &__mobile {
+          display: none !important;
+        }
       }
       &Count {
         &:after {

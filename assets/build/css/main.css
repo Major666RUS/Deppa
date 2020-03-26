@@ -3460,10 +3460,12 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-columns {
-    -moz-column-count: 3;
-         column-count: 3;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
     .card-columns .card {
@@ -7617,6 +7619,8 @@ body {
         padding-bottom: 1rem;
         border-bottom: 1px solid #E8E9EA;
         margin-bottom: 28px; }
+        .searchBar_searchResultsLine__mobile {
+          display: none !important; }
       .searchBar_searchResultsCount:after {
         content: "•";
         margin: 0 .625rem; }
