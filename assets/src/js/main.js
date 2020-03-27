@@ -70,6 +70,10 @@ $(function(){
     original = 1;
   });
 
+  $('.product_variations').hover(function() {
+    original = 1;
+  });
+
 
   $('.catalog_productsTileItemVariationsForm').on('change', function() {
     var $this = $(this);
@@ -240,6 +244,83 @@ $(function(){
     $productItem.find('.catalog_productsListItemTitle').html(originalTitle);
   });
 
+  // Product page
+  $('.product_addToCartForm').on('change', function() {
+    var $this = $(this);
+
+    $this.find('.product_photoWrapper img').attr('src', $this.find('input[type="radio"]:checked').attr('data-image'));
+    $this.find('.product_photoWrapper img').attr('alt', $this.find('input[type="radio"]:checked').attr('data-title'));
+    $this.find('.product_photoWrapper img').attr('title', $this.find('input[type="radio"]:checked').attr('data-title'));
+    originalSrc = $this.find('input[type="radio"]:checked').attr('data-image');
+    $this.find('.product_sku .sku').html($this.find('input[type="radio"]:checked').attr('data-sku'));
+    originalSku = $this.find('input[type="radio"]:checked').attr('data-sku');
+    
+    if (+$this.find('input[type="radio"]:checked').attr('data-instock') == 1) {
+      $this.find('.product_priceBlock').removeClass('product_priceBlock__noPrice');
+      $this.find('.product_price').html($this.find('input[type="radio"]:checked').attr('data-price') + '<span class="rouble">₽</span>');          
+      originalPrice = $this.find('input[type="radio"]:checked').attr('data-price') + '<span class="rouble">₽</span>';
+      originalInStock = 1;
+    } else {
+      $this.find('.product_priceBlock').addClass('product_priceBlock__noPrice');
+      $this.find('.product_price').html('Нет в наличии');
+      originalPrice = 'Нет в наличии';
+      originalInStock = 0;
+    }
+
+    $this.find('.product_title').html($this.find('input[type="radio"]:checked').attr('data-title'));
+    originalTitle = $this.find('input[type="radio"]:checked').attr('data-title');
+  });
+
+  $('.product_addToCartForm .product_variations > label').hover(function() {
+    var $this = $(this).find('input[name="productVariation"]');
+    var $productItem = $(this).parents('.product_addToCartForm');
+    
+
+    if (original == 1) {
+      originalSrc = $productItem.find('.product_photoWrapper img').attr('src');
+      originalSku = $productItem.find('.product_sku .sku').html();
+      originalInStock = $productItem.find('.product_price .rouble').length > 0 ? 1 : 0;
+      originalPrice = $productItem.find('.product_price').html();
+      originalTitle =  $productItem.find('.product_title').html();
+      original = 0;
+    }
+
+    $productItem.find('.product_photoWrapper img').attr('src', $this.attr('data-image'));
+    $productItem.find('.product_photoWrapper img').attr('title', $this.attr('data-title'));
+    $productItem.find('.product_photoWrapper img').attr('alt', $this.attr('data-title'));
+    $productItem.find('.product_sku .sku').html($this.attr('data-sku'));
+
+    if (+$this.attr('data-instock') == 1) {
+      $productItem.find('.product_priceBlock').removeClass('product_priceBlock__noPrice');
+      $productItem.find('.product_price').html($this.attr('data-price') + '<span class="rouble">₽</span>');          
+    } else {
+      $productItem.find('.product_priceBlock').addClass('product_priceBlock__noPrice');
+      $productItem.find('.product_price').html('Нет в наличии');
+    }
+
+    $productItem.find('.product_title').html($this.attr('data-title'));
+
+  }, function() {
+    var $this = $(this).find('input[name="productVariation"]');
+    var $productItem = $(this).parents('.product_addToCartForm');
+
+    $productItem.find('.product_photoWrapper img').attr('src', originalSrc);
+    $productItem.find('.product_photoWrapper img').attr('title', originalTitle);
+    $productItem.find('.product_photoWrapper img').attr('alt', originalTitle);
+    $productItem.find('.product_sku .sku').html(originalSku);
+
+    if (+originalInStock == 1) {
+      $productItem.find('.product_priceBlock').removeClass('product_priceBlock__noPrice');
+      $productItem.find('.product_price').html(originalPrice);          
+    } else {
+      $productItem.find('.product_priceBlock').addClass('product_priceBlock__noPrice');
+      $productItem.find('.product_price').html('Нет в наличии');
+    }
+
+    $productItem.find('.product_title').html(originalTitle);
+  });
+
+
   // Product image hover data-changing effect
   $.each( $('.catalog_productsTileItem'), function() { 
     var variationsNumber = $(this).find('input[name="productVariation"]').length;
@@ -275,6 +356,25 @@ $(function(){
       $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).trigger('mouseover');
     }, function() {
       $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).trigger('mouseout');
+    });
+  });
+
+  // Product page
+  $.each( $('.product_addToCartForm'), function() { 
+    var variationsNumber = $(this).find('.product_variations').eq(0).find('input[name="productVariation"]').length;
+    var hoverBlockWidth = 100/variationsNumber;
+
+    for (var i = 0; i < variationsNumber; i++) {
+      $(this).find('.product_photoWrapper').append('<span class="productImageHover" data-id="' + i + '" style="width:' + hoverBlockWidth + '%;left:' + hoverBlockWidth*i + '%;"></span>');
+    }
+  });
+
+  $.each( $('.product_addToCartForm'), function() {
+    var $item = $(this);
+    $item.find('.productImageHover').hover(function() {
+      $item.find('.product_variations > label').eq($(this).attr('data-id')).trigger('mouseover');
+    }, function() {
+      $item.find('.product_variations > label').eq($(this).attr('data-id')).trigger('mouseout');
     });
   });
 });

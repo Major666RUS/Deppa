@@ -3460,12 +3460,10 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-columns {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
     .card-columns .card {
@@ -10122,6 +10120,14 @@ input[type=number] {
   display: flex;
   align-items: center;
   margin-bottom: 3.25rem; }
+  .product_priceBlock__noPrice .product_price {
+    color: #757a7f; }
+  .product_priceBlock__noPrice .product_inputCount {
+    display: none; }
+  .product_priceBlock__noPrice .product_bonus {
+    display: none; }
+  .product_priceBlock__noPrice + .product_buttons {
+    visibility: hidden; }
 
 .product_inputCount {
   display: flex;
@@ -10220,6 +10226,9 @@ input[type=number] {
   .product_variation:hover,
   input[type="radio"]:checked + .product_variation {
     border-color: #7BB5B1; }
+  .product_variation img {
+    max-width: 3.25rem;
+    max-height: 3.25rem; }
 
 .product_tabsBlock {
   margin-top: 3.25rem;
