@@ -22,7 +22,7 @@
         <div class="header_mobileMenu">
           <a href="/cart" class="header_cart">
             <img src="img/cart.svg" alt="cart">
-            <span class="header_cartCount">3</span>
+            <span class="header_cartCount js-cart">3</span>
           </a>
           <span class="header_burger js-menuToggle">
             <span></span>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </header>
-
+    <form class="needs-validation" novalidate>
     <div class="order_grid">
         <div class="order_left leftColumn leftColumn__thin order_wrapper mw-100">
             <div class="container">
@@ -94,7 +94,6 @@
                 </div>
 
                 <div class="order_customer row">
-                    <form class="needs-validation" novalidate>
                     <div class="order_customerBlock col-xl-10 col-lg-10 col-md-12 col-sm-12">
                         <div class="row">
                             <h2 class="order_customerBlockTitle col-lg-12 col-md-12 col-sm-12">Получатель</h2>
@@ -528,22 +527,12 @@
                             </li>
                         </ul>
                     </div>
-
-                    <div class="order_customerBlock__action col-xl-10 col-lg-10 col-md-12 col-sm-12">
-                        <button type="submit" class="btn btn-dark">
-                            Создать заказ
-                        </button>
-                        <div class="order_customerAcceptLink">
-                            Создавая заказ, вы соглашаетесь с <a href="#">условиями обработки</a> персональных данных
-                        </div>
-                    </div>
-                    </form>
                 </div>
 
             </div>
         </div>
         <div class="order_right cart_wrapper">
-            <form class="cart_form">
+            <div class="cart_form">
                 <ul class="cart list-unstyled">
                     <li class="cart_item">
                         <div class="cart_itemImage">
@@ -626,10 +615,19 @@
                             <span class="cart_footerTotalPrice">2 880 ₽</span>
                         </span>
                     </div>
+                    <div class="order_customerBlock__action">
+                        <button type="submit" class="btn btn-dark">
+                            Создать заказ
+                        </button>
+                        <div class="order_customerAcceptLink">
+                            Создавая заказ, вы соглашаетесь с <a href="#">условиями обработки</a> персональных данных
+                        </div>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+    </form>
     
     <footer class="footer">
       <div class="container">

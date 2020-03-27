@@ -105,4 +105,10 @@ $(function(){
       width: 0
     }); 
   }
+
+  $('.js-addToCart').click(function() {
+    var count = +$('.js-cart').html();
+    $('.js-cart').html(++count);
+    return false;
+  });
 })
