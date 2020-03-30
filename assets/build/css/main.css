@@ -7397,10 +7397,8 @@ body {
       font-size: .625rem; }
 
 @media (max-width: 767.98px) {
-  .header {
-    padding: 0 1.25rem; }
-    .header_logo img {
-      width: 90px; } }
+  .header_logo img {
+    width: 90px; } }
 
 @media (max-width: 1199px) {
   .header_desc {
