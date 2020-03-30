@@ -136,8 +136,9 @@
   &_devices,
   &_devicesList {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
+    padding: 0 15px;
   }
   &_devices {
     padding: 1.5rem 0 0;
@@ -439,8 +440,12 @@
   }
 }
 
-@include media-breakpoint-between(md, xl) {
+@include media-breakpoint-between(md, lg) {
   .searchBar {
-    //
+    &_catalogItemLink {
+      img {
+        width: 80px;
+      }
+    }
   }
 }
