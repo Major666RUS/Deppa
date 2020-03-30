@@ -84,6 +84,20 @@
         display: flex;
         align-items: center;
         margin-bottom: 3.25rem;
+        &__noPrice {
+            & .product_price {
+                color: #757a7f;
+            }
+            & .product_inputCount {
+                display: none;
+            }
+            & .product_bonus {
+                display: none;
+            }
+            & + .product_buttons {
+                visibility: hidden;
+            }
+        }
     }
     &_inputCount {
         display: flex;
@@ -191,6 +205,10 @@
         &:hover,
         input[type="radio"]:checked + & {
             border-color: #7BB5B1;
+        }
+        & img {
+            max-width: 3.25rem;
+            max-height: 3.25rem;
         }
     }
 
