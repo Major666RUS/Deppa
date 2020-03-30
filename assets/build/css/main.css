@@ -7468,16 +7468,15 @@ body {
     .searchBar_catalogItem, .searchBar_priorityBrandsItem {
       list-style: none; }
   .searchBar_priorityBrands {
-    justify-content: center;
     padding: 1.5rem 0 1.25rem;
     border-bottom: 1px solid #E8E9EA; }
-    .searchBar_priorityBrandsItem {
-      margin: 0 1.25rem; }
-      .searchBar_priorityBrandsItemLink {
-        display: block;
-        transition: all .25s ease-in-out; }
-        .searchBar_priorityBrandsItemLink:hover {
-          opacity: .8; }
+    .searchBar_priorityBrandsItem:not(:last-of-type) {
+      margin-right: 2.5rem; }
+    .searchBar_priorityBrandsItemLink {
+      display: block;
+      transition: all .25s ease-in-out; }
+      .searchBar_priorityBrandsItemLink:hover {
+        opacity: .8; }
   .searchBar_catalog {
     justify-content: center;
     padding: 2.5rem 0 3.5rem; }
