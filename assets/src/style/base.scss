@@ -6,13 +6,13 @@ body {
   overflow-x: hidden;
 }
 
-@include media-breakpoint-up(md) {
-  .modal-open {
-    & .header {
-      padding-right: calc(17px + 3rem);
-    }
-  }
-}
+// @include media-breakpoint-up(md) {
+//   .modal-open {
+//     & .header {
+//       padding-right: calc(17px + 3rem);
+//     }
+//   }
+// }
 
 .noScroll {
   overflow: hidden;

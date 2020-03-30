@@ -416,6 +416,9 @@
           flex: 1 0 auto;
           padding: 0;
           margin-right: .375rem;
+          &:before {
+            content: none !important;
+          }
         }
         &Title {
           margin-bottom: .25rem;

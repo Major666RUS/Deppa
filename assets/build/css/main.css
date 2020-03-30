@@ -7234,10 +7234,6 @@ body {
   color: #19222A;
   overflow-x: hidden; }
 
-@media (min-width: 768px) {
-  .modal-open .header {
-    padding-right: calc(17px + 3rem); } }
-
 .noScroll {
   overflow: hidden;
   pointer-events: none; }
@@ -7728,6 +7724,8 @@ body {
           flex: 1 0 auto;
           padding: 0;
           margin-right: .375rem; }
+          .searchBar .catalog_productsTileItemImage:before {
+            content: none !important; }
         .searchBar .catalog_productsTileItemTitle {
           margin-bottom: .25rem; }
         .searchBar .catalog_productsTileItemPrice {
