@@ -19033,8 +19033,10 @@ $(function(){
     var $item = $(this);
     $item.find('.productImageHover').hover(function() {
       $item.find('.catalog_productsTileItemVariations > label').eq($(this).attr('data-id')).trigger('mouseover');
+      $item.find('.catalog_productsTileItemVariations > label').eq($(this).attr('data-id')).find('.catalog_productsTileItemVariation').addClass('hovered');
     }, function() {
       $item.find('.catalog_productsTileItemVariations > label').eq($(this).attr('data-id')).trigger('mouseout');
+      $item.find('.catalog_productsTileItemVariations > label').eq($(this).attr('data-id')).find('.catalog_productsTileItemVariation').removeClass('hovered');
     });
   });
 
@@ -19052,8 +19054,10 @@ $(function(){
     var $item = $(this);
     $item.find('.productImageHover').hover(function() {
       $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).trigger('mouseover');
+      $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).find('.catalog_productsListItemVariation').addClass('hovered');
     }, function() {
       $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).trigger('mouseout');
+      $item.find('.catalog_productsListItemVariations > label').eq($(this).attr('data-id')).find('.catalog_productsListItemVariation').removeClass('hovered');
     });
   });
 
@@ -19070,9 +19074,11 @@ $(function(){
   $.each( $('.product_addToCartForm'), function() {
     var $item = $(this);
     $item.find('.productImageHover').hover(function() {
-      $item.find('.product_variations > label').eq($(this).attr('data-id')).trigger('mouseover');
+      $item.find('.product_variations:visible > label').eq($(this).attr('data-id')).trigger('mouseover');
+      $item.find('.product_variations:visible > label').eq($(this).attr('data-id')).find('.product_variation').addClass('hovered');
     }, function() {
-      $item.find('.product_variations > label').eq($(this).attr('data-id')).trigger('mouseout');
+      $item.find('.product_variations:visible > label').eq($(this).attr('data-id')).trigger('mouseout');
+      $item.find('.product_variations:visible > label').eq($(this).attr('data-id')).find('.product_variation').removeClass('hovered');
     });
   });
 });

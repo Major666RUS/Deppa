@@ -84,6 +84,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 3.25rem;
+        min-height: 2.25rem;
         &__noPrice {
             & .product_price {
                 color: #757a7f;
@@ -203,6 +204,7 @@
         margin-right: 0.75rem;
         cursor: pointer;
         &:hover,
+        &.hovered,
         input[type="radio"]:checked + & {
             border-color: #7BB5B1;
         }

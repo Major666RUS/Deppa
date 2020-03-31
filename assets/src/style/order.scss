@@ -63,9 +63,12 @@
                 margin-top: -1.75rem;
             }
             &__action {
-                // margin-bottom: 7.5rem;
+                padding-bottom: 4rem;
                 & .btn {
                     width: 100%;
+                }
+                & .custom-checkbox {
+                    margin: 1.25rem 0 0.875rem 0;
                 }
             }      
             &Title {
@@ -484,6 +487,13 @@
                             height: 0.75rem;
                             width: auto;
                             margin-right: 0.375rem;
+                        }
+                    }
+                    &__noflex {
+                        display: block;
+                        & a {
+                            display: inline;
+                            font-size: inherit;
                         }
                     }
                 }

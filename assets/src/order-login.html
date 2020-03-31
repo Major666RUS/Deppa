@@ -407,7 +407,7 @@
                     </div>
 
                     <div class="order_customerBlock order_customerBlock__closerToTop col-xl-10 col-lg-10 col-md-12 col-sm-12">
-                        <div class="order_customerBlockSubtitle m-0">Создавая заказ вы принимаете договор <a href="#">поставки товара</a></div>
+                        <div class="order_customerBlockSubtitle order_customerBlockSubtitle__noflex m-0">Создавая заказ вы принимаете договор <a href="#">поставки товара</a></div>
                         <div class="order_customerInfo order_shippingCompanyContract row align-items-center">
                             <div class="form-group floating-label col-xl-8 col-lg-10 col-md-12 col-sm-12">
                                 <input type="text" class="floating-input form-control" id="INN"
@@ -451,6 +451,21 @@
                                 </label>
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="order_customerBlock__action col-lg-8 col-md-12 col-sm-12 p-md-0 d-block d-sm-block d-md-none d-lg-none">
+                        <button type="submit" class="btn btn-dark">
+                            Создать заказ
+                        </button>
+                        <div class="custom-control custom-checkbox catalog_filterFormCheckbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="noCall">
+                            <label class="custom-control-label" for="noCall">
+                                Не подтверждать заказ по телефону
+                            </label>
+                        </div>
+                        <div class="order_customerAcceptLink">
+                            Создавая заказ, вы соглашаетесь с <a href="#">условиями обработки</a> персональных данных
+                        </div>
                     </div>
                 </div>
 
