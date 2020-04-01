@@ -9318,7 +9318,8 @@ Build date: 2019-12-19 16:51:02
   .catalog_productsTile__search {
     flex-wrap: nowrap !important;
     margin-bottom: 0 !important;
-    overflow: hidden; }
+    overflow: hidden;
+    padding-bottom: 2px; }
   .catalog_productsTile__search .catalog_productsTileItem {
     width: calc(20% - 2rem);
     flex: 1 0 auto !important; }
