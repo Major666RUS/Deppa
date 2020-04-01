@@ -3460,10 +3460,12 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-columns {
-    -moz-column-count: 3;
-         column-count: 3;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
     .card-columns .card {
@@ -7892,8 +7894,10 @@ body {
 
 .carousel-item {
   height: 680px;
+  max-width: 100%;
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  background-size: cover; }
   .carousel-item img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -9097,7 +9101,8 @@ Build date: 2019-12-19 16:51:02
     color: rgba(57, 64, 73, 0.5) !important; }
 
 .homePage_grid {
-  display: flex; }
+  display: flex;
+  position: relative; }
 
 .homePage_left {
   flex: 1; }
@@ -9601,7 +9606,7 @@ Build date: 2019-12-19 16:51:02
     overflow-y: scroll;
     max-width: 405px;
     top: 0;
-    right: 0;
+    right: -1px;
     width: 400px;
     display: flex;
     flex-direction: column;

@@ -13,7 +13,9 @@ $(function(){
         });
       } else {
         checkCartVisibility(); 
-        $('.cart_wrapper').css('position', 'fixed');
+        if (window.scrollY < 70) {
+          $('.cart_wrapper').css('position', 'absolute');
+        } else $('.cart_wrapper').css('position', 'fixed');
         $('.cart_wrapper').animate({
           width: 0
         }); 
@@ -100,7 +102,9 @@ $(function(){
 
   if ($('.homePage_grid .cart_wrapper').length) {
     checkCartVisibility(); 
-    $('.cart_wrapper').css('position', 'fixed');
+    if (window.scrollY < 70) {
+      $('.cart_wrapper').css('position', 'absolute');
+    } else $('.cart_wrapper').css('position', 'fixed');
     $('.cart_wrapper').animate({
       width: 0
     }); 

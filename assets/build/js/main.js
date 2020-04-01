@@ -18513,7 +18513,7 @@ $(function(){
   });
 
   $('.js-searchInput').on('input', function() {
-    if (window.innerWidth < 1199) {
+    if (window.innerWidth < 992) {
       if ($('.js-searchInput').val()) {
         $('.searchBar_closeMobile').css('display', 'flex');
       } else {
@@ -18624,7 +18624,9 @@ $(function(){
         });
       } else {
         checkCartVisibility(); 
-        $('.cart_wrapper').css('position', 'fixed');
+        if (window.scrollY < 70) {
+          $('.cart_wrapper').css('position', 'absolute');
+        } else $('.cart_wrapper').css('position', 'fixed');
         $('.cart_wrapper').animate({
           width: 0
         }); 
@@ -18711,7 +18713,9 @@ $(function(){
 
   if ($('.homePage_grid .cart_wrapper').length) {
     checkCartVisibility(); 
-    $('.cart_wrapper').css('position', 'fixed');
+    if (window.scrollY < 70) {
+      $('.cart_wrapper').css('position', 'absolute');
+    } else $('.cart_wrapper').css('position', 'fixed');
     $('.cart_wrapper').animate({
       width: 0
     }); 
