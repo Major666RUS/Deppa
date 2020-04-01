@@ -8035,7 +8035,7 @@ body {
       font-size: 1.125rem;
       font-weight: 300;
       line-height: 1.3;
-      height: 70px;
+      min-height: 70px;
       overflow: hidden; }
     .productCarousel_productsTileItemBottom {
       margin-top: auto; }
@@ -9380,7 +9380,8 @@ Build date: 2019-12-19 16:51:02
     margin-bottom: 1.25rem;
     font-size: 1.125rem;
     font-weight: 300;
-    line-height: 1.3; }
+    line-height: 1.3;
+    min-height: 70px; }
   .catalog_productsTileItemBottom {
     margin-top: auto; }
   .catalog_productsTileItemPrice {
